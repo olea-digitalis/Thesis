@@ -17,7 +17,7 @@ def erdos_rennie_like(num_nodes, num_hedges, max_hedge_width, self_loops=False):
         return -1
     
     node_ls = [] 
-    hedge_ls = [] #edges will be encoded as ordered lists, where entry 0 is a list containing nodes in the tail and entry 1 is a list containing nodes in the head
+    hedge_ls = [] #hedges will be encoded as ordered lists, where entry 0 is a list containing nodes in the tail and entry 1 is a list containing nodes in the head
     hedge_set = set() #to avoid repeated edges I use a set to keep track of the edges. The set will be converted back to a list when it is returned.
     
     for n in range(num_nodes): #initializes nodes
@@ -92,11 +92,30 @@ def set_to_list(s):
     for item in s:
         ls.append(item)
 
-        
-        
+def export(fileprefix, hedges):
+    """
+    takes a list of nodes and a list of hedges and exports them to a .txt file with the given prefix
+    """
+    with open(fileprefix + '.txt', 'w') as f:
+        for h in hedges:
+            s = ""
+            for node in h[0]: #each node in the tail
+                s += str(node) + "|"
+            s = s[:-1]
+            s += '\t'
+            for node in h[1]: #each node in the head
+                s += str(node) + "|"
+            s = s[:-1]
+            s += '\t'
+            s += '1' + '\n'   #assigns weight for the hedge, currently always set to 1
+            f.write(s)
+
+
+
 def main():
-    print(erdos_rennie_like(50, 10, 3, False))
-    
+    nodes, hedges = erdos_rennie_like(50, 10, 3, False)
+    print(hedges)
+    export('test',hedges)
     
     
 

@@ -1,0 +1,49 @@
+## Anna Ritz, Oct 2016
+## Shortest B-Hyperpaths code
+## Modified from ACM-BCB publication source code to be "bare-bones"
+## Note: works on directed hypergraphs with nodes and hyperedges (no hypernodes)
+
+########################
+## Dependencies
+########################
+(0) Python 2.7 
+(1) Install HALP:  https://github.com/Murali-group/halp
+
+ $ pip install --target <where_you_want_the_code> halp
+
+(2) Add HALP to your $PYTHONPATH variable.
+(3) CPLEX is installed on the bioinf* machines.
+(34) Download both ilp.py and acm_bcb_shortest_b_hyperpaths.py. ilp.py has
+lots of broken/commented out code - this is in progress.
+
+########################
+## Troubleshooting
+########################
+I'm having trouble getting the $PYTHONPATH variable
+to be recognized when calling "python".  Worst case scenario, import sys
+and append the HALP target directory to the sys.path list, eg., 
+
+ sys.path.append("<where_you_want_the_code>")
+
+########################
+## Running
+########################
+
+(0) To print the usage:
+python acm_bcb_shortest_b_hyperpaths.py -h 
+
+(1) To run on test.hyperedges, in verbose mode:
+python acm_bcb_shortest_b_hyperpaths.py --outprefix test_output --verbose test.hyperedges a n 
+
+(2) To get multiple solutions (including sub-optimal solutions); note that only 2 solutions exist.
+python acm_bcb_shortest_b_hyperpaths.py --outprefix test_output --verbose  --numsols 3 --subopt test.hyperedges a n
+
+########################
+## Output
+######################## 
+You will get an *.lp file that is the mixed integer linear program formatted for cplex.
+
+For each solution, you will get three files:
+- *edge-variables: for every hyperedge, 1 if it's in the solution and 0 otherwise.
+- *node-variables: for every node, 1 if it's in the solution and 0 otherwise.
+- *order-variables: for every node, a real-valued number between 0 and 1 that establishes a topological ordering.

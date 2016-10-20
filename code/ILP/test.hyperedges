@@ -1,0 +1,17 @@
+#T	H	W
+a	b|c	1
+b	m|d	1
+c|b	d|e	1
+c	e	1
+c	f|h	1
+d	f|m	1
+f	a|g|h	1
+g	i|f	1
+h	i|k	1
+i	m|l	1
+j	l	1
+l	j|k	1
+m	g	1
+l|k	e	1
+j	n	1
+k	j	1
