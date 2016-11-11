@@ -11,7 +11,9 @@ from optparse import OptionParser
 import numpy as np
 import glob
 
+
 from ilp import *  ## import functions from ilp.py
+
 
 ## import HALP library.  https://github.com/Murali-group/halp
 from halp.directed_hypergraph import DirectedHypergraph
@@ -26,8 +28,15 @@ def main(args):
         print '%d nodes and %d hyperedges' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
         for hedge in H.hyperedge_id_iterator():
             print '%s: %s --> %s' % (hedge,opts.nodedelim.join(H.get_hyperedge_tail(hedge)),opts.nodedelim.join(H.get_hyperedge_head(hedge)))
-    allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
-        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    pairs = []
+    for i in range(1,61):
+        if i % 2 == 0:
+            pairs.append(tuple([i,i+1]))
+
+    allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
+    
+    #allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
+        #opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
     return 
    
 
@@ -98,7 +107,7 @@ def compute_shortest_b_hyperpath(H,source,target,outprefix,numsols,subopt,verbos
     nodeset = H.get_node_set()
 
     ## Run the ILP
-    numsols,numoptobjective,allvars = solveILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose) 
+    numsols,numoptobjective,allvars,times = solveILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose)
     if verbose:
         print 'Done.\n'
         
@@ -108,8 +117,64 @@ def compute_shortest_b_hyperpath(H,source,target,outprefix,numsols,subopt,verbos
   
     ## return variables (first solution indexed at 0)
     print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
-    return allvars
+    return allvars, times
 
+
+def compile_shortest_hpaths(H,source,target,outprefix,numsols,subopt,verbose,path_directions=None):
+    if path_directions == None:
+        allvars, times = compute_shortest_b_hyperpath(H,source,target,outprefix,numsols,subopt,verbose)
+        return allvars
+    else:
+        compile_times = []
+        for pair in path_directions:
+            allvars, times = compute_shortest_b_hyperpath(H,str(pair[0]),str(pair[1]),outprefix,numsols,subopt,verbose)
+            compile_times.append(times)
+        with open (outprefix + '_times.csv','a') as time_file:
+            time_file.write(get_time_stats(compile_times,string_form=True))
+            time_file.write('\n' + str(compile_times) + '\n\n')
+
+        return allvars, times
+
+def get_time_stats(compile_times,string_form=False):
+    #returns the min time, max time, median, and mean
+    all_times = []
+    for times in compile_times:
+        for t in times:
+            all_times.append(t)
+
+    max_time = max(all_times)
+    min_time = min(all_times)
+    mean = get_mean(all_times)
+    median = get_median(all_times)
+
+    if not string_form:
+        return min_time,max_time,median,mean
+
+    else:
+        s = "min: " + str(min_time) + "\t max: " + str(max_time) + "\t median: " + str(median) + "\t mean: " + str(mean)
+        return s
+    
+def get_mean(ls):
+    total = 0
+    for n in ls:
+        total += n
+
+    mean = total / float(len(ls))
+    return mean
+
+def get_median(ls):
+    s_ls = sorted(ls)
+    if len(ls) % 2 == 1:
+        median = s_ls[len(ls)/2]
+    else:
+        m1 = s_ls[len(ls)/2]
+        m2 = s_ls[len(ls)/2 -1]
+        median = (m1 + m2)/float(2)
+    return median
+        
+
+    
+    
 ###########
 if __name__=='__main__':
     main(sys.argv)

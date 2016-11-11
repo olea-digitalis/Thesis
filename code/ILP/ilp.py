@@ -237,6 +237,7 @@ def writeBinaryBounds(H,out):
 	return out
 
 ################################
+
 def solveILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False):
 	print '\nSolving ILP...'
 
@@ -248,10 +249,14 @@ def solveILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False):
 	numoptobjective = 0
 	maxobj = None
 	allvars = []
+        times = []
 	while(numsolsfound < numsols+1):
 		## Solve ILP
 		print '-'*10 + 'Looking for Solution %d' % (numsolsfound) + '-'*10 + '\n'
+                start = ilp.get_dettime()
 		ilp.solve()
+                finish = ilp.get_dettime()
+                times.append(finish-start)
 		print '-'*10 + 'Done Looking for Solution %d' % (numsolsfound) + '-'*10 + '\n'
 		
 		if ilp.solution.pool.get_num()>0:
@@ -299,7 +304,9 @@ def solveILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False):
 
 	print '-'*20 + 'Cplex Output End' + '-'*20 + '\n'
 	print '%d solutions found' % (numsolsfound-1)
-	return numsolsfound-1,numoptobjective,allvars
+	return numsolsfound-1,numoptobjective,allvars, times
+
+
 
 ################################
 def getILPSolution(H,nodeset,outprefix,num,objective,verbose):
