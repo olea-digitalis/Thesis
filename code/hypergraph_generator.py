@@ -113,11 +113,69 @@ def export(fileprefix, hedges):
 
 
 def main():
-    nodes, hedges = erdos_rennie_like(50, 10, 3, False)
-    print(hedges)
-    export('test',hedges)
+    """
+    nodes, hdiag1 = erdos_rennie_like(600, 36000, 3, False)
+    print(hdiag1)
+    export('diag1',hdiag1)
+    nodes, hdiag2 = erdos_rennie_like(600,180000,3)
+    nodes,hdiag4 = erdos_rennie_like(600,300000,2)
+    nodes,hdiag5 = erdos_rennie_like(100,8333,3)
+    nodes,hdiag6 = erdos_rennie_like(100,8333,4)
+    nodes,hdiag7 = erdos_rennie_like(300,75000,3)
+    nodes,hdiag8 = erdos_rennie_like(450,168750,3)
+    export('diag2',hdiag2)
+    export('diag4',hdiag4)
+    export('diag5',hdiag5)
+    export('diag6',hdiag6)
+    export('diag7',hdiag7)
+    export('diag8',hdiag8)
+
+
+
     
-    
+    nodes, hdiag3 = erdos_rennie_like(600,300000,3)
+    export('diag3',hdiag3)
+    """
+
+    """
+    nodes, hd3 = erdos_rennie_like(100,8333,5)
+    export('d3',hd3)
+
+    nodes, hd5 = erdos_rennie_like(100,8333,6)
+    export('d5',hd5)
+
+    nodes, hd6 = erdos_rennie_like(100,8333,7)
+    export('d6',hd6)
+    """
+
+    """
+    nodes, sparse1 = erdos_rennie_like(600, 1200, 3)
+    export('sparse_diag1', sparse1)
+
+    nodes, sparse2 = erdos_rennie_like(600, 2400, 3)
+    export('sparse_diag2',sparse2)
+
+    nodes, sparse3 = erdos_rennie_like(600, 5800, 3)
+    export('sparse_diag3',sparse3)
+
+    nodes, sparse4 = erdos_rennie_like(600,11600, 3)
+    export('sparse_diag4',sparse4)
+
+    nodes, sparse5 = erdos_rennie_like(600,23200, 3)
+    export('sparse_diag5',sparse5)
+    """
+
+    nodes, size1 = erdos_rennie_like(100, 500, 3)
+    nodes, size2 = erdos_rennie_like(200,1000,3)
+    nodes,size3 = erdos_rennie_like(300,1500,3)
+    nodes,size4 = erdos_rennie_like(400,2000,3)
+    nodes,size5 = erdos_rennie_like(500,2500,3)
+
+    export('size_diag1',size1)
+    export('size_diag2',size2)
+    export('size_diag3',size3)
+    export('size_diag4',size4)
+    export('size_diag5',size5)
 
 if __name__ == '__main__':
     main()
