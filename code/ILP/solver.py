@@ -89,14 +89,17 @@ def read_hypergraph(opts):
         sys.exit('ERROR: target "%s" is not in node set. Exiting.' % (opts.target))
     return H
 
-def compute_shortest_b_hyperpath(H,source,target,outprefix,numsols,subopt,verbose):
+def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
     
     ## Get induced sub-hypergraph on b-connected nodes 
-    bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H,source)
-    H = H.get_induced_subhypergraph(bconnected)
+    bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H_orig,source)
+    if target not in bconnected:
+        print 'TARGET NOT IN INPUT.'
+        return None, None
+    H = H_orig.get_induced_subhypergraph(bconnected)
 
     if verbose:
-        print '%d nodes are B-connected to source "%s"' % (len(bconnected),source)
+        #print '%d nodes are B-connected to source "%s"' % (len(bconnected),source)
         print 'Hypergraph of B-connected nodes now has %d nodes and %d hyperedges.' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
 
     ## Build the ILP.
@@ -113,7 +116,7 @@ def compute_shortest_b_hyperpath(H,source,target,outprefix,numsols,subopt,verbos
         
     if numsols == 0:
         print 'INFEASIBLE SOLUTION.'
-        return None
+        return None, None
   
     ## return variables (first solution indexed at 0)
     print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
@@ -128,7 +131,9 @@ def compile_shortest_hpaths(H,source,target,outprefix,numsols,subopt,verbose,pat
         compile_times = []
         for pair in path_directions:
             allvars, times = compute_shortest_b_hyperpath(H,str(pair[0]),str(pair[1]),outprefix,numsols,subopt,verbose)
-            compile_times.append(times)
+
+            if allvars:
+                compile_times.append(times)
         with open (outprefix + '_times.csv','a') as time_file:
             time_file.write(get_time_stats(compile_times,string_form=True))
             time_file.write('\n' + str(compile_times) + '\n\n')
