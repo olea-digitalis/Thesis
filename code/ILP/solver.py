@@ -10,7 +10,8 @@ import sys
 from optparse import OptionParser
 import numpy as np
 import glob
-
+import random
+import time
 
 from ilp import *  ## import functions from ilp.py
 
@@ -28,10 +29,10 @@ def main(args):
         print '%d nodes and %d hyperedges' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
         for hedge in H.hyperedge_id_iterator():
             print '%s: %s --> %s' % (hedge,opts.nodedelim.join(H.get_hyperedge_tail(hedge)),opts.nodedelim.join(H.get_hyperedge_head(hedge)))
+    H_nodes = H.get_node_set()
     pairs = []
-    for i in range(1,61):
-        if i % 2 == 0:
-            pairs.append(tuple([i,i+1]))
+    for i in range(0,3000):
+        pairs.append(random.sample(H_nodes,2))
 
     allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
     
@@ -129,22 +130,33 @@ def compile_shortest_hpaths(H,source,target,outprefix,numsols,subopt,verbose,pat
         return allvars
     else:
         compile_times = []
+        i = 0
         for pair in path_directions:
+            with open (outprefix + '_working_record.txt','a') as wr:
+                wr.write(str(pair) + time.asctime() + '\n')
             allvars, times = compute_shortest_b_hyperpath(H,str(pair[0]),str(pair[1]),outprefix,numsols,subopt,verbose)
 
             if allvars:
-                compile_times.append(times)
+                with open (outprefix + '_working_record.txt','a') as wr:
+                    wr.write("Solution found!\n")
+                compile_times.append([pair,times])
+                i += 1
+
+            if i == 29:
+                break
         with open (outprefix + '_times.csv','a') as time_file:
-            time_file.write(get_time_stats(compile_times,string_form=True))
-            time_file.write('\n' + str(compile_times) + '\n\n')
+            time_file.write(get_time_stats(compile_times,string_form=True) + '\n')
+            
+            for thing in compile_times:
+                time_file.write(str(thing) + '\n')
 
         return allvars, times
 
 def get_time_stats(compile_times,string_form=False):
     #returns the min time, max time, median, and mean
     all_times = []
-    for times in compile_times:
-        for t in times:
+    for thing in compile_times:
+        for t in thing[1]:
             all_times.append(t)
 
     max_time = max(all_times)
