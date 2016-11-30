@@ -24,17 +24,23 @@ from halp.algorithms import directed_paths
 ################################
 def main(args):
     opts = parseOptions(args)
-    H = read_hypergraph(opts)
+    H = read_hypergraph(opts,mod=True)
     if opts.verbose:
         print '%d nodes and %d hyperedges' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
+        """
         for hedge in H.hyperedge_id_iterator():
             print '%s: %s --> %s' % (hedge,opts.nodedelim.join(H.get_hyperedge_tail(hedge)),opts.nodedelim.join(H.get_hyperedge_head(hedge)))
+        """
+    """
     H_nodes = H.get_node_set()
     pairs = []
     for i in range(0,3000):
         pairs.append(random.sample(H_nodes,2))
+    """
 
-    allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
+    find_b_fragments(H)
+    
+    #allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
     
     #allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
         #opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
@@ -79,16 +85,46 @@ def parseOptions(args):
 
     return opts
 
-def read_hypergraph(opts):
+def read_hypergraph(opts, mod=False):
     H = DirectedHypergraph()
     H.read(opts.hedgefile,opts.nodedelim,opts.coldelim)
 
     nodes = H.get_node_set()
-    if opts.source not in nodes:
+    if opts.source not in nodes and mod==False:
         sys.exit('ERROR: source "%s" is not in node set. Exiting.' % (opts.source))
-    if opts.target not in nodes:
+    if opts.target not in nodes and mod==False:
         sys.exit('ERROR: target "%s" is not in node set. Exiting.' % (opts.target))
     return H
+
+def find_b_fragments(H,dictionary=False):
+    if dictionary:
+        d = {}
+    ls = []
+    for n in H.get_node_set():
+        bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H,n)
+        ls.append(len(bconnected))
+        if dictionary:
+            d[n]=bconnected
+
+
+    ls.sort(reverse=True)
+
+    if dictionary:
+        return d
+    print(count(ls))
+    return ls
+
+
+def count(ls):
+    d = {}
+    for i in ls:
+        if i in d:
+            d[i] += 1
+        else:
+            d[i] = 1
+    return d
+    
+
 
 def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
     
