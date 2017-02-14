@@ -38,7 +38,20 @@ def main(args):
         pairs.append(random.sample(H_nodes,2))
     """
 
-    find_b_fragments(H)
+    print(H.get_node_set())
+    print(H.get_hyperedge_id_set())
+    print_all_hedges(H)
+
+    add_cheat_hedges(H)
+    print("##############################\nAdded cheat hedges\n#####################\n")
+    
+    print(H.get_node_set())
+    print(H.get_hyperedge_id_set())
+    print_all_hedges(H)
+
+    
+
+    #find_b_fragments(H)
     
     #allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
     
@@ -95,6 +108,70 @@ def read_hypergraph(opts, mod=False):
     if opts.target not in nodes and mod==False:
         sys.exit('ERROR: target "%s" is not in node set. Exiting.' % (opts.target))
     return H
+
+
+def get_frag_pairs(H, n):
+    #UNFINISHED
+    i = 0
+    nodes = H.get_node_set()
+    while i < n:
+        current = random.choice(nodes)
+        bconnected, ignore1,ignore2,ignore3 = directed_paths.b_visit(H,current)
+        if len(bconnected) == 1:
+            pass
+        else:
+            pass
+        
+
+
+
+def print_hedge(H,hedge):
+    print hedge, "\ttail:", H.get_hyperedge_tail(hedge),"\thead:", H.get_hyperedge_head(hedge), "\tattributes:", H.get_hyperedge_attributes(hedge)
+
+def print_all_hedges(H):
+    hedges = list(H.get_hyperedge_id_set())
+    for hedge in sorted(hedges):
+        print_hedge(H,hedge)
+
+
+
+################################
+#cheating hpath setup functions#
+################################
+
+def get_restrictive_hedges(H,n):
+    #the restrictive hedges of a node is a subset of the forward star
+    #any hedge in the forward star of n with |tail_set| > 1 (i.e. contains more nodes than just n) is a restrictive hedge
+    #the forward star of a node is the set of hyperedges such that the node is in the tail of each hyperedge in that set.
+    hedges = H.get_forward_star(n)
+    r_hedges = []
+    for h in hedges:
+        if len(H.get_hyperedge_tail(h)) > 1:
+            r_hedges.append(h)
+    return r_hedges
+
+
+def add_cheat_hedges(H):
+    #adds cheat hedges to every node in H, labeled with attribute: 'cheat' = True
+    #for every restrictive hedge (see function: get_restrictive_hedges() ) of each node, we add a cheat hedge
+    #cheat hedges model the restrictive hedges but they remove the restriction
+    #that is, the tail of a cheat hedge contains only the given node, and the head contains the head set of the given restrictive hedge
+    #returns a list of the added cheat hedge ID's
+
+    
+    added_cheats = []
+    for n in H.get_node_set():
+        r_hedges = get_restrictive_hedges(H,n)
+        for h in r_hedges:
+            c = H.add_hyperedge([n], H.get_hyperedge_head(h), attr_dict={'cheat': True})
+            added_cheats.append(c)
+    return added_cheats
+
+
+
+
+
+
 
 def find_b_fragments(H,dictionary=False):
     if dictionary:
