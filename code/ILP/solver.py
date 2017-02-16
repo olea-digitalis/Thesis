@@ -12,6 +12,7 @@ import numpy as np
 import glob
 import random
 import time
+import copy
 
 from ilp import *  ## import functions from ilp.py
 
@@ -38,6 +39,8 @@ def main(args):
         pairs.append(random.sample(H_nodes,2))
     """
 
+    """
+    #testing cheat hedges code
     print(H.get_node_set())
     print(H.get_hyperedge_id_set())
     print_all_hedges(H)
@@ -49,14 +52,16 @@ def main(args):
     print(H.get_hyperedge_id_set())
     print_all_hedges(H)
 
-    
+    """
 
     #find_b_fragments(H)
     
     #allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
     
-    #allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
-        #opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
+        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    print_all_hedges(H)
+    print(allvars)
     return 
    
 
@@ -235,6 +240,71 @@ def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,v
     ## return variables (first solution indexed at 0)
     print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
     return allvars, times
+
+
+
+
+
+
+###############################
+#MY ILP FOR CHEATING HYPERPATH#
+###############################
+
+
+def compute_cheating_hyperpaths(H_orig,source,target,outprefix,numsols,subopt,verbose):
+    cH = copy.deepcopy(H_orig)
+    cheatset = add_cheating_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
+    
+    ## Get induced sub-hypergraph on b-connected nodes 
+    bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(cH,source)
+    if target not in bconnected:
+        print 'TARGET NOT IN INPUT.'
+        return None, None
+    H = cH.get_induced_subhypergraph(bconnected)
+
+    if verbose:
+        #print '%d nodes are B-connected to source "%s"' % (len(bconnected),source)
+        print 'Hypergraph of B-connected nodes now has %d nodes and %d hyperedges.' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
+
+    ## Build the round 0 ILP.
+    lpfile = '%s.lp' % (outprefix)
+    k = len(cheatset)
+    mod_ilp.make_cheatinghyperpath_ilp(H,k,cheatset,source,target,lpfile)
+
+    ## get set of nodes (for parsing output)
+    nodeset = H.get_node_set()
+
+    ## Run the ILP
+    numsols,numoptobjective,allvars,times = mod_ilp.solveCheatILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose)
+    if verbose:
+        print 'Done.\n'
+        
+    if numsols == 0:
+        print 'INFEASIBLE SOLUTION.'
+        return None, None
+  
+    ## return variables (first solution indexed at 0)
+    print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
+
+    ########
+    #TO DO:#
+    ########
+    ##take the number of cheat hedges from the round 0 ILP result and use it as
+    #k for the iterative part
+    ##design the iterative part, i.e. a loop that creates a new ILP each round,
+    #making k 1 smaller each time
+    ##design a good way to save the result for each round of the ILP, want to
+    #save at the end of each round, taking note of k and the number of cheat
+    #hedges each time, in addition to the other information of the path.
+    #This should also save results at the end of each round, not at the end
+    #of the function (in case it runs too long).
+
+    return allvars, times
+
+
+
+
+
 
 
 def compile_shortest_hpaths(H,source,target,outprefix,numsols,subopt,verbose,path_directions=None):
