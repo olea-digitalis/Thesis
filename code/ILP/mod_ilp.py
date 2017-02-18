@@ -151,7 +151,7 @@ def make_cheatinghyperpath_ilp(H,k,cheatset,source,target,outfile):
 	## write constraints
 	out.write('Subject To\n')
 	c = 0
-        out,c = writeConstraint_fewerThan_k_cheats(H,k,out,c)
+        out,c = writeConstraint_fewerThan_k_cheats(H,k,cheatset,out,c)
 	out,c = writeConstraint_IfHedgeThenIncidents(H,out,c)
 	out,c = writeConstraint_IfHnodeThenBackwardStar(H,source,out,c)
 	out,c = writeConstraint_FixValues(H,{target:1},out,c)
@@ -170,7 +170,7 @@ def make_cheatinghyperpath_ilp(H,k,cheatset,source,target,outfile):
 ###############
 
 
-def writeConstraint_fewerThan_k_cheats(H,k,out,c):
+def writeConstraint_fewerThan_k_cheats(H,k,cheatset,out,c):
         '''
         Writes the constraint that the solution should include at most k
         cheat hedges
@@ -180,6 +180,7 @@ def writeConstraint_fewerThan_k_cheats(H,k,out,c):
         out.write('c%d_fewer_than_k_cheats: ' % (c))
         for hedge in cheatset:
                 out.write(' + ' + a(hedge))
+        out.write(' <= ' + str(k-1))
         out.write('\n')
         c+=1
         return out, c
@@ -510,7 +511,8 @@ def getILPSolution(H,nodeset,outprefix,num,objective,verbose):
 		if v[0] == 'a': # node
 			if verbose and variables[v] != 0:
 				print v,'-->',row[1],'=',variables[v]
-				
+                        print(row)
+                        print(nodeset)
 			if row[1] in nodeset: # node
 				nout.write('%s\t%s\t%d\n' % (v,row[1],variables[v]))
 			else: # edge

@@ -15,7 +15,7 @@ import time
 import copy
 
 from ilp import *  ## import functions from ilp.py
-
+import mod_ilp
 
 ## import HALP library.  https://github.com/Murali-group/halp
 from halp.directed_hypergraph import DirectedHypergraph
@@ -58,9 +58,12 @@ def main(args):
     
     #allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
     
-    allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
-        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    #allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
+    #    opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
     print_all_hedges(H)
+    allvars = compute_cheating_hyperpath(H,opts.source,opts.target,\
+        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    
     print(allvars)
     return 
    
@@ -161,6 +164,7 @@ def add_cheat_hedges(H):
     #for every restrictive hedge (see function: get_restrictive_hedges() ) of each node, we add a cheat hedge
     #cheat hedges model the restrictive hedges but they remove the restriction
     #that is, the tail of a cheat hedge contains only the given node, and the head contains the head set of the given restrictive hedge
+    #each cheat edge keeps track of which hedge it is modeled after via the 'original_hedge' attribute.
     #returns a list of the added cheat hedge ID's
 
     
@@ -168,8 +172,9 @@ def add_cheat_hedges(H):
     for n in H.get_node_set():
         r_hedges = get_restrictive_hedges(H,n)
         for h in r_hedges:
-            c = H.add_hyperedge([n], H.get_hyperedge_head(h), attr_dict={'cheat': True})
-            added_cheats.append(c)
+            if not H.has_hyperedge([n],H.get_hyperedge_head(h)): #this conditional is necessary because the halp library won't let you have two hyperedges with the same head and tail. If there is already with the head and tail of the candidate cheat edge, we simply do not make it.
+                c = H.add_hyperedge([n], H.get_hyperedge_head(h), attr_dict={'cheat': True, 'original_hedge': h})
+                added_cheats.append(c)
     return added_cheats
 
 
@@ -251,24 +256,27 @@ def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,v
 ###############################
 
 
-def compute_cheating_hyperpaths(H_orig,source,target,outprefix,numsols,subopt,verbose):
+def compute_cheating_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
     cH = copy.deepcopy(H_orig)
-    cheatset = add_cheating_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
+    cheatset = add_cheat_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
     
     ## Get induced sub-hypergraph on b-connected nodes 
     bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(cH,source)
     if target not in bconnected:
         print 'TARGET NOT IN INPUT.'
         return None, None
-    H = cH.get_induced_subhypergraph(bconnected)
+    print("Printing cH now:\n")
+    print_all_hedges(cH)
+    
+    #H = cH.get_induced_subhypergraph(bconnected)
+    #print("\n\nPrinting H now:\n")
+    #print_all_hedges(H)
 
-    if verbose:
-        #print '%d nodes are B-connected to source "%s"' % (len(bconnected),source)
-        print 'Hypergraph of B-connected nodes now has %d nodes and %d hyperedges.' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
-
+    H = cH
+    
     ## Build the round 0 ILP.
     lpfile = '%s.lp' % (outprefix)
-    k = len(cheatset)
+    k = len(cheatset)+1
     mod_ilp.make_cheatinghyperpath_ilp(H,k,cheatset,source,target,lpfile)
 
     ## get set of nodes (for parsing output)
@@ -276,13 +284,12 @@ def compute_cheating_hyperpaths(H_orig,source,target,outprefix,numsols,subopt,ve
 
     ## Run the ILP
     numsols,numoptobjective,allvars,times = mod_ilp.solveCheatILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose)
-    if verbose:
-        print 'Done.\n'
+
         
     if numsols == 0:
         print 'INFEASIBLE SOLUTION.'
         return None, None
-  
+
     ## return variables (first solution indexed at 0)
     print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
 
