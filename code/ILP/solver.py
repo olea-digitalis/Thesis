@@ -60,11 +60,27 @@ def main(args):
     
     #allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
     #    opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
-    print_all_hedges(H)
-    allvars = compute_cheating_hyperpath(H,opts.source,opts.target,\
-        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    """
+    cH = copy.deepcopy(H)
+    cheatset = add_cheat_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
+    k = 1
+
     
+
+    allvars = compute_cheating_hyperpath(cH,cheatset,k,opts.source,opts.target,\
+        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    """
+    iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+
+    """
+    print("\n\nHere's the hgraph:")
+    print_all_hedges(H)
+    print_all_hedges(cH)
+    print('\n')
+    print("Printing allvars:")
     print(allvars)
+    print(type(allvars[0][0]))
+    """
     return 
    
 
@@ -256,36 +272,31 @@ def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,v
 ###############################
 
 
-def compute_cheating_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
-    cH = copy.deepcopy(H_orig)
-    cheatset = add_cheat_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
-    
+def compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,subopt,verbose):
     ## Get induced sub-hypergraph on b-connected nodes 
     bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(cH,source)
     if target not in bconnected:
         print 'TARGET NOT IN INPUT.'
+        print(bconnected)
         return None, None
-    print("Printing cH now:\n")
-    print_all_hedges(cH)
+    #print("Printing cH now:\n")
+    #print_all_hedges(cH)
     
     #H = cH.get_induced_subhypergraph(bconnected)
     #print("\n\nPrinting H now:\n")
     #print_all_hedges(H)
 
-    H = cH
     
-    ## Build the round 0 ILP.
+    ## Build the ILP.
     lpfile = '%s.lp' % (outprefix)
-    k = len(cheatset)+1
-    mod_ilp.make_cheatinghyperpath_ilp(H,k,cheatset,source,target,lpfile)
+    mod_ilp.make_cheatinghyperpath_ilp(cH,k,cheatset,source,target,lpfile)
 
     ## get set of nodes (for parsing output)
-    nodeset = H.get_node_set()
+    nodeset = cH.get_node_set()
 
     ## Run the ILP
-    numsols,numoptobjective,allvars,times = mod_ilp.solveCheatILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose)
+    numsols,numoptobjective,allvars,times = mod_ilp.solveCheatILP(cH,nodeset,lpfile,outprefix,numsols,subopt,verbose)
 
-        
     if numsols == 0:
         print 'INFEASIBLE SOLUTION.'
         return None, None
@@ -293,20 +304,131 @@ def compute_cheating_hyperpath(H_orig,source,target,outprefix,numsols,subopt,ver
     ## return variables (first solution indexed at 0)
     print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
 
-    ########
-    #TO DO:#
-    ########
-    ##take the number of cheat hedges from the round 0 ILP result and use it as
-    #k for the iterative part
-    ##design the iterative part, i.e. a loop that creates a new ILP each round,
-    #making k 1 smaller each time
-    ##design a good way to save the result for each round of the ILP, want to
-    #save at the end of each round, taking note of k and the number of cheat
-    #hedges each time, in addition to the other information of the path.
-    #This should also save results at the end of each round, not at the end
-    #of the function (in case it runs too long).
-
     return allvars, times
+
+
+
+
+
+def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose):
+    results_file = outprefix + "_icILP_results.txt"
+    with open(results_file,'w') as rf:
+        rf.write("-------------------------------------\n")
+        rf.write("iterate_cheat_ILP results\n")
+        rf.write("-------------------------------------\n\n\n")
+    cH = copy.deepcopy(H_orig)
+    cheatset = add_cheat_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
+    k = len(cheatset)+1
+
+    while k > 0:
+        allvars, times = compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,subopt,verbose)
+        allvars = allvars[0] #for some reason this is a list containing only a dict
+        print("#####################################################")
+        print("#####################################################")
+        print("#####################################################")
+        print(allvars)
+        print(type(allvars))
+        print(allvars.keys())
+        print(cheatset)
+        print_all_hedges(cH)
+        print("#####################################################")
+        print("#####################################################")
+        print("#####################################################")
+        next_k = icILP_recorder(k,allvars,cheatset,outprefix)
+        k = next_k
+
+    return
+
+
+
+
+
+
+
+def icILP_recorder(k,allvars,cheatset,outprefix):
+    #this function will record a summary of each iteration of the icILP in a txt file
+    #it will also compute and return the k for the next iteration of the icILP
+
+    results_file = outprefix + "_icILP_results.txt"
+    
+    if allvars == None:
+        with open(results_file,'a') as rf:
+            rf.write('\n\nRESULTS: k=' + str(k) + '\n')
+            rf.write('NO SOLUTION')
+        return -1
+    
+    path_nodes = []
+    path_hedges = []
+    path_cheats = []
+    #for some reason allvars is returned as a list containing only a dictionary
+    #so that's why it's allvars[0] in the next line
+    for v in allvars.keys():
+        if var_is_alpha(v) and allvars[v]==1:
+            if var_is_edge(v):
+                path_hedges.append(get_var_id(v))
+                if var_is_cheat_edge(v, cheatset):
+                    path_cheats.append(get_var_id(v))
+            else:
+                path_nodes.append(get_var_id(v))
+
+    num_nodes = len(path_nodes)
+    num_hedges = len(path_hedges)
+    num_cheats = len(path_cheats)
+    next_k = num_cheats
+
+    with open(results_file,'a') as rf:
+        rf.write('\n\nRESULTS: k=' + str(k) + '\n')
+        rf.write('# nodes:\t# hedges:\t# cheats:\tnodes+hedges:\n')
+        rf.write(str(num_nodes) + '\t' + str(num_hedges) + '\t' + str(num_cheats) + '\t' + str(num_nodes + num_hedges) + '\n')
+        rf.write('\n\nNodes in Path: ' + str(path_nodes) + '\n\n')
+        rf.write('Hyperedges in Path: ' + str(path_hedges) + '\n\n')
+        rf.write('Cheat Hyperedges in Path: ' + str(path_cheats) + '\n\n')
+    
+    return next_k
+
+
+def write_ref_sheet(H, cH, cheatset,allvars=None):
+    #this function will construct a reference sheet so you can quickly figure out what a returned path should actually look like.
+    pass
+
+
+
+
+def get_var_id(v):
+    #gets the id from a variable in the ILP output
+    return v[2:]
+
+def var_is_alpha(v):
+    #determines whether a variable from the ILP output is an alpha variable
+    if v[0] == 'a':
+        return True
+    else:
+        return False
+
+def var_is_edge(v):
+    #this helper function determines whether an alpha variable from the ILP
+    #output belongs to an edge. On the toy graphs, edges are labeled e<number>
+    #but it's concievable that naming conventions for somebody else's graphs
+    #might complicate matters. So for now this is a placeholder, to make fixing
+    #things easier if such a problem arises.
+    var_id = get_var_id(v)
+    if var_id[0] == 'e':
+        try:
+            int(var_id[1])
+            return True
+        except:
+            return False
+    else:
+        return False
+
+def var_is_cheat_edge(v, cheatset):
+    #given that v is an alpha variable of an edge, determines whether that
+    #edge is a cheat edge or not
+    var_id = get_var_id(v)
+    if var_id in cheatset:
+        return True
+    else:
+        return False
 
 
 
