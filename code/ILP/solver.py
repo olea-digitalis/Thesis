@@ -54,7 +54,18 @@ def main(args):
 
     """
 
+    """
     #find_b_fragments(H)
+    bcon_dict = find_b_fragments(H, dictionary=True)
+    max_bcon_root = dict_max(bcon_dict, val_len)
+    print(len(bcon_dict[max_bcon_root]))
+    print("Max bcon root is called:", max_bcon_root)
+    print("Here are the bconnected nodes:", bcon_dict[max_bcon_root])
+    """
+    print_all_hedges(H)
+    compile_shortest_hpaths(H,'Complex842',opts.outprefix,opts.subopt, opts.verbose)
+    
+    
     
     #allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
     
@@ -70,7 +81,7 @@ def main(args):
     allvars = compute_cheating_hyperpath(cH,cheatset,k,opts.source,opts.target,\
         opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
     """
-    iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    #iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
 
     """
     print("\n\nHere's the hgraph:")
@@ -145,8 +156,6 @@ def get_frag_pairs(H, n):
             pass
         else:
             pass
-        
-
 
 
 def print_hedge(H,hedge):
@@ -226,7 +235,20 @@ def count(ls):
         else:
             d[i] = 1
     return d
-    
+
+
+def val_len(d, key):
+    return len(d[key])
+
+def dict_max(d, obj_function):
+    max_key = d.keys()[0]
+    max_val = obj_function(d,d.keys()[0])
+    for k in d.keys():
+        if obj_function(d,k) >= max_val:
+            max_key = k
+            max_val = obj_function(d,k)
+    return max_key
+
 
 
 def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
@@ -436,39 +458,40 @@ def var_is_cheat_edge(v, cheatset):
 
 
 
-def compile_shortest_hpaths(H,source,target,outprefix,numsols,subopt,verbose,path_directions=None):
-    if path_directions == None:
-        allvars, times = compute_shortest_b_hyperpath(H,source,target,outprefix,numsols,subopt,verbose)
-        return allvars
-    else:
-        compile_times = []
-        i = 0
-        for pair in path_directions:
-            with open (outprefix + '_working_record.txt','a') as wr:
-                wr.write(str(pair) + time.asctime() + '\n')
-            allvars, times = compute_shortest_b_hyperpath(H,str(pair[0]),str(pair[1]),outprefix,numsols,subopt,verbose)
+def compile_shortest_hpaths(H,root,outprefix,subopt,verbose):
+    #this times finding the shortest hyperpath between a root node and each
+    #node in its bconnected set. 
+    bconnected, ignore1, ignore2, ignore3 = directed_paths.b_visit(H,root)
+    time_ls = []
+    i = 0
+    t = len(bconnected)
 
-            if allvars:
-                with open (outprefix + '_working_record.txt','a') as wr:
-                    wr.write("Solution found!\n")
-                compile_times.append([pair,times])
-                i += 1
-
-            if i == 29:
-                break
+    with open(outprefix + '_times.csv','w') as time_file:
+        time_file.write("root: " + str(root) + '\n' + 'size of bconnected set: ' + str(t) + '\n\n')
+        time_file.write("Target\tTime (seconds)\n")
+    
+    for n in bconnected:
+        print("Round "+str(i)+'/'+str(t)+'\t'+str(n))
+        allvars, duration = compute_shortest_b_hyperpath(H,root,n,outprefix,1,subopt,verbose)
+        if duration != None:
+            time_ls.append(duration)
         with open (outprefix + '_times.csv','a') as time_file:
-            time_file.write(get_time_stats(compile_times,string_form=True) + '\n')
-            
-            for thing in compile_times:
-                time_file.write(str(thing) + '\n')
+            time_file.write(str(n) + '\t' + str(duration) + '\n')
+        i+=1
 
-        return allvars, times
+    with open(outprefix + '_times.csv','a') as time_file:
+        time_file.write('\n\n###########################################')
+        time_file.write('\nSUMMARY\n')
+        time_file.write('###########################################\n')
+        time_file.write(get_time_stats(time_ls,string_form=True) + '\n')
+
+    return
 
 def get_time_stats(compile_times,string_form=False):
     #returns the min time, max time, median, and mean
     all_times = []
-    for thing in compile_times:
-        for t in thing[1]:
+    for t_ls in compile_times:
+        for t in t_ls:
             all_times.append(t)
 
     max_time = max(all_times)

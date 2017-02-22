@@ -347,7 +347,7 @@ def getILPSolution(H,nodeset,outprefix,num,objective,verbose):
 		else:
 			variables[v] = int(variables[v])
 
-		row = v.split('_')
+                row = [v[0],v[2:]]
 		if v[0] == 'a': # node
 			if verbose and variables[v] != 0:
 				print v,'-->',row[1],'=',variables[v]
