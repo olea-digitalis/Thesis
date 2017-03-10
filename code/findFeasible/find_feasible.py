@@ -12,7 +12,7 @@ wnt_ls = ['pid_154','pid_168','pid_185','pid_206','pid_246','pid_250','pid_302',
 out = "feasible_out.txt"
 
 
-node_file = "signaling-hypergraph-hyperedges.txt"
+node_file = "signaling-hypergraph-hypernodes.txt"
 hedge_file = "signaling-hypergraph-hyperedges.txt"
 elements_file = "ncipid-elements.txt"
 
@@ -33,11 +33,16 @@ def find_feasible(source, hedgefile, nodefile, elements, outfile):
     nodes = parse_nodes(nodefile)
     hedges = parse_hedges(hedgefile)
     populate_nodes(nodes, hedges, True)
-    node_names = [n.name for n in nodes]
-    if source not in node_names:
+
+    source_node = None
+    for n in nodes:
+        if n.name == source:
+            source_node = n
+    if not source_node:
         print("Warning! " + source + " not found in node file!")
         return
-    feas_ls = frag_BFS(nodes,source, ignore_direction = False, out_ls = True)
+    
+    feas_ls = frag_BFS(nodes,source_node, ignore_direction = False, out_ls = True)
     with open(outfile,'a') as o:
         for id in feas_ls:
             o.write(find_entry(id, elements))
@@ -53,12 +58,15 @@ def iterate_find_feasible(ls, hedgefile, nodefile, elements, outfile):
         o.write("FEASIBLE TARGETS FOR " + str(ls) + "\n")
         o.write("#####################################\n")
         o.write("\n\n")
-        for source in ls:
+
+    for source in ls:
+        with open(outfile,'a') as o:
             o.write("##################\n")
             o.write("TARGETS FOR " + source + ":\n")
             o.write(find_entry(source, elements))
             o.write("##################\n")
-            find_feasible(source, hedgefile, nodefile, elements, outfile)
+        find_feasible(source, hedgefile, nodefile, elements, outfile)
+        with open(outfile,'a') as o:
             o.write("\n\n")
 
 iterate_find_feasible(wnt_ls,hedge_file,node_file, elements_file, out)
