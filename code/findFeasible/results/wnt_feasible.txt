@@ -1,0 +1,734 @@
+#####################################
+FEASIBLE TARGETS FOR ['pid_154', 'pid_168', 'pid_185', 'pid_206', 'pid_246', 'pid_250', 'pid_302', 'pid_319', 'pid_330', 'pid_334', 'pid_350', 'pid_361', 'pid_368', 'pid_400', 'pid_454', 'pid_467', 'pid_492', 'pid_532', 'pid_791', 'pid_82477']
+#####################################
+
+
+##################
+TARGETS FOR pid_154:
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+##################
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_168:
+pid_168	WNT1	UniProt:P04628	protein	None	None	None
+##################
+pid_168	WNT1	UniProt:P04628	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_185:
+pid_185	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	extracellular-region	None
+##################
+pid_185	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	extracellular-region	None
+pid_164	LRP6	UniProt:O75581	protein	None	integral-to-membrane	None
+pid_461	WNT3A/FZD2/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_443	pid_170:1.0;pid_206:1.0;pid_443:1.0	None
+pid_466	WNT5A/FZD2	None	integral-to-membrane	pid_443;pid_467	pid_443:1.0;pid_467:1.0	None
+pid_225	FZD8	UniProt:Q9H461	protein	None	integral-to-membrane	None
+pid_421	WNT3A/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_233	pid_170:1.0;pid_206:1.0;pid_233:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_333	WNT3A/WNT-inhibitory-factor-1	inactivating-residue-modification	extracellular-region	pid_206;pid_334	pid_206:1.0;pid_334:1.0	None
+pid_519	WNT3A/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_206	pid_169:1.0;pid_170:1.0;pid_206:1.0	None
+pid_205	WNT3A/FZD5/LRP6;WNT3A/LRP6/FZD5	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207	pid_170:1.0;pid_206:1.0;pid_207:1.0	None
+pid_556	FZD8/LRP6/IGFBP4	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_557	pid_170:1.0;pid_233:1.0;pid_557:1.0	None
+pid_599	WNT3A/FZD8/LRP6/PRR	activating-residue-modification	endosome	pid_170;pid_206;pid_233;pid_600	pid_170:1.0;pid_206:1.0;pid_233:1.0;pid_600:1.0	None
+pid_653	WNT3A/FZD1	activating-residue-modification	integral-to-membrane	pid_169;pid_206	pid_169:1.0;pid_206:1.0	None
+pid_249	WNT3/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_250	pid_169:1.0;pid_170:1.0;pid_250:1.0	None
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_536	WNT2/FZD9/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_350;pid_537	pid_170:1.0;pid_350:1.0;pid_537:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_349	WNT2/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_350	pid_169:1.0;pid_170:1.0;pid_350:1.0	None
+pid_491	WNT7A/FZD5/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_207;pid_492	pid_170:1.0;pid_207:1.0;pid_492:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_88615	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_88638	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88795	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_77289	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+pid_88644	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88769	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_26794	beta-catenin	UniProt:P35222	protein	None	cytoplasm	None
+pid_3479	APC	UniProt:P25054	protein	None	None	None
+pid_88734	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88807	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77221;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0	None
+pid_88656	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88626	beta-catenin	UniProt:P35222	protein	None	nucleus	None
+pid_77279	Axin1/APC//beta-catenin;Axin1/APC/beta-catenin	None	cytoplasm	pid_26214;pid_3479;pid_48362	pid_26214:1.0;pid_3479:1.0;pid_48362:1.0	None
+pid_26317	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	cytoplasm	None
+pid_80083	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191	cytoplasm	None
+pid_160979	APC/ASEF	activating-residue-modification	None	pid_160980;pid_3479	pid_160980:1.0;pid_3479:1.0	None
+pid_159775	APC	UniProt:P25054	protein	None	microtubule	None
+pid_88837	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77290;pid_88838	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77290:1.0;pid_88838:1.0	None
+pid_88815	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88816	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88816:1.0	None
+pid_88664	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88665	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88665:1.0	None
+pid_98324	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98325	pid_26214:1.0;pid_98325:1.0	None
+pid_98657	TLE1	UniProt:Q04724	protein	None	nucleus	None
+pid_98348	TLE2	UniProt:Q04725	protein	None	nucleus	None
+pid_98471	HDAC1	UniProt:Q13547	protein	inactivating-residue-modification	None	None
+pid_98719	beta-catenin/ICAT	inactivating-residue-modification	nucleus	pid_26214;pid_98720	pid_26214:1.0;pid_98720:1.0	None
+pid_98522	beta-catenin/APC	None	nucleus	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98554	TCF1E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98555	pid_26214:1.0;pid_98555:1.0	None
+pid_99197	AES	UniProt:Q08117	protein	None	nucleus	None
+pid_98634	14-3-3-family/chibby/beta-catenin	None	nucleus	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98308	beta-catenin/IMFA	activating-residue-modification	nucleus	pid_26214;pid_98283	pid_26214:1.0;pid_98283:1.0	None
+pid_98312	MYF5	UniProt:P13349	protein	None	nucleus	None
+pid_98837	beta-catenin/duplin	inactivating-residue-modification	nucleus	pid_26214;pid_98838	pid_26214:1.0;pid_98838:1.0	None
+pid_98804	beta-catenin/TBL1/TBLR1	None	nucleus	pid_26214;pid_98805;pid_98807	pid_26214:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98393	TCF4/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98394	pid_26214:1.0;pid_98394:1.0	None
+pid_98292	beta-catenin/myogenin	activating-residue-modification	nucleus	pid_26214;pid_98293	pid_26214:1.0;pid_98293:1.0	None
+pid_98299	myogenin	UniProt:P15173	protein	None	nucleus	None
+pid_98382	beta-catenin/MED12	activating-residue-modification	nucleus	pid_26214;pid_98383	pid_26214:1.0;pid_98383:1.0	None
+pid_98962	TLE4	UniProt:Q04727	protein	None	nucleus	None
+pid_98344	TCF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98335	pid_26214:1.0;pid_98335:1.0	None
+pid_98989	beta-catenin/PITX2	activating-residue-modification	None	pid_26214;pid_98849	pid_26214:1.0;pid_98849:1.0	None
+pid_98493	TCF4E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98494	pid_26214:1.0;pid_98494:1.0	None
+pid_98438	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98439	pid_26214:1.0;pid_98439:1.0	None
+pid_98588	TCF3/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98582	pid_26214:1.0;pid_98582:1.0	None
+pid_77249	Axin1/APC//beta-catenin	None	cytoplasm	pid_3479;pid_48362;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77223:1.0	None
+pid_132279	Axin1	UniProt:O15169	protein	activating-residue-modification	cytoplasm	None
+pid_132281	APC	UniProt:P25054	protein	activating-residue-modification	cytoplasm	None
+pid_132283	beta-catenin	UniProt:P35222	protein	activating-residue-modification	cytoplasm	None
+pid_26901	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	nucleus	None
+pid_80123	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191;activating-residue-modification	nucleus	None
+pid_159776	APC/DLG1	None	cell-leading-edge	pid_159633;pid_3479	pid_159633:1.0;pid_3479:1.0	None
+pid_77319	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77320:1.0	None
+pid_98902	LEF1/beta-catenin/PITX2	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98849	pid_26214:1.0;pid_98325:1.0;pid_98849:1.0	None
+pid_98362	LEF1/beta-catenin/CDX1	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98358	pid_26214:1.0;pid_98325:1.0;pid_98358:1.0	None
+pid_99062	beta-catenin/APC	inactivating-residue-modification	cytoplasm	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98601	beta-catenin/APC/CtBP	inactivating-residue-modification	nucleus	pid_26214;pid_3479;pid_92258	pid_26214:1.0;pid_3479:1.0;pid_92258:1.0	None
+pid_99212	14-3-3-family/chibby/beta-catenin	inactivating-residue-modification	cytoplasm	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98817	TCF4/beta-catenin/TBLR1/TBL1	activating-residue-modification	nucleus	pid_26214;pid_85025;pid_98805;pid_98807	pid_26214:1.0;pid_85025:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98823	TLE1/HDAC1	None	nucleus	pid_7761;pid_98651	pid_7761:1.0;pid_98651:1.0	None
+pid_98422	TCF4/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98394	pid_26214:1.0;pid_7834:1.0;pid_98394:1.0	None
+pid_98414	beta-catenin/AR/T-DHT/TIF2	activating-residue-modification	nucleus	pid_26214;pid_44594;pid_44602;pid_7475	pid_26214:1.0;pid_44594:1.0;pid_44602:1.0;pid_7475:1.0	None
+pid_98458	TCF4	UniProt:Q9NQB0	protein	None	nucleus	None
+pid_99079	TCF4/beta-catenin/TRRAP/SCF	None	None	pid_48214;pid_5613;pid_77342;pid_77344;pid_98394;pid_99080	pid_48214:1.0;pid_5613:1.0;pid_77342:1.0;pid_77344:1.0;pid_98394:1.0;pid_99080:1.0	None
+pid_98507	TCF4/beta-catenin/TNIK	activating-residue-modification	nucleus	pid_26214;pid_98508;pid_98510	pid_26214:1.0;pid_98508:1.0;pid_98510:1.0	None
+pid_99131	TCF4/beta-catenin/TIP49B	inactivating-residue-modification	nucleus	pid_26214;pid_48262;pid_98394	pid_26214:1.0;pid_48262:1.0;pid_98394:1.0	None
+pid_98481	TCF4/beta-catenin/Cbp	activating-residue-modification	nucleus	pid_26214;pid_98394;pid_98482	pid_26214:1.0;pid_98394:1.0;pid_98482:1.0	None
+pid_98924	TCF4/beta-catenin/JUN/DVL3	activating-residue-modification	nucleus	pid_26214;pid_7513;pid_77299;pid_98394	pid_26214:1.0;pid_7513:1.0;pid_77299:1.0;pid_98394:1.0	None
+pid_98449	TCF4/beta-catenin/HBP1	inactivating-residue-modification	nucleus	pid_26214;pid_48245;pid_98394	pid_26214:1.0;pid_48245:1.0;pid_98394:1.0	None
+pid_98403	TCF4/beta-catenin/KLF4	inactivating-residue-modification	nucleus	pid_26214;pid_98394;pid_98400	pid_26214:1.0;pid_98394:1.0;pid_98400:1.0	None
+pid_98568	TCF4/HDAC1-HDAC2	activating-residue-modification	nucleus	pid_98394;pid_98566	pid_98394:1.0;pid_98566:1.0	None
+pid_98572	beta-catenin	UniProt:P35222	protein	inactivating-residue-modification	nucleus	None
+pid_98700	TCF4E/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98494	pid_26214:1.0;pid_7834:1.0;pid_98494:1.0	None
+pid_98617	TCF4E/beta-catenin/BCL9	activating-residue-modification	nucleus	pid_26214;pid_98494;pid_98614	pid_26214:1.0;pid_98494:1.0;pid_98614:1.0	None
+pid_98671	TCF3/beta-catenin/TERT/BRG1	activating-residue-modification	nucleus	pid_26214;pid_98582;pid_98672;pid_98674	pid_26214:1.0;pid_98582:1.0;pid_98672:1.0;pid_98674:1.0	None
+pid_77220	Axin1/APC//beta-catenin/GSK3	None	cytoplasm	pid_3479;pid_48362;pid_77221;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77221:1.0;pid_77223:1.0	None
+pid_132305	APC	UniProt:P25054	protein	None	cytoplasm	None
+pid_132503	Axin1	UniProt:O15169	protein	None	cytoplasm	None
+pid_132472	beta-catenin	UniProt:P35222	protein	activating-residue-modification	nucleus	None
+pid_132269	beta-catenin/beta-TrCP1	None	cytoplasm	pid_132270;pid_5613	pid_132270:1.0;pid_5613:1.0	None
+pid_88906	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:2.0;pid_77221:2.0;pid_77290:1.0;pid_77320:1.0	None
+pid_77229	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77230;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77230:1.0;pid_77234:1.0	None
+pid_132315	beta-catenin/TCF1/CtBP/CBP/TLE1/AES/SMAD4	None	nucleus	pid_132316;pid_18184;pid_26214;pid_92258;pid_98651;pid_99191	pid_132316:1.0;pid_18184:1.0;pid_26214:1.0;pid_92258:1.0;pid_98651:1.0;pid_99191:1.0	None
+pid_132273	beta-catenin	UniProt:P35222	protein	[ubiquitinylated-lysine]@null;inactivating-residue-modification	cytoplasm	None
+pid_132274	beta-TrCP1	UniProt:Q9Y297	protein	None	cytoplasm	None
+pid_88705	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77223;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77223:1.0;pid_77234:1.0	None
+pid_77267	APC/beta-catenin	None	None	pid_77230;pid_77234	pid_77230:1.0;pid_77234:1.0	None
+pid_77357	Axin1/GSK3	None	cytoplasm	pid_48362;pid_68387	pid_48362:1.0;pid_68387:1.0	None
+pid_88710	WNT3A/LRP6/FZD5/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77320:1.0	None
+pid_77335	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@33;[O-phospho-L-serine]@37;[O-phospho-L-serine]@45;[O-phospho-L-threonine]@41;[ubiquitinylated-lysine]@19	cytoplasm	None
+
+
+##################
+TARGETS FOR pid_206:
+pid_206	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	None	None
+##################
+pid_206	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	None	None
+
+
+##################
+TARGETS FOR pid_246:
+pid_246	WNT3	UniProt:P56703	protein	None	extracellular-region	None
+##################
+pid_246	WNT3	UniProt:P56703	protein	None	extracellular-region	None
+pid_249	WNT3/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_250	pid_169:1.0;pid_170:1.0;pid_250:1.0	None
+
+
+##################
+TARGETS FOR pid_250:
+pid_250	WNT3	UniProt:P56703	protein	None	None	None
+##################
+pid_250	WNT3	UniProt:P56703	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_302:
+pid_302	WNT5A	UniProt:P41221	protein	[N4-glycosyl-L-asparagine]@114;[N4-glycosyl-L-asparagine]@120;[N4-glycosyl-L-asparagine]@312;[N4-glycosyl-L-asparagine]@326;[S-palmitoyl-L-cysteine]@104	extracellular-region	None
+##################
+pid_302	WNT5A	UniProt:P41221	protein	[N4-glycosyl-L-asparagine]@114;[N4-glycosyl-L-asparagine]@120;[N4-glycosyl-L-asparagine]@312;[N4-glycosyl-L-asparagine]@326;[S-palmitoyl-L-cysteine]@104	extracellular-region	None
+pid_364	LRP5	UniProt:O75197	protein	None	integral-to-membrane	None
+pid_572	WNT5A/FZD4/LRP5	activating-residue-modification	integral-to-membrane	pid_319;pid_369;pid_573	pid_319:1.0;pid_369:1.0;pid_573:1.0	None
+pid_798	FZD4	UniProt:Q9ULV1	protein	None	integral-to-membrane	None
+pid_799	WNT5A/ROR2	inactivating-residue-modification	integral-to-membrane	pid_319;pid_397	pid_319:1.0;pid_397:1.0	None
+pid_318	WNT5A/FZD7	activating-residue-modification	integral-to-membrane	pid_319;pid_320	pid_319:1.0;pid_320:1.0	None
+pid_442	WNT5A/FZD2	activating-residue-modification	integral-to-membrane	pid_319;pid_443	pid_319:1.0;pid_443:1.0	None
+pid_701	WNT5A/FZD2/ROR2-(dimer)	activating-residue-modification	integral-to-membrane	pid_319;pid_443;pid_702;pid_706	pid_319:1.0;pid_443:1.0;pid_702:1.0;pid_706:1.0	None
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_367	WNT7B/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_169;pid_368;pid_369	pid_169:1.0;pid_368:1.0;pid_369:1.0	None
+pid_586	WNT7B/FZD10/LRP5	activating-residue-modification	integral-to-membrane	pid_368;pid_369;pid_587	pid_368:1.0;pid_369:1.0;pid_587:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_319:
+pid_319	WNT5A	UniProt:P41221	protein	[N4-glycosyl-L-asparagine]@114;[N4-glycosyl-L-asparagine]@120;[N4-glycosyl-L-asparagine]@312;[N4-glycosyl-L-asparagine]@326;[S-palmitoyl-L-cysteine]@104	None	None
+##################
+pid_319	WNT5A	UniProt:P41221	protein	[N4-glycosyl-L-asparagine]@114;[N4-glycosyl-L-asparagine]@120;[N4-glycosyl-L-asparagine]@312;[N4-glycosyl-L-asparagine]@326;[S-palmitoyl-L-cysteine]@104	None	None
+
+
+##################
+TARGETS FOR pid_330:
+pid_330	WNT-inhibitory-factor-1	UniProt:Q9Y5W5	protein	None	extracellular-region	None
+##################
+pid_330	WNT-inhibitory-factor-1	UniProt:Q9Y5W5	protein	None	extracellular-region	None
+pid_333	WNT3A/WNT-inhibitory-factor-1	inactivating-residue-modification	extracellular-region	pid_206;pid_334	pid_206:1.0;pid_334:1.0	None
+
+
+##################
+TARGETS FOR pid_334:
+pid_334	WNT-inhibitory-fator-1	UniProt:Q9Y5W5	protein	None	None	None
+##################
+pid_334	WNT-inhibitory-fator-1	UniProt:Q9Y5W5	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_350:
+pid_350	WNT2	UniProt:P09544	protein	None	None	None
+##################
+pid_350	WNT2	UniProt:P09544	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_361:
+pid_361	WNT7B	UniProt:P56706	protein	None	extracellular-region	None
+##################
+pid_361	WNT7B	UniProt:P56706	protein	None	extracellular-region	None
+pid_367	WNT7B/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_169;pid_368;pid_369	pid_169:1.0;pid_368:1.0;pid_369:1.0	None
+pid_586	WNT7B/FZD10/LRP5	activating-residue-modification	integral-to-membrane	pid_368;pid_369;pid_587	pid_368:1.0;pid_369:1.0;pid_587:1.0	None
+
+
+##################
+TARGETS FOR pid_368:
+pid_368	WNT7B	UniProt:P56706	protein	None	None	None
+##################
+pid_368	WNT7B	UniProt:P56706	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_400:
+pid_400	WNT3A-WNT5A	None	protein	None	None	None
+##################
+pid_400	WNT3A-WNT5A	None	protein	None	None	None
+pid_636	WNT3A-WNT5A/FZD5-FZD6/ROR2(dimer)/CTHRC1(trimer)	activating-residue-modification	integral-to-membrane	pid_394;pid_400;pid_402;pid_637	pid_394:3.0;pid_400:1.0;pid_402:1.0;pid_637:2.0	None
+
+
+##################
+TARGETS FOR pid_454:
+pid_454	WNT5A	UniProt:P41221	protein	[palmitoylated-residue-[residue=N]]@114;[palmitoylated-residue-[residue=N]]@120;[palmitoylated-residue-[residue=N]]@312;[palmitoylated-residue-[residue=N]]@326;[S-palmitoyl-L-cysteine]@104	extracellular-region	None
+##################
+pid_454	WNT5A	UniProt:P41221	protein	[palmitoylated-residue-[residue=N]]@114;[palmitoylated-residue-[residue=N]]@120;[palmitoylated-residue-[residue=N]]@312;[palmitoylated-residue-[residue=N]]@326;[S-palmitoyl-L-cysteine]@104	extracellular-region	None
+pid_164	LRP6	UniProt:O75581	protein	None	integral-to-membrane	None
+pid_185	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	extracellular-region	None
+pid_461	WNT3A/FZD2/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_443	pid_170:1.0;pid_206:1.0;pid_443:1.0	None
+pid_466	WNT5A/FZD2	None	integral-to-membrane	pid_443;pid_467	pid_443:1.0;pid_467:1.0	None
+pid_249	WNT3/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_250	pid_169:1.0;pid_170:1.0;pid_250:1.0	None
+pid_225	FZD8	UniProt:Q9H461	protein	None	integral-to-membrane	None
+pid_421	WNT3A/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_233	pid_170:1.0;pid_206:1.0;pid_233:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_519	WNT3A/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_206	pid_169:1.0;pid_170:1.0;pid_206:1.0	None
+pid_205	WNT3A/FZD5/LRP6;WNT3A/LRP6/FZD5	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207	pid_170:1.0;pid_206:1.0;pid_207:1.0	None
+pid_536	WNT2/FZD9/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_350;pid_537	pid_170:1.0;pid_350:1.0;pid_537:1.0	None
+pid_556	FZD8/LRP6/IGFBP4	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_557	pid_170:1.0;pid_233:1.0;pid_557:1.0	None
+pid_599	WNT3A/FZD8/LRP6/PRR	activating-residue-modification	endosome	pid_170;pid_206;pid_233;pid_600	pid_170:1.0;pid_206:1.0;pid_233:1.0;pid_600:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_349	WNT2/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_350	pid_169:1.0;pid_170:1.0;pid_350:1.0	None
+pid_491	WNT7A/FZD5/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_207;pid_492	pid_170:1.0;pid_207:1.0;pid_492:1.0	None
+pid_333	WNT3A/WNT-inhibitory-factor-1	inactivating-residue-modification	extracellular-region	pid_206;pid_334	pid_206:1.0;pid_334:1.0	None
+pid_653	WNT3A/FZD1	activating-residue-modification	integral-to-membrane	pid_169;pid_206	pid_169:1.0;pid_206:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_88615	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_88638	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88795	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_77289	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+pid_88644	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88769	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_26794	beta-catenin	UniProt:P35222	protein	None	cytoplasm	None
+pid_3479	APC	UniProt:P25054	protein	None	None	None
+pid_88734	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88807	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77221;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0	None
+pid_88656	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88626	beta-catenin	UniProt:P35222	protein	None	nucleus	None
+pid_77279	Axin1/APC//beta-catenin;Axin1/APC/beta-catenin	None	cytoplasm	pid_26214;pid_3479;pid_48362	pid_26214:1.0;pid_3479:1.0;pid_48362:1.0	None
+pid_26317	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	cytoplasm	None
+pid_80083	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191	cytoplasm	None
+pid_160979	APC/ASEF	activating-residue-modification	None	pid_160980;pid_3479	pid_160980:1.0;pid_3479:1.0	None
+pid_159775	APC	UniProt:P25054	protein	None	microtubule	None
+pid_88837	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77290;pid_88838	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77290:1.0;pid_88838:1.0	None
+pid_88815	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88816	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88816:1.0	None
+pid_88664	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88665	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88665:1.0	None
+pid_98324	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98325	pid_26214:1.0;pid_98325:1.0	None
+pid_98657	TLE1	UniProt:Q04724	protein	None	nucleus	None
+pid_98348	TLE2	UniProt:Q04725	protein	None	nucleus	None
+pid_98471	HDAC1	UniProt:Q13547	protein	inactivating-residue-modification	None	None
+pid_98719	beta-catenin/ICAT	inactivating-residue-modification	nucleus	pid_26214;pid_98720	pid_26214:1.0;pid_98720:1.0	None
+pid_98522	beta-catenin/APC	None	nucleus	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98554	TCF1E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98555	pid_26214:1.0;pid_98555:1.0	None
+pid_99197	AES	UniProt:Q08117	protein	None	nucleus	None
+pid_98634	14-3-3-family/chibby/beta-catenin	None	nucleus	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98308	beta-catenin/IMFA	activating-residue-modification	nucleus	pid_26214;pid_98283	pid_26214:1.0;pid_98283:1.0	None
+pid_98312	MYF5	UniProt:P13349	protein	None	nucleus	None
+pid_98837	beta-catenin/duplin	inactivating-residue-modification	nucleus	pid_26214;pid_98838	pid_26214:1.0;pid_98838:1.0	None
+pid_98804	beta-catenin/TBL1/TBLR1	None	nucleus	pid_26214;pid_98805;pid_98807	pid_26214:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98393	TCF4/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98394	pid_26214:1.0;pid_98394:1.0	None
+pid_98292	beta-catenin/myogenin	activating-residue-modification	nucleus	pid_26214;pid_98293	pid_26214:1.0;pid_98293:1.0	None
+pid_98299	myogenin	UniProt:P15173	protein	None	nucleus	None
+pid_98382	beta-catenin/MED12	activating-residue-modification	nucleus	pid_26214;pid_98383	pid_26214:1.0;pid_98383:1.0	None
+pid_98962	TLE4	UniProt:Q04727	protein	None	nucleus	None
+pid_98344	TCF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98335	pid_26214:1.0;pid_98335:1.0	None
+pid_98989	beta-catenin/PITX2	activating-residue-modification	None	pid_26214;pid_98849	pid_26214:1.0;pid_98849:1.0	None
+pid_98493	TCF4E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98494	pid_26214:1.0;pid_98494:1.0	None
+pid_98438	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98439	pid_26214:1.0;pid_98439:1.0	None
+pid_98588	TCF3/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98582	pid_26214:1.0;pid_98582:1.0	None
+pid_77249	Axin1/APC//beta-catenin	None	cytoplasm	pid_3479;pid_48362;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77223:1.0	None
+pid_132279	Axin1	UniProt:O15169	protein	activating-residue-modification	cytoplasm	None
+pid_132281	APC	UniProt:P25054	protein	activating-residue-modification	cytoplasm	None
+pid_132283	beta-catenin	UniProt:P35222	protein	activating-residue-modification	cytoplasm	None
+pid_26901	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	nucleus	None
+pid_80123	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191;activating-residue-modification	nucleus	None
+pid_159776	APC/DLG1	None	cell-leading-edge	pid_159633;pid_3479	pid_159633:1.0;pid_3479:1.0	None
+pid_77319	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77320:1.0	None
+pid_98902	LEF1/beta-catenin/PITX2	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98849	pid_26214:1.0;pid_98325:1.0;pid_98849:1.0	None
+pid_98362	LEF1/beta-catenin/CDX1	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98358	pid_26214:1.0;pid_98325:1.0;pid_98358:1.0	None
+pid_99062	beta-catenin/APC	inactivating-residue-modification	cytoplasm	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98601	beta-catenin/APC/CtBP	inactivating-residue-modification	nucleus	pid_26214;pid_3479;pid_92258	pid_26214:1.0;pid_3479:1.0;pid_92258:1.0	None
+pid_99212	14-3-3-family/chibby/beta-catenin	inactivating-residue-modification	cytoplasm	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98817	TCF4/beta-catenin/TBLR1/TBL1	activating-residue-modification	nucleus	pid_26214;pid_85025;pid_98805;pid_98807	pid_26214:1.0;pid_85025:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98823	TLE1/HDAC1	None	nucleus	pid_7761;pid_98651	pid_7761:1.0;pid_98651:1.0	None
+pid_98422	TCF4/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98394	pid_26214:1.0;pid_7834:1.0;pid_98394:1.0	None
+pid_98414	beta-catenin/AR/T-DHT/TIF2	activating-residue-modification	nucleus	pid_26214;pid_44594;pid_44602;pid_7475	pid_26214:1.0;pid_44594:1.0;pid_44602:1.0;pid_7475:1.0	None
+pid_98458	TCF4	UniProt:Q9NQB0	protein	None	nucleus	None
+pid_99079	TCF4/beta-catenin/TRRAP/SCF	None	None	pid_48214;pid_5613;pid_77342;pid_77344;pid_98394;pid_99080	pid_48214:1.0;pid_5613:1.0;pid_77342:1.0;pid_77344:1.0;pid_98394:1.0;pid_99080:1.0	None
+pid_98507	TCF4/beta-catenin/TNIK	activating-residue-modification	nucleus	pid_26214;pid_98508;pid_98510	pid_26214:1.0;pid_98508:1.0;pid_98510:1.0	None
+pid_99131	TCF4/beta-catenin/TIP49B	inactivating-residue-modification	nucleus	pid_26214;pid_48262;pid_98394	pid_26214:1.0;pid_48262:1.0;pid_98394:1.0	None
+pid_98481	TCF4/beta-catenin/Cbp	activating-residue-modification	nucleus	pid_26214;pid_98394;pid_98482	pid_26214:1.0;pid_98394:1.0;pid_98482:1.0	None
+pid_98924	TCF4/beta-catenin/JUN/DVL3	activating-residue-modification	nucleus	pid_26214;pid_7513;pid_77299;pid_98394	pid_26214:1.0;pid_7513:1.0;pid_77299:1.0;pid_98394:1.0	None
+pid_98449	TCF4/beta-catenin/HBP1	inactivating-residue-modification	nucleus	pid_26214;pid_48245;pid_98394	pid_26214:1.0;pid_48245:1.0;pid_98394:1.0	None
+pid_98403	TCF4/beta-catenin/KLF4	inactivating-residue-modification	nucleus	pid_26214;pid_98394;pid_98400	pid_26214:1.0;pid_98394:1.0;pid_98400:1.0	None
+pid_98568	TCF4/HDAC1-HDAC2	activating-residue-modification	nucleus	pid_98394;pid_98566	pid_98394:1.0;pid_98566:1.0	None
+pid_98572	beta-catenin	UniProt:P35222	protein	inactivating-residue-modification	nucleus	None
+pid_98700	TCF4E/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98494	pid_26214:1.0;pid_7834:1.0;pid_98494:1.0	None
+pid_98617	TCF4E/beta-catenin/BCL9	activating-residue-modification	nucleus	pid_26214;pid_98494;pid_98614	pid_26214:1.0;pid_98494:1.0;pid_98614:1.0	None
+pid_98671	TCF3/beta-catenin/TERT/BRG1	activating-residue-modification	nucleus	pid_26214;pid_98582;pid_98672;pid_98674	pid_26214:1.0;pid_98582:1.0;pid_98672:1.0;pid_98674:1.0	None
+pid_77220	Axin1/APC//beta-catenin/GSK3	None	cytoplasm	pid_3479;pid_48362;pid_77221;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77221:1.0;pid_77223:1.0	None
+pid_132305	APC	UniProt:P25054	protein	None	cytoplasm	None
+pid_132503	Axin1	UniProt:O15169	protein	None	cytoplasm	None
+pid_132472	beta-catenin	UniProt:P35222	protein	activating-residue-modification	nucleus	None
+pid_132269	beta-catenin/beta-TrCP1	None	cytoplasm	pid_132270;pid_5613	pid_132270:1.0;pid_5613:1.0	None
+pid_88906	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:2.0;pid_77221:2.0;pid_77290:1.0;pid_77320:1.0	None
+pid_77229	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77230;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77230:1.0;pid_77234:1.0	None
+pid_132315	beta-catenin/TCF1/CtBP/CBP/TLE1/AES/SMAD4	None	nucleus	pid_132316;pid_18184;pid_26214;pid_92258;pid_98651;pid_99191	pid_132316:1.0;pid_18184:1.0;pid_26214:1.0;pid_92258:1.0;pid_98651:1.0;pid_99191:1.0	None
+pid_132273	beta-catenin	UniProt:P35222	protein	[ubiquitinylated-lysine]@null;inactivating-residue-modification	cytoplasm	None
+pid_132274	beta-TrCP1	UniProt:Q9Y297	protein	None	cytoplasm	None
+pid_88705	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77223;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77223:1.0;pid_77234:1.0	None
+pid_77267	APC/beta-catenin	None	None	pid_77230;pid_77234	pid_77230:1.0;pid_77234:1.0	None
+pid_77357	Axin1/GSK3	None	cytoplasm	pid_48362;pid_68387	pid_48362:1.0;pid_68387:1.0	None
+pid_88710	WNT3A/LRP6/FZD5/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77320:1.0	None
+pid_77335	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@33;[O-phospho-L-serine]@37;[O-phospho-L-serine]@45;[O-phospho-L-threonine]@41;[ubiquitinylated-lysine]@19	cytoplasm	None
+
+
+##################
+TARGETS FOR pid_467:
+pid_467	WNT5A	UniProt:P41221	protein	[palmitoylated-residue-[residue=N]]@114;[palmitoylated-residue-[residue=N]]@120;[palmitoylated-residue-[residue=N]]@312;[palmitoylated-residue-[residue=N]]@326;[S-palmitoyl-L-cysteine]@104	None	None
+##################
+pid_467	WNT5A	UniProt:P41221	protein	[palmitoylated-residue-[residue=N]]@114;[palmitoylated-residue-[residue=N]]@120;[palmitoylated-residue-[residue=N]]@312;[palmitoylated-residue-[residue=N]]@326;[S-palmitoyl-L-cysteine]@104	None	None
+
+
+##################
+TARGETS FOR pid_492:
+pid_492	WNT7A	UniProt:O00755	protein	None	None	None
+##################
+pid_492	WNT7A	UniProt:O00755	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_532:
+pid_532	WNT2	UniProt:P09544	protein	None	extracellular-region	None
+##################
+pid_532	WNT2	UniProt:P09544	protein	None	extracellular-region	None
+pid_536	WNT2/FZD9/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_350;pid_537	pid_170:1.0;pid_350:1.0;pid_537:1.0	None
+pid_349	WNT2/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_350	pid_169:1.0;pid_170:1.0;pid_350:1.0	None
+
+
+##################
+TARGETS FOR pid_791:
+pid_791	WNT7A	UniProt:O00755	protein	None	extracellular-region	None
+##################
+pid_791	WNT7A	UniProt:O00755	protein	None	extracellular-region	None
+pid_491	WNT7A/FZD5/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_207;pid_492	pid_170:1.0;pid_207:1.0;pid_492:1.0	None
+
+
+##################
+TARGETS FOR pid_82477:
+pid_82477	WNT5A	UniProt:P41221	protein	None	None	None
+##################
+pid_82477	WNT5A	UniProt:P41221	protein	None	None	None
+
+
+
+
+Listing all successfully identified outputs:
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+pid_168	WNT1	UniProt:P04628	protein	None	None	None
+pid_185	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	extracellular-region	None
+pid_164	LRP6	UniProt:O75581	protein	None	integral-to-membrane	None
+pid_461	WNT3A/FZD2/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_443	pid_170:1.0;pid_206:1.0;pid_443:1.0	None
+pid_466	WNT5A/FZD2	None	integral-to-membrane	pid_443;pid_467	pid_443:1.0;pid_467:1.0	None
+pid_225	FZD8	UniProt:Q9H461	protein	None	integral-to-membrane	None
+pid_421	WNT3A/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_233	pid_170:1.0;pid_206:1.0;pid_233:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_333	WNT3A/WNT-inhibitory-factor-1	inactivating-residue-modification	extracellular-region	pid_206;pid_334	pid_206:1.0;pid_334:1.0	None
+pid_519	WNT3A/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_206	pid_169:1.0;pid_170:1.0;pid_206:1.0	None
+pid_205	WNT3A/FZD5/LRP6;WNT3A/LRP6/FZD5	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207	pid_170:1.0;pid_206:1.0;pid_207:1.0	None
+pid_556	FZD8/LRP6/IGFBP4	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_557	pid_170:1.0;pid_233:1.0;pid_557:1.0	None
+pid_599	WNT3A/FZD8/LRP6/PRR	activating-residue-modification	endosome	pid_170;pid_206;pid_233;pid_600	pid_170:1.0;pid_206:1.0;pid_233:1.0;pid_600:1.0	None
+pid_653	WNT3A/FZD1	activating-residue-modification	integral-to-membrane	pid_169;pid_206	pid_169:1.0;pid_206:1.0	None
+pid_249	WNT3/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_250	pid_169:1.0;pid_170:1.0;pid_250:1.0	None
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_536	WNT2/FZD9/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_350;pid_537	pid_170:1.0;pid_350:1.0;pid_537:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_349	WNT2/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_350	pid_169:1.0;pid_170:1.0;pid_350:1.0	None
+pid_491	WNT7A/FZD5/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_207;pid_492	pid_170:1.0;pid_207:1.0;pid_492:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_88615	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_88638	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88795	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_77289	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+pid_88644	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88769	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_26794	beta-catenin	UniProt:P35222	protein	None	cytoplasm	None
+pid_3479	APC	UniProt:P25054	protein	None	None	None
+pid_88734	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88807	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77221;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0	None
+pid_88656	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88626	beta-catenin	UniProt:P35222	protein	None	nucleus	None
+pid_77279	Axin1/APC//beta-catenin;Axin1/APC/beta-catenin	None	cytoplasm	pid_26214;pid_3479;pid_48362	pid_26214:1.0;pid_3479:1.0;pid_48362:1.0	None
+pid_26317	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	cytoplasm	None
+pid_80083	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191	cytoplasm	None
+pid_160979	APC/ASEF	activating-residue-modification	None	pid_160980;pid_3479	pid_160980:1.0;pid_3479:1.0	None
+pid_159775	APC	UniProt:P25054	protein	None	microtubule	None
+pid_88837	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77290;pid_88838	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77290:1.0;pid_88838:1.0	None
+pid_88815	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88816	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88816:1.0	None
+pid_88664	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88665	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88665:1.0	None
+pid_98324	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98325	pid_26214:1.0;pid_98325:1.0	None
+pid_98657	TLE1	UniProt:Q04724	protein	None	nucleus	None
+pid_98348	TLE2	UniProt:Q04725	protein	None	nucleus	None
+pid_98471	HDAC1	UniProt:Q13547	protein	inactivating-residue-modification	None	None
+pid_98719	beta-catenin/ICAT	inactivating-residue-modification	nucleus	pid_26214;pid_98720	pid_26214:1.0;pid_98720:1.0	None
+pid_98522	beta-catenin/APC	None	nucleus	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98554	TCF1E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98555	pid_26214:1.0;pid_98555:1.0	None
+pid_99197	AES	UniProt:Q08117	protein	None	nucleus	None
+pid_98634	14-3-3-family/chibby/beta-catenin	None	nucleus	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98308	beta-catenin/IMFA	activating-residue-modification	nucleus	pid_26214;pid_98283	pid_26214:1.0;pid_98283:1.0	None
+pid_98312	MYF5	UniProt:P13349	protein	None	nucleus	None
+pid_98837	beta-catenin/duplin	inactivating-residue-modification	nucleus	pid_26214;pid_98838	pid_26214:1.0;pid_98838:1.0	None
+pid_98804	beta-catenin/TBL1/TBLR1	None	nucleus	pid_26214;pid_98805;pid_98807	pid_26214:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98393	TCF4/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98394	pid_26214:1.0;pid_98394:1.0	None
+pid_98292	beta-catenin/myogenin	activating-residue-modification	nucleus	pid_26214;pid_98293	pid_26214:1.0;pid_98293:1.0	None
+pid_98299	myogenin	UniProt:P15173	protein	None	nucleus	None
+pid_98382	beta-catenin/MED12	activating-residue-modification	nucleus	pid_26214;pid_98383	pid_26214:1.0;pid_98383:1.0	None
+pid_98962	TLE4	UniProt:Q04727	protein	None	nucleus	None
+pid_98344	TCF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98335	pid_26214:1.0;pid_98335:1.0	None
+pid_98989	beta-catenin/PITX2	activating-residue-modification	None	pid_26214;pid_98849	pid_26214:1.0;pid_98849:1.0	None
+pid_98493	TCF4E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98494	pid_26214:1.0;pid_98494:1.0	None
+pid_98438	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98439	pid_26214:1.0;pid_98439:1.0	None
+pid_98588	TCF3/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98582	pid_26214:1.0;pid_98582:1.0	None
+pid_77249	Axin1/APC//beta-catenin	None	cytoplasm	pid_3479;pid_48362;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77223:1.0	None
+pid_132279	Axin1	UniProt:O15169	protein	activating-residue-modification	cytoplasm	None
+pid_132281	APC	UniProt:P25054	protein	activating-residue-modification	cytoplasm	None
+pid_132283	beta-catenin	UniProt:P35222	protein	activating-residue-modification	cytoplasm	None
+pid_26901	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	nucleus	None
+pid_80123	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191;activating-residue-modification	nucleus	None
+pid_159776	APC/DLG1	None	cell-leading-edge	pid_159633;pid_3479	pid_159633:1.0;pid_3479:1.0	None
+pid_77319	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77320:1.0	None
+pid_98902	LEF1/beta-catenin/PITX2	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98849	pid_26214:1.0;pid_98325:1.0;pid_98849:1.0	None
+pid_98362	LEF1/beta-catenin/CDX1	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98358	pid_26214:1.0;pid_98325:1.0;pid_98358:1.0	None
+pid_99062	beta-catenin/APC	inactivating-residue-modification	cytoplasm	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98601	beta-catenin/APC/CtBP	inactivating-residue-modification	nucleus	pid_26214;pid_3479;pid_92258	pid_26214:1.0;pid_3479:1.0;pid_92258:1.0	None
+pid_99212	14-3-3-family/chibby/beta-catenin	inactivating-residue-modification	cytoplasm	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98817	TCF4/beta-catenin/TBLR1/TBL1	activating-residue-modification	nucleus	pid_26214;pid_85025;pid_98805;pid_98807	pid_26214:1.0;pid_85025:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98823	TLE1/HDAC1	None	nucleus	pid_7761;pid_98651	pid_7761:1.0;pid_98651:1.0	None
+pid_98422	TCF4/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98394	pid_26214:1.0;pid_7834:1.0;pid_98394:1.0	None
+pid_98414	beta-catenin/AR/T-DHT/TIF2	activating-residue-modification	nucleus	pid_26214;pid_44594;pid_44602;pid_7475	pid_26214:1.0;pid_44594:1.0;pid_44602:1.0;pid_7475:1.0	None
+pid_98458	TCF4	UniProt:Q9NQB0	protein	None	nucleus	None
+pid_99079	TCF4/beta-catenin/TRRAP/SCF	None	None	pid_48214;pid_5613;pid_77342;pid_77344;pid_98394;pid_99080	pid_48214:1.0;pid_5613:1.0;pid_77342:1.0;pid_77344:1.0;pid_98394:1.0;pid_99080:1.0	None
+pid_98507	TCF4/beta-catenin/TNIK	activating-residue-modification	nucleus	pid_26214;pid_98508;pid_98510	pid_26214:1.0;pid_98508:1.0;pid_98510:1.0	None
+pid_99131	TCF4/beta-catenin/TIP49B	inactivating-residue-modification	nucleus	pid_26214;pid_48262;pid_98394	pid_26214:1.0;pid_48262:1.0;pid_98394:1.0	None
+pid_98481	TCF4/beta-catenin/Cbp	activating-residue-modification	nucleus	pid_26214;pid_98394;pid_98482	pid_26214:1.0;pid_98394:1.0;pid_98482:1.0	None
+pid_98924	TCF4/beta-catenin/JUN/DVL3	activating-residue-modification	nucleus	pid_26214;pid_7513;pid_77299;pid_98394	pid_26214:1.0;pid_7513:1.0;pid_77299:1.0;pid_98394:1.0	None
+pid_98449	TCF4/beta-catenin/HBP1	inactivating-residue-modification	nucleus	pid_26214;pid_48245;pid_98394	pid_26214:1.0;pid_48245:1.0;pid_98394:1.0	None
+pid_98403	TCF4/beta-catenin/KLF4	inactivating-residue-modification	nucleus	pid_26214;pid_98394;pid_98400	pid_26214:1.0;pid_98394:1.0;pid_98400:1.0	None
+pid_98568	TCF4/HDAC1-HDAC2	activating-residue-modification	nucleus	pid_98394;pid_98566	pid_98394:1.0;pid_98566:1.0	None
+pid_98572	beta-catenin	UniProt:P35222	protein	inactivating-residue-modification	nucleus	None
+pid_98700	TCF4E/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98494	pid_26214:1.0;pid_7834:1.0;pid_98494:1.0	None
+pid_98617	TCF4E/beta-catenin/BCL9	activating-residue-modification	nucleus	pid_26214;pid_98494;pid_98614	pid_26214:1.0;pid_98494:1.0;pid_98614:1.0	None
+pid_98671	TCF3/beta-catenin/TERT/BRG1	activating-residue-modification	nucleus	pid_26214;pid_98582;pid_98672;pid_98674	pid_26214:1.0;pid_98582:1.0;pid_98672:1.0;pid_98674:1.0	None
+pid_77220	Axin1/APC//beta-catenin/GSK3	None	cytoplasm	pid_3479;pid_48362;pid_77221;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77221:1.0;pid_77223:1.0	None
+pid_132305	APC	UniProt:P25054	protein	None	cytoplasm	None
+pid_132503	Axin1	UniProt:O15169	protein	None	cytoplasm	None
+pid_132472	beta-catenin	UniProt:P35222	protein	activating-residue-modification	nucleus	None
+pid_132269	beta-catenin/beta-TrCP1	None	cytoplasm	pid_132270;pid_5613	pid_132270:1.0;pid_5613:1.0	None
+pid_88906	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:2.0;pid_77221:2.0;pid_77290:1.0;pid_77320:1.0	None
+pid_77229	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77230;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77230:1.0;pid_77234:1.0	None
+pid_132315	beta-catenin/TCF1/CtBP/CBP/TLE1/AES/SMAD4	None	nucleus	pid_132316;pid_18184;pid_26214;pid_92258;pid_98651;pid_99191	pid_132316:1.0;pid_18184:1.0;pid_26214:1.0;pid_92258:1.0;pid_98651:1.0;pid_99191:1.0	None
+pid_132273	beta-catenin	UniProt:P35222	protein	[ubiquitinylated-lysine]@null;inactivating-residue-modification	cytoplasm	None
+pid_132274	beta-TrCP1	UniProt:Q9Y297	protein	None	cytoplasm	None
+pid_88705	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77223;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77223:1.0;pid_77234:1.0	None
+pid_77267	APC/beta-catenin	None	None	pid_77230;pid_77234	pid_77230:1.0;pid_77234:1.0	None
+pid_77357	Axin1/GSK3	None	cytoplasm	pid_48362;pid_68387	pid_48362:1.0;pid_68387:1.0	None
+pid_88710	WNT3A/LRP6/FZD5/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77320:1.0	None
+pid_77335	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@33;[O-phospho-L-serine]@37;[O-phospho-L-serine]@45;[O-phospho-L-threonine]@41;[ubiquitinylated-lysine]@19	cytoplasm	None
+pid_206	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	None	None
+pid_246	WNT3	UniProt:P56703	protein	None	extracellular-region	None
+pid_249	WNT3/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_250	pid_169:1.0;pid_170:1.0;pid_250:1.0	None
+pid_250	WNT3	UniProt:P56703	protein	None	None	None
+pid_302	WNT5A	UniProt:P41221	protein	[N4-glycosyl-L-asparagine]@114;[N4-glycosyl-L-asparagine]@120;[N4-glycosyl-L-asparagine]@312;[N4-glycosyl-L-asparagine]@326;[S-palmitoyl-L-cysteine]@104	extracellular-region	None
+pid_364	LRP5	UniProt:O75197	protein	None	integral-to-membrane	None
+pid_572	WNT5A/FZD4/LRP5	activating-residue-modification	integral-to-membrane	pid_319;pid_369;pid_573	pid_319:1.0;pid_369:1.0;pid_573:1.0	None
+pid_798	FZD4	UniProt:Q9ULV1	protein	None	integral-to-membrane	None
+pid_799	WNT5A/ROR2	inactivating-residue-modification	integral-to-membrane	pid_319;pid_397	pid_319:1.0;pid_397:1.0	None
+pid_318	WNT5A/FZD7	activating-residue-modification	integral-to-membrane	pid_319;pid_320	pid_319:1.0;pid_320:1.0	None
+pid_442	WNT5A/FZD2	activating-residue-modification	integral-to-membrane	pid_319;pid_443	pid_319:1.0;pid_443:1.0	None
+pid_701	WNT5A/FZD2/ROR2-(dimer)	activating-residue-modification	integral-to-membrane	pid_319;pid_443;pid_702;pid_706	pid_319:1.0;pid_443:1.0;pid_702:1.0;pid_706:1.0	None
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_367	WNT7B/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_169;pid_368;pid_369	pid_169:1.0;pid_368:1.0;pid_369:1.0	None
+pid_586	WNT7B/FZD10/LRP5	activating-residue-modification	integral-to-membrane	pid_368;pid_369;pid_587	pid_368:1.0;pid_369:1.0;pid_587:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+pid_319	WNT5A	UniProt:P41221	protein	[N4-glycosyl-L-asparagine]@114;[N4-glycosyl-L-asparagine]@120;[N4-glycosyl-L-asparagine]@312;[N4-glycosyl-L-asparagine]@326;[S-palmitoyl-L-cysteine]@104	None	None
+pid_330	WNT-inhibitory-factor-1	UniProt:Q9Y5W5	protein	None	extracellular-region	None
+pid_333	WNT3A/WNT-inhibitory-factor-1	inactivating-residue-modification	extracellular-region	pid_206;pid_334	pid_206:1.0;pid_334:1.0	None
+pid_334	WNT-inhibitory-fator-1	UniProt:Q9Y5W5	protein	None	None	None
+pid_350	WNT2	UniProt:P09544	protein	None	None	None
+pid_361	WNT7B	UniProt:P56706	protein	None	extracellular-region	None
+pid_367	WNT7B/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_169;pid_368;pid_369	pid_169:1.0;pid_368:1.0;pid_369:1.0	None
+pid_586	WNT7B/FZD10/LRP5	activating-residue-modification	integral-to-membrane	pid_368;pid_369;pid_587	pid_368:1.0;pid_369:1.0;pid_587:1.0	None
+pid_368	WNT7B	UniProt:P56706	protein	None	None	None
+pid_400	WNT3A-WNT5A	None	protein	None	None	None
+pid_636	WNT3A-WNT5A/FZD5-FZD6/ROR2(dimer)/CTHRC1(trimer)	activating-residue-modification	integral-to-membrane	pid_394;pid_400;pid_402;pid_637	pid_394:3.0;pid_400:1.0;pid_402:1.0;pid_637:2.0	None
+pid_454	WNT5A	UniProt:P41221	protein	[palmitoylated-residue-[residue=N]]@114;[palmitoylated-residue-[residue=N]]@120;[palmitoylated-residue-[residue=N]]@312;[palmitoylated-residue-[residue=N]]@326;[S-palmitoyl-L-cysteine]@104	extracellular-region	None
+pid_164	LRP6	UniProt:O75581	protein	None	integral-to-membrane	None
+pid_185	WNT3A	UniProt:P56704	protein	[N4-glycosyl-L-asparagine]@298;[N4-glycosyl-L-asparagine]@87;[O-palmitoyl-L-serine]@209;[S-palmitoyl-L-cysteine]@77	extracellular-region	None
+pid_461	WNT3A/FZD2/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_443	pid_170:1.0;pid_206:1.0;pid_443:1.0	None
+pid_466	WNT5A/FZD2	None	integral-to-membrane	pid_443;pid_467	pid_443:1.0;pid_467:1.0	None
+pid_249	WNT3/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_250	pid_169:1.0;pid_170:1.0;pid_250:1.0	None
+pid_225	FZD8	UniProt:Q9H461	protein	None	integral-to-membrane	None
+pid_421	WNT3A/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_233	pid_170:1.0;pid_206:1.0;pid_233:1.0	None
+pid_426	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_154	WNT1	UniProt:P04628	protein	None	extracellular-region	None
+pid_382	WNT1/FZD8/LRP6	activating-residue-modification	integral-to-membrane	pid_168;pid_170;pid_233	pid_168:1.0;pid_170:1.0;pid_233:1.0	None
+pid_684	LRP6/FZD8/SOST	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_682	pid_170:1.0;pid_233:1.0;pid_682:1.0	None
+pid_519	WNT3A/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_206	pid_169:1.0;pid_170:1.0;pid_206:1.0	None
+pid_205	WNT3A/FZD5/LRP6;WNT3A/LRP6/FZD5	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207	pid_170:1.0;pid_206:1.0;pid_207:1.0	None
+pid_536	WNT2/FZD9/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_350;pid_537	pid_170:1.0;pid_350:1.0;pid_537:1.0	None
+pid_556	FZD8/LRP6/IGFBP4	inactivating-residue-modification	integral-to-membrane	pid_170;pid_233;pid_557	pid_170:1.0;pid_233:1.0;pid_557:1.0	None
+pid_599	WNT3A/FZD8/LRP6/PRR	activating-residue-modification	endosome	pid_170;pid_206;pid_233;pid_600	pid_170:1.0;pid_206:1.0;pid_233:1.0;pid_600:1.0	None
+pid_167	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_349	WNT2/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_350	pid_169:1.0;pid_170:1.0;pid_350:1.0	None
+pid_491	WNT7A/FZD5/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_207;pid_492	pid_170:1.0;pid_207:1.0;pid_492:1.0	None
+pid_333	WNT3A/WNT-inhibitory-factor-1	inactivating-residue-modification	extracellular-region	pid_206;pid_334	pid_206:1.0;pid_334:1.0	None
+pid_653	WNT3A/FZD1	activating-residue-modification	integral-to-membrane	pid_169;pid_206	pid_169:1.0;pid_206:1.0	None
+pid_231	WNT1/FZD8/Ryk	activating-residue-modification	integral-to-membrane	pid_168;pid_232;pid_233	pid_168:1.0;pid_232:1.0;pid_233:1.0	None
+pid_504	DKK1/LRP6;LRP6/DKK1	inactivating-residue-modification	endosome	pid_170;pid_262	pid_170:1.0;pid_262:1.0	None
+pid_664	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	integral-to-membrane	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_483	WNT1/FZD1/LRP5	activating-residue-modification	integral-to-membrane	pid_168;pid_169;pid_369	pid_168:1.0;pid_169:1.0;pid_369:1.0	None
+pid_775	LRP5/DKK1	inactivating-residue-modification	integral-to-membrane	pid_262;pid_369	pid_262:1.0;pid_369:1.0	None
+pid_132404	WNT1/FZD1/LRP6;WNT1/LRP6/FZD1	None	None	pid_168;pid_169;pid_170	pid_168:1.0;pid_169:1.0;pid_170:1.0	None
+pid_88615	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_280	DKK1	UniProt:O94907	protein	None	endosome	None
+pid_281	LRP6	UniProt:O75581	protein	None	endosome	None
+pid_261	DKK1/LRP6/Kremen-1-Kremen-2	inactivating-residue-modification	endosome	pid_170;pid_262;pid_265	pid_170:1.0;pid_262:1.0;pid_265:1.0	None
+pid_88638	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88795	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_77289	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_265	Kremen-1-Kremen-2	None	protein	None	None	None
+pid_88644	WNT3A/LRP6/FZD5/DVL	activating-residue-modification	integral-to-membrane	pid_170;pid_206;pid_207;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_77290:1.0	None
+pid_88769	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88770	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88770:1.0	None
+pid_26794	beta-catenin	UniProt:P35222	protein	None	cytoplasm	None
+pid_3479	APC	UniProt:P25054	protein	None	None	None
+pid_88734	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88807	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77221;pid_77290	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0	None
+pid_88656	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77301	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77301:1.0	None
+pid_88626	beta-catenin	UniProt:P35222	protein	None	nucleus	None
+pid_77279	Axin1/APC//beta-catenin;Axin1/APC/beta-catenin	None	cytoplasm	pid_26214;pid_3479;pid_48362	pid_26214:1.0;pid_3479:1.0;pid_48362:1.0	None
+pid_26317	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	cytoplasm	None
+pid_80083	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191	cytoplasm	None
+pid_160979	APC/ASEF	activating-residue-modification	None	pid_160980;pid_3479	pid_160980:1.0;pid_3479:1.0	None
+pid_159775	APC	UniProt:P25054	protein	None	microtubule	None
+pid_88837	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_170;pid_206;pid_207;pid_48362;pid_77290;pid_88838	pid_170:1.0;pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77290:1.0;pid_88838:1.0	None
+pid_88815	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88816	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88816:1.0	None
+pid_88664	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_88665	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_88665:1.0	None
+pid_98324	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98325	pid_26214:1.0;pid_98325:1.0	None
+pid_98657	TLE1	UniProt:Q04724	protein	None	nucleus	None
+pid_98348	TLE2	UniProt:Q04725	protein	None	nucleus	None
+pid_98471	HDAC1	UniProt:Q13547	protein	inactivating-residue-modification	None	None
+pid_98719	beta-catenin/ICAT	inactivating-residue-modification	nucleus	pid_26214;pid_98720	pid_26214:1.0;pid_98720:1.0	None
+pid_98522	beta-catenin/APC	None	nucleus	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98554	TCF1E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98555	pid_26214:1.0;pid_98555:1.0	None
+pid_99197	AES	UniProt:Q08117	protein	None	nucleus	None
+pid_98634	14-3-3-family/chibby/beta-catenin	None	nucleus	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98308	beta-catenin/IMFA	activating-residue-modification	nucleus	pid_26214;pid_98283	pid_26214:1.0;pid_98283:1.0	None
+pid_98312	MYF5	UniProt:P13349	protein	None	nucleus	None
+pid_98837	beta-catenin/duplin	inactivating-residue-modification	nucleus	pid_26214;pid_98838	pid_26214:1.0;pid_98838:1.0	None
+pid_98804	beta-catenin/TBL1/TBLR1	None	nucleus	pid_26214;pid_98805;pid_98807	pid_26214:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98393	TCF4/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98394	pid_26214:1.0;pid_98394:1.0	None
+pid_98292	beta-catenin/myogenin	activating-residue-modification	nucleus	pid_26214;pid_98293	pid_26214:1.0;pid_98293:1.0	None
+pid_98299	myogenin	UniProt:P15173	protein	None	nucleus	None
+pid_98382	beta-catenin/MED12	activating-residue-modification	nucleus	pid_26214;pid_98383	pid_26214:1.0;pid_98383:1.0	None
+pid_98962	TLE4	UniProt:Q04727	protein	None	nucleus	None
+pid_98344	TCF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98335	pid_26214:1.0;pid_98335:1.0	None
+pid_98989	beta-catenin/PITX2	activating-residue-modification	None	pid_26214;pid_98849	pid_26214:1.0;pid_98849:1.0	None
+pid_98493	TCF4E/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98494	pid_26214:1.0;pid_98494:1.0	None
+pid_98438	LEF1/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98439	pid_26214:1.0;pid_98439:1.0	None
+pid_98588	TCF3/beta-catenin	activating-residue-modification	nucleus	pid_26214;pid_98582	pid_26214:1.0;pid_98582:1.0	None
+pid_77249	Axin1/APC//beta-catenin	None	cytoplasm	pid_3479;pid_48362;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77223:1.0	None
+pid_132279	Axin1	UniProt:O15169	protein	activating-residue-modification	cytoplasm	None
+pid_132281	APC	UniProt:P25054	protein	activating-residue-modification	cytoplasm	None
+pid_132283	beta-catenin	UniProt:P35222	protein	activating-residue-modification	cytoplasm	None
+pid_26901	beta-catenin	UniProt:P35222	protein	[O4'-phospho-L-tyrosine]@654	nucleus	None
+pid_80123	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@191;activating-residue-modification	nucleus	None
+pid_159776	APC/DLG1	None	cell-leading-edge	pid_159633;pid_3479	pid_159633:1.0;pid_3479:1.0	None
+pid_77319	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_77221:1.0;pid_77290:1.0;pid_77320:1.0	None
+pid_98902	LEF1/beta-catenin/PITX2	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98849	pid_26214:1.0;pid_98325:1.0;pid_98849:1.0	None
+pid_98362	LEF1/beta-catenin/CDX1	activating-residue-modification	nucleus	pid_26214;pid_98325;pid_98358	pid_26214:1.0;pid_98325:1.0;pid_98358:1.0	None
+pid_99062	beta-catenin/APC	inactivating-residue-modification	cytoplasm	pid_26214;pid_3479	pid_26214:1.0;pid_3479:1.0	None
+pid_98601	beta-catenin/APC/CtBP	inactivating-residue-modification	nucleus	pid_26214;pid_3479;pid_92258	pid_26214:1.0;pid_3479:1.0;pid_92258:1.0	None
+pid_99212	14-3-3-family/chibby/beta-catenin	inactivating-residue-modification	cytoplasm	pid_26214;pid_4877;pid_98631	pid_26214:1.0;pid_4877:1.0;pid_98631:1.0	None
+pid_98817	TCF4/beta-catenin/TBLR1/TBL1	activating-residue-modification	nucleus	pid_26214;pid_85025;pid_98805;pid_98807	pid_26214:1.0;pid_85025:1.0;pid_98805:1.0;pid_98807:1.0	None
+pid_98823	TLE1/HDAC1	None	nucleus	pid_7761;pid_98651	pid_7761:1.0;pid_98651:1.0	None
+pid_98422	TCF4/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98394	pid_26214:1.0;pid_7834:1.0;pid_98394:1.0	None
+pid_98414	beta-catenin/AR/T-DHT/TIF2	activating-residue-modification	nucleus	pid_26214;pid_44594;pid_44602;pid_7475	pid_26214:1.0;pid_44594:1.0;pid_44602:1.0;pid_7475:1.0	None
+pid_98458	TCF4	UniProt:Q9NQB0	protein	None	nucleus	None
+pid_99079	TCF4/beta-catenin/TRRAP/SCF	None	None	pid_48214;pid_5613;pid_77342;pid_77344;pid_98394;pid_99080	pid_48214:1.0;pid_5613:1.0;pid_77342:1.0;pid_77344:1.0;pid_98394:1.0;pid_99080:1.0	None
+pid_98507	TCF4/beta-catenin/TNIK	activating-residue-modification	nucleus	pid_26214;pid_98508;pid_98510	pid_26214:1.0;pid_98508:1.0;pid_98510:1.0	None
+pid_99131	TCF4/beta-catenin/TIP49B	inactivating-residue-modification	nucleus	pid_26214;pid_48262;pid_98394	pid_26214:1.0;pid_48262:1.0;pid_98394:1.0	None
+pid_98481	TCF4/beta-catenin/Cbp	activating-residue-modification	nucleus	pid_26214;pid_98394;pid_98482	pid_26214:1.0;pid_98394:1.0;pid_98482:1.0	None
+pid_98924	TCF4/beta-catenin/JUN/DVL3	activating-residue-modification	nucleus	pid_26214;pid_7513;pid_77299;pid_98394	pid_26214:1.0;pid_7513:1.0;pid_77299:1.0;pid_98394:1.0	None
+pid_98449	TCF4/beta-catenin/HBP1	inactivating-residue-modification	nucleus	pid_26214;pid_48245;pid_98394	pid_26214:1.0;pid_48245:1.0;pid_98394:1.0	None
+pid_98403	TCF4/beta-catenin/KLF4	inactivating-residue-modification	nucleus	pid_26214;pid_98394;pid_98400	pid_26214:1.0;pid_98394:1.0;pid_98400:1.0	None
+pid_98568	TCF4/HDAC1-HDAC2	activating-residue-modification	nucleus	pid_98394;pid_98566	pid_98394:1.0;pid_98566:1.0	None
+pid_98572	beta-catenin	UniProt:P35222	protein	inactivating-residue-modification	nucleus	None
+pid_98700	TCF4E/beta-catenin/p300	activating-residue-modification	nucleus	pid_26214;pid_7834;pid_98494	pid_26214:1.0;pid_7834:1.0;pid_98494:1.0	None
+pid_98617	TCF4E/beta-catenin/BCL9	activating-residue-modification	nucleus	pid_26214;pid_98494;pid_98614	pid_26214:1.0;pid_98494:1.0;pid_98614:1.0	None
+pid_98671	TCF3/beta-catenin/TERT/BRG1	activating-residue-modification	nucleus	pid_26214;pid_98582;pid_98672;pid_98674	pid_26214:1.0;pid_98582:1.0;pid_98672:1.0;pid_98674:1.0	None
+pid_77220	Axin1/APC//beta-catenin/GSK3	None	cytoplasm	pid_3479;pid_48362;pid_77221;pid_77223	pid_3479:1.0;pid_48362:1.0;pid_77221:1.0;pid_77223:1.0	None
+pid_132305	APC	UniProt:P25054	protein	None	cytoplasm	None
+pid_132503	Axin1	UniProt:O15169	protein	None	cytoplasm	None
+pid_132472	beta-catenin	UniProt:P35222	protein	activating-residue-modification	nucleus	None
+pid_132269	beta-catenin/beta-TrCP1	None	cytoplasm	pid_132270;pid_5613	pid_132270:1.0;pid_5613:1.0	None
+pid_88906	WNT3A/LRP6/FZD5/DVL/Axin1/GSK3/Axin1/GSK3	activating-residue-modification	signalosome	pid_206;pid_207;pid_48362;pid_77221;pid_77290;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:2.0;pid_77221:2.0;pid_77290:1.0;pid_77320:1.0	None
+pid_77229	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77230;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77230:1.0;pid_77234:1.0	None
+pid_132315	beta-catenin/TCF1/CtBP/CBP/TLE1/AES/SMAD4	None	nucleus	pid_132316;pid_18184;pid_26214;pid_92258;pid_98651;pid_99191	pid_132316:1.0;pid_18184:1.0;pid_26214:1.0;pid_92258:1.0;pid_98651:1.0;pid_99191:1.0	None
+pid_132273	beta-catenin	UniProt:P35222	protein	[ubiquitinylated-lysine]@null;inactivating-residue-modification	cytoplasm	None
+pid_132274	beta-TrCP1	UniProt:Q9Y297	protein	None	cytoplasm	None
+pid_88705	Axin1/APC/GSK3/beta-catenin	None	cytoplasm	pid_48362;pid_77221;pid_77223;pid_77234	pid_48362:1.0;pid_77221:1.0;pid_77223:1.0;pid_77234:1.0	None
+pid_77267	APC/beta-catenin	None	None	pid_77230;pid_77234	pid_77230:1.0;pid_77234:1.0	None
+pid_77357	Axin1/GSK3	None	cytoplasm	pid_48362;pid_68387	pid_48362:1.0;pid_68387:1.0	None
+pid_88710	WNT3A/LRP6/FZD5/Axin1/GSK3	activating-residue-modification	integral-to-membrane	pid_206;pid_207;pid_48362;pid_68387;pid_77320	pid_206:1.0;pid_207:1.0;pid_48362:1.0;pid_68387:1.0;pid_77320:1.0	None
+pid_77335	beta-catenin	UniProt:P35222	protein	[O-phospho-L-serine]@33;[O-phospho-L-serine]@37;[O-phospho-L-serine]@45;[O-phospho-L-threonine]@41;[ubiquitinylated-lysine]@19	cytoplasm	None
+pid_467	WNT5A	UniProt:P41221	protein	[palmitoylated-residue-[residue=N]]@114;[palmitoylated-residue-[residue=N]]@120;[palmitoylated-residue-[residue=N]]@312;[palmitoylated-residue-[residue=N]]@326;[S-palmitoyl-L-cysteine]@104	None	None
+pid_492	WNT7A	UniProt:O00755	protein	None	None	None
+pid_532	WNT2	UniProt:P09544	protein	None	extracellular-region	None
+pid_536	WNT2/FZD9/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_350;pid_537	pid_170:1.0;pid_350:1.0;pid_537:1.0	None
+pid_349	WNT2/FZD1/LRP6	activating-residue-modification	integral-to-membrane	pid_169;pid_170;pid_350	pid_169:1.0;pid_170:1.0;pid_350:1.0	None
+pid_791	WNT7A	UniProt:O00755	protein	None	extracellular-region	None
+pid_491	WNT7A/FZD5/LRP6	activating-residue-modification	integral-to-membrane	pid_170;pid_207;pid_492	pid_170:1.0;pid_207:1.0;pid_492:1.0	None
+pid_82477	WNT5A	UniProt:P41221	protein	None	None	None

@@ -1,0 +1,178 @@
+#####################################
+FEASIBLE TARGETS FOR ['pid_14480', 'pid_21562', 'pid_60514']
+#####################################
+
+
+##################
+TARGETS FOR pid_14480:
+pid_14480	EGF	UniProt:P01133	protein	None	None	None
+##################
+pid_14480	EGF	UniProt:P01133	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_21562:
+pid_21562	EGF	UniProt:P01133	protein	None	extracellular-region	None
+##################
+pid_21562	EGF	UniProt:P01133	protein	None	extracellular-region	None
+pid_26325	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326	pid_14480:2.0;pid_26326:2.0	None
+pid_48940	EGFR/ErbB3/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_48917	pid_14480:1.0;pid_26326:1.0;pid_48917:1.0	None
+pid_154667	EGFR/EGFR/EGF/EGF	None	integral-to-membrane	pid_14480;pid_154668	pid_14480:2.0;pid_154668:2.0	None
+pid_20211	ErbB2;erbB2	UniProt:P04626	protein	None	integral-to-membrane	None
+pid_49072	EGFR/ErbB2/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_48891	pid_14480:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_49077	HSP90-(dimer)	inactivating-residue-modification	None	pid_38554	pid_38554:2.0	None
+pid_172422	EGF/EGFR	None	integral-to-membrane	pid_14480;pid_39996	pid_14480:1.0;pid_39996:1.0	None
+pid_47975	EGFR/EGFR/EGF/EGF/p66-SHC	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47976	pid_14480:2.0;pid_26326:2.0;pid_47976:1.0	None
+pid_40050	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_39996	pid_14480:2.0;pid_39996:2.0	None
+pid_47826	EGFR/EGFR/EGF/EGF/p52-SHC	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47491	pid_14480:2.0;pid_26326:2.0;pid_47491:1.0	None
+pid_47530	EGFR/EGFR/EGF/EGF/GRB2	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_9054:1.0	None
+pid_47681	EGFR/EGFR/EGF/EGF/JAK1-JAK2	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47682	pid_14480:2.0;pid_26326:2.0;pid_47682:1.0	None
+pid_60593	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_60287	pid_14480:2.0;pid_60287:2.0	None
+pid_47699	EGFR/EGFR/EGF/EGF/GRB2/N-WASP	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47700;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_47700:1.0;pid_9054:1.0	None
+pid_47951	EGFR/EGFR/EGF/EGF/p46-SHC	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47952	pid_14480:2.0;pid_26326:2.0;pid_47952:1.0	None
+pid_47909	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_39996	pid_14480:2.0;pid_26326:1.0;pid_39996:1.0	None
+pid_47506	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_47507	pid_14480:2.0;pid_47507:2.0	None
+pid_47747	EGFR/EGFR/EGF/EGF/GNAI1/GNAI3/GAB1	activating-residue-modification	integral-to-membrane	pid_14007;pid_14179;pid_14480;pid_26326;pid_47748	pid_14007:1.0;pid_14179:1.0;pid_14480:2.0;pid_26326:2.0;pid_47748:1.0	None
+pid_47798	EGFR/EGFR/EGF/EGF/FAK	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47799	pid_14480:2.0;pid_26326:2.0;pid_47799:1.0	None
+pid_47561	EGFR/EGFR/EGF/EGF/GRB2/SOS1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_31920;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_31920:1.0;pid_9054:1.0	None
+pid_47843	EGFR/EGFR/EGF/EGF/GRB2/PAK1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47590;pid_47594;pid_9054	pid_14480:2.0;pid_26326:1.0;pid_47590:1.0;pid_47594:1.0;pid_9054:1.0	None
+pid_47593	EGFR/EGFR/EGF/EGF/NCK1-2/PAK1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47588;pid_47590;pid_47594	pid_14480:2.0;pid_26326:1.0;pid_47588:1.0;pid_47590:1.0;pid_47594:1.0	None
+pid_47787	EGFR/EGFR/EGF/EGF/RasGAP	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_31685	pid_14480:2.0;pid_26326:2.0;pid_31685:1.0	None
+pid_47873	EGFR/EGFR/EGF/EGF/PLCgamma1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47874	pid_14480:2.0;pid_26326:2.0;pid_47874:1.0	None
+pid_48005	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_48006	pid_14480:2.0;pid_48006:2.0	None
+pid_20708	ErbB4/ErbB2/betacellulin	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20259	pid_20189:1.0;pid_20191:1.0;pid_20259:1.0	None
+pid_49199	EGFR/ErbB2/TGFA	activating-residue-modification	integral-to-membrane	pid_26326;pid_48891;pid_48970	pid_26326:1.0;pid_48891:1.0;pid_48970:1.0	None
+pid_20188	ErbB4/ErbB2/neuregulin-1-beta	activating-residue-modification	integral-to-membrane	pid_20050;pid_20189;pid_20191	pid_20050:1.0;pid_20189:1.0;pid_20191:1.0	None
+pid_49033	EGFR/ErbB2/epiregulin	activating-residue-modification	integral-to-membrane	pid_20436;pid_26326;pid_48891	pid_20436:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_49225	EGFR/ErbB2/amphiregulin	activating-residue-modification	integral-to-membrane	pid_26326;pid_48891;pid_49097	pid_26326:1.0;pid_48891:1.0;pid_49097:1.0	None
+pid_20511	ErbB4/ErbB2/HBEGF	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20478	pid_20189:1.0;pid_20191:1.0;pid_20478:1.0	None
+pid_49179	ErbB2/ErbB3/neuregulin-2	activating-residue-modification	integral-to-membrane	pid_20191;pid_49180;pid_49183	pid_20191:1.0;pid_49180:1.0;pid_49183:1.0	None
+pid_48916	ErbB2/ErbB3/neuregulin-1-beta	activating-residue-modification	integral-to-membrane	pid_20050;pid_48891;pid_48917	pid_20050:1.0;pid_48891:1.0;pid_48917:1.0	None
+pid_49010	EGFR/ErbB2/HBEGF	activating-residue-modification	integral-to-membrane	pid_20478;pid_26326;pid_48891	pid_20478:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_20628	ErbB4/ErbB2/neuregulin-4	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20629	pid_20189:1.0;pid_20191:1.0;pid_20629:1.0	None
+pid_48890	EGFR/ErbB2/betacellulin	activating-residue-modification	integral-to-membrane	pid_20259;pid_26326;pid_48891	pid_20259:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_20435	ErbB4/ErbB2/epiregulin	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20436	pid_20189:1.0;pid_20191:1.0;pid_20436:1.0	None
+pid_172406	EGF/EGFR-dimer	activating-residue-modification	integral-to-membrane	pid_14480;pid_41398	pid_14480:2.0;pid_41398:2.0	None
+pid_47989	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_47883	pid_14480:2.0;pid_47883:2.0	None
+pid_47993	p66-SHC	UniProt:P29353	protein	[O-phospho-L-serine]@null;[O-phospho-L-threonine]@null;[O4'-phospho-L-tyrosine]@null	None	None
+pid_48095	p66-SHC/GRB2/SOS1	None	cytoplasm	pid_47993;pid_48096;pid_9054	pid_47993:1.0;pid_48096:1.0;pid_9054:1.0	None
+pid_40369	EGFR/EGFR/EGF/EGF/GRB2/GAB1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_40370;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_40370:1.0;pid_9054:1.0	None
+pid_60286	EGFR/EGFR/EGF/EGF	activating-residue-modification	endosome	pid_14480;pid_60287	pid_14480:2.0;pid_60287:2.0	None
+pid_47882	EGFR/EGFR/EGF/EGF/GNAI1/GNAI3/GAB1	activating-residue-modification	integral-to-membrane	pid_14007;pid_14179;pid_14480;pid_47883;pid_47884	pid_14007:1.0;pid_14179:1.0;pid_14480:2.0;pid_47883:2.0;pid_47884:1.0	None
+pid_47567	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_26326	pid_14480:2.0;pid_26326:2.0	None
+pid_47571	GRB2/SOS1	None	cytoplasm	pid_47572;pid_9054	pid_47572:1.0;pid_9054:1.0	None
+pid_20050	neuregulin-1-beta	UniProt:Q02297	protein	None	None	None
+pid_20199	ErbB4-ectodomain	UniProt:Q15303	protein	Fragment:1-651	extracellular-region	None
+pid_20204	ErbB4-m80	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:652-1308	integral-to-membrane	None
+pid_172411	EGF/EGFR-dimer/SHC	activating-residue-modification	integral-to-membrane	pid_12022;pid_14480;pid_41398	pid_12022:1.0;pid_14480:2.0;pid_41398:2.0	None
+pid_47609	EGFR/EGFR/EGF/EGF/GRB2/GAB1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47610;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_47610:1.0;pid_9054:1.0	None
+pid_40381	EGFR/EGFR/EGF/EGF/GRB2/GAB1	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_39996;pid_40370;pid_9054	pid_14480:2.0;pid_39996:2.0;pid_40370:1.0;pid_9054:1.0	None
+pid_48019	EGFR/EGFR/EGF/EGF/GRB2/GAB1/RasGAP	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_31685;pid_40370;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_31685:1.0;pid_40370:1.0;pid_9054:1.0	None
+pid_60404	EGFR/EGFR/EGF/EGF/p46-SHC	activating-residue-modification	endosome	pid_14480;pid_47950;pid_60287	pid_14480:2.0;pid_47950:1.0;pid_60287:2.0	None
+pid_60389	EGFR/EGFR/EGF/EGF	activating-residue-modification	endosome	pid_14480;pid_26326	pid_14480:2.0;pid_26326:2.0	None
+pid_60300	EGFR/EGFR/EGF/EGF	activating-residue-modification	endosome	pid_14480;pid_60301	pid_14480:2.0;pid_60301:2.0	None
+pid_60443	EGFR/EGFR/EGF/EGF/p52-SHC	activating-residue-modification	endosome	pid_14480;pid_47825;pid_60287	pid_14480:2.0;pid_47825:1.0;pid_60287:2.0	None
+pid_60522	EGFR/EGFR/EGF/EGF/GRB2/SOS1	activating-residue-modification	endosome	pid_14480;pid_31920;pid_60287;pid_9054	pid_14480:2.0;pid_31920:1.0;pid_60287:2.0;pid_9054:1.0	None
+pid_20081	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:null-null	cytoplasm	None
+pid_20718	ErbB4-m80	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;[ubiquitination]@null;activating-residue-modification;Fragment:652-1308	integral-to-membrane	None
+pid_172445	EGF/EGFR-dimer/SHC/GRB2/SOS1	activating-residue-modification	integral-to-membrane	pid_12022;pid_12030;pid_14480;pid_41398;pid_9054	pid_12022:1.0;pid_12030:1.0;pid_14480:2.0;pid_41398:2.0;pid_9054:1.0	None
+pid_60657	EGFR/EGFR/EGF/EGF/p46-SHC/GRB2/SOS1	activating-residue-modification	endosome	pid_12030;pid_14480;pid_47950;pid_60287;pid_9054	pid_12030:1.0;pid_14480:2.0;pid_47950:1.0;pid_60287:2.0;pid_9054:1.0	None
+pid_60642	EGFR/EGFR/EGF/EGF	activating-residue-modification	lysosome	pid_14480;pid_60301	pid_14480:2.0;pid_60301:2.0	None
+pid_60713	EGFR/EGFR/EGF/EGF/p52-SHC/GRB2/SOS1	activating-residue-modification	endosome	pid_14480;pid_31920;pid_47825;pid_60287;pid_9054	pid_14480:2.0;pid_31920:1.0;pid_47825:1.0;pid_60287:2.0;pid_9054:1.0	None
+pid_20085	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;[ubiquitination]@null;activating-residue-modification;Fragment:null-null	cytoplasm	None
+pid_20691	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:null-null	lysosome	None
+pid_20120	E4ICDs/TAB2/NCoR1	None	cytoplasm	pid_20100;pid_20101;pid_8073	pid_20100:1.0;pid_20101:1.0;pid_8073:1.0	None
+pid_20576	WWOX/E4ICDs	None	cytoplasm	pid_20423;pid_20577	pid_20423:1.0;pid_20577:1.0	None
+pid_20417	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:null-null	nucleus	None
+pid_60513	EGFR	UniProt:P00533	protein	inactivating-residue-modification	lysosome	None
+pid_60514	EGF	UniProt:P01133	protein	None	lysosome	None
+pid_20099	E4ICDs/TAB2/NCoR1	None	nucleus	pid_20100;pid_20101;pid_8073	pid_20100:1.0;pid_20101:1.0;pid_8073:1.0	None
+pid_20422	E4ICDs/ETO2	None	nucleus	pid_20423;pid_20424	pid_20423:1.0;pid_20424:1.0	None
+
+
+##################
+TARGETS FOR pid_60514:
+pid_60514	EGF	UniProt:P01133	protein	None	lysosome	None
+##################
+pid_60514	EGF	UniProt:P01133	protein	None	lysosome	None
+
+
+
+
+Listing all successfully identified outputs:
+pid_14480	EGF	UniProt:P01133	protein	None	None	None
+pid_21562	EGF	UniProt:P01133	protein	None	extracellular-region	None
+pid_26325	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326	pid_14480:2.0;pid_26326:2.0	None
+pid_48940	EGFR/ErbB3/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_48917	pid_14480:1.0;pid_26326:1.0;pid_48917:1.0	None
+pid_154667	EGFR/EGFR/EGF/EGF	None	integral-to-membrane	pid_14480;pid_154668	pid_14480:2.0;pid_154668:2.0	None
+pid_20211	ErbB2;erbB2	UniProt:P04626	protein	None	integral-to-membrane	None
+pid_49072	EGFR/ErbB2/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_48891	pid_14480:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_49077	HSP90-(dimer)	inactivating-residue-modification	None	pid_38554	pid_38554:2.0	None
+pid_172422	EGF/EGFR	None	integral-to-membrane	pid_14480;pid_39996	pid_14480:1.0;pid_39996:1.0	None
+pid_47975	EGFR/EGFR/EGF/EGF/p66-SHC	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47976	pid_14480:2.0;pid_26326:2.0;pid_47976:1.0	None
+pid_40050	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_39996	pid_14480:2.0;pid_39996:2.0	None
+pid_47826	EGFR/EGFR/EGF/EGF/p52-SHC	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47491	pid_14480:2.0;pid_26326:2.0;pid_47491:1.0	None
+pid_47530	EGFR/EGFR/EGF/EGF/GRB2	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_9054:1.0	None
+pid_47681	EGFR/EGFR/EGF/EGF/JAK1-JAK2	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47682	pid_14480:2.0;pid_26326:2.0;pid_47682:1.0	None
+pid_60593	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_60287	pid_14480:2.0;pid_60287:2.0	None
+pid_47699	EGFR/EGFR/EGF/EGF/GRB2/N-WASP	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47700;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_47700:1.0;pid_9054:1.0	None
+pid_47951	EGFR/EGFR/EGF/EGF/p46-SHC	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47952	pid_14480:2.0;pid_26326:2.0;pid_47952:1.0	None
+pid_47909	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_39996	pid_14480:2.0;pid_26326:1.0;pid_39996:1.0	None
+pid_47506	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_47507	pid_14480:2.0;pid_47507:2.0	None
+pid_47747	EGFR/EGFR/EGF/EGF/GNAI1/GNAI3/GAB1	activating-residue-modification	integral-to-membrane	pid_14007;pid_14179;pid_14480;pid_26326;pid_47748	pid_14007:1.0;pid_14179:1.0;pid_14480:2.0;pid_26326:2.0;pid_47748:1.0	None
+pid_47798	EGFR/EGFR/EGF/EGF/FAK	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47799	pid_14480:2.0;pid_26326:2.0;pid_47799:1.0	None
+pid_47561	EGFR/EGFR/EGF/EGF/GRB2/SOS1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_31920;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_31920:1.0;pid_9054:1.0	None
+pid_47843	EGFR/EGFR/EGF/EGF/GRB2/PAK1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47590;pid_47594;pid_9054	pid_14480:2.0;pid_26326:1.0;pid_47590:1.0;pid_47594:1.0;pid_9054:1.0	None
+pid_47593	EGFR/EGFR/EGF/EGF/NCK1-2/PAK1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47588;pid_47590;pid_47594	pid_14480:2.0;pid_26326:1.0;pid_47588:1.0;pid_47590:1.0;pid_47594:1.0	None
+pid_47787	EGFR/EGFR/EGF/EGF/RasGAP	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_31685	pid_14480:2.0;pid_26326:2.0;pid_31685:1.0	None
+pid_47873	EGFR/EGFR/EGF/EGF/PLCgamma1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47874	pid_14480:2.0;pid_26326:2.0;pid_47874:1.0	None
+pid_48005	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_48006	pid_14480:2.0;pid_48006:2.0	None
+pid_20708	ErbB4/ErbB2/betacellulin	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20259	pid_20189:1.0;pid_20191:1.0;pid_20259:1.0	None
+pid_49199	EGFR/ErbB2/TGFA	activating-residue-modification	integral-to-membrane	pid_26326;pid_48891;pid_48970	pid_26326:1.0;pid_48891:1.0;pid_48970:1.0	None
+pid_20188	ErbB4/ErbB2/neuregulin-1-beta	activating-residue-modification	integral-to-membrane	pid_20050;pid_20189;pid_20191	pid_20050:1.0;pid_20189:1.0;pid_20191:1.0	None
+pid_49033	EGFR/ErbB2/epiregulin	activating-residue-modification	integral-to-membrane	pid_20436;pid_26326;pid_48891	pid_20436:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_49225	EGFR/ErbB2/amphiregulin	activating-residue-modification	integral-to-membrane	pid_26326;pid_48891;pid_49097	pid_26326:1.0;pid_48891:1.0;pid_49097:1.0	None
+pid_20511	ErbB4/ErbB2/HBEGF	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20478	pid_20189:1.0;pid_20191:1.0;pid_20478:1.0	None
+pid_49179	ErbB2/ErbB3/neuregulin-2	activating-residue-modification	integral-to-membrane	pid_20191;pid_49180;pid_49183	pid_20191:1.0;pid_49180:1.0;pid_49183:1.0	None
+pid_48916	ErbB2/ErbB3/neuregulin-1-beta	activating-residue-modification	integral-to-membrane	pid_20050;pid_48891;pid_48917	pid_20050:1.0;pid_48891:1.0;pid_48917:1.0	None
+pid_49010	EGFR/ErbB2/HBEGF	activating-residue-modification	integral-to-membrane	pid_20478;pid_26326;pid_48891	pid_20478:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_20628	ErbB4/ErbB2/neuregulin-4	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20629	pid_20189:1.0;pid_20191:1.0;pid_20629:1.0	None
+pid_48890	EGFR/ErbB2/betacellulin	activating-residue-modification	integral-to-membrane	pid_20259;pid_26326;pid_48891	pid_20259:1.0;pid_26326:1.0;pid_48891:1.0	None
+pid_20435	ErbB4/ErbB2/epiregulin	activating-residue-modification	integral-to-membrane	pid_20189;pid_20191;pid_20436	pid_20189:1.0;pid_20191:1.0;pid_20436:1.0	None
+pid_172406	EGF/EGFR-dimer	activating-residue-modification	integral-to-membrane	pid_14480;pid_41398	pid_14480:2.0;pid_41398:2.0	None
+pid_47989	EGFR/EGFR/EGF/EGF	activating-residue-modification	integral-to-membrane	pid_14480;pid_47883	pid_14480:2.0;pid_47883:2.0	None
+pid_47993	p66-SHC	UniProt:P29353	protein	[O-phospho-L-serine]@null;[O-phospho-L-threonine]@null;[O4'-phospho-L-tyrosine]@null	None	None
+pid_48095	p66-SHC/GRB2/SOS1	None	cytoplasm	pid_47993;pid_48096;pid_9054	pid_47993:1.0;pid_48096:1.0;pid_9054:1.0	None
+pid_40369	EGFR/EGFR/EGF/EGF/GRB2/GAB1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_40370;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_40370:1.0;pid_9054:1.0	None
+pid_60286	EGFR/EGFR/EGF/EGF	activating-residue-modification	endosome	pid_14480;pid_60287	pid_14480:2.0;pid_60287:2.0	None
+pid_47882	EGFR/EGFR/EGF/EGF/GNAI1/GNAI3/GAB1	activating-residue-modification	integral-to-membrane	pid_14007;pid_14179;pid_14480;pid_47883;pid_47884	pid_14007:1.0;pid_14179:1.0;pid_14480:2.0;pid_47883:2.0;pid_47884:1.0	None
+pid_47567	EGFR/EGFR/EGF/EGF	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_26326	pid_14480:2.0;pid_26326:2.0	None
+pid_47571	GRB2/SOS1	None	cytoplasm	pid_47572;pid_9054	pid_47572:1.0;pid_9054:1.0	None
+pid_20050	neuregulin-1-beta	UniProt:Q02297	protein	None	None	None
+pid_20199	ErbB4-ectodomain	UniProt:Q15303	protein	Fragment:1-651	extracellular-region	None
+pid_20204	ErbB4-m80	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:652-1308	integral-to-membrane	None
+pid_172411	EGF/EGFR-dimer/SHC	activating-residue-modification	integral-to-membrane	pid_12022;pid_14480;pid_41398	pid_12022:1.0;pid_14480:2.0;pid_41398:2.0	None
+pid_47609	EGFR/EGFR/EGF/EGF/GRB2/GAB1	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_47610;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_47610:1.0;pid_9054:1.0	None
+pid_40381	EGFR/EGFR/EGF/EGF/GRB2/GAB1	inactivating-residue-modification	integral-to-membrane	pid_14480;pid_39996;pid_40370;pid_9054	pid_14480:2.0;pid_39996:2.0;pid_40370:1.0;pid_9054:1.0	None
+pid_48019	EGFR/EGFR/EGF/EGF/GRB2/GAB1/RasGAP	activating-residue-modification	integral-to-membrane	pid_14480;pid_26326;pid_31685;pid_40370;pid_9054	pid_14480:2.0;pid_26326:2.0;pid_31685:1.0;pid_40370:1.0;pid_9054:1.0	None
+pid_60404	EGFR/EGFR/EGF/EGF/p46-SHC	activating-residue-modification	endosome	pid_14480;pid_47950;pid_60287	pid_14480:2.0;pid_47950:1.0;pid_60287:2.0	None
+pid_60389	EGFR/EGFR/EGF/EGF	activating-residue-modification	endosome	pid_14480;pid_26326	pid_14480:2.0;pid_26326:2.0	None
+pid_60300	EGFR/EGFR/EGF/EGF	activating-residue-modification	endosome	pid_14480;pid_60301	pid_14480:2.0;pid_60301:2.0	None
+pid_60443	EGFR/EGFR/EGF/EGF/p52-SHC	activating-residue-modification	endosome	pid_14480;pid_47825;pid_60287	pid_14480:2.0;pid_47825:1.0;pid_60287:2.0	None
+pid_60522	EGFR/EGFR/EGF/EGF/GRB2/SOS1	activating-residue-modification	endosome	pid_14480;pid_31920;pid_60287;pid_9054	pid_14480:2.0;pid_31920:1.0;pid_60287:2.0;pid_9054:1.0	None
+pid_20081	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:null-null	cytoplasm	None
+pid_20718	ErbB4-m80	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;[ubiquitination]@null;activating-residue-modification;Fragment:652-1308	integral-to-membrane	None
+pid_172445	EGF/EGFR-dimer/SHC/GRB2/SOS1	activating-residue-modification	integral-to-membrane	pid_12022;pid_12030;pid_14480;pid_41398;pid_9054	pid_12022:1.0;pid_12030:1.0;pid_14480:2.0;pid_41398:2.0;pid_9054:1.0	None
+pid_60657	EGFR/EGFR/EGF/EGF/p46-SHC/GRB2/SOS1	activating-residue-modification	endosome	pid_12030;pid_14480;pid_47950;pid_60287;pid_9054	pid_12030:1.0;pid_14480:2.0;pid_47950:1.0;pid_60287:2.0;pid_9054:1.0	None
+pid_60642	EGFR/EGFR/EGF/EGF	activating-residue-modification	lysosome	pid_14480;pid_60301	pid_14480:2.0;pid_60301:2.0	None
+pid_60713	EGFR/EGFR/EGF/EGF/p52-SHC/GRB2/SOS1	activating-residue-modification	endosome	pid_14480;pid_31920;pid_47825;pid_60287;pid_9054	pid_14480:2.0;pid_31920:1.0;pid_47825:1.0;pid_60287:2.0;pid_9054:1.0	None
+pid_20085	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;[ubiquitination]@null;activating-residue-modification;Fragment:null-null	cytoplasm	None
+pid_20691	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:null-null	lysosome	None
+pid_20120	E4ICDs/TAB2/NCoR1	None	cytoplasm	pid_20100;pid_20101;pid_8073	pid_20100:1.0;pid_20101:1.0;pid_8073:1.0	None
+pid_20576	WWOX/E4ICDs	None	cytoplasm	pid_20423;pid_20577	pid_20423:1.0;pid_20577:1.0	None
+pid_20417	E4ICDs	UniProt:Q15303	protein	[O4'-phospho-L-tyrosine]@1035;[O4'-phospho-L-tyrosine]@1056;[O4'-phospho-L-tyrosine]@1128;[O4'-phospho-L-tyrosine]@1188;[O4'-phospho-L-tyrosine]@1242;activating-residue-modification;Fragment:null-null	nucleus	None
+pid_60513	EGFR	UniProt:P00533	protein	inactivating-residue-modification	lysosome	None
+pid_60514	EGF	UniProt:P01133	protein	None	lysosome	None
+pid_20099	E4ICDs/TAB2/NCoR1	None	nucleus	pid_20100;pid_20101;pid_8073	pid_20100:1.0;pid_20101:1.0;pid_8073:1.0	None
+pid_20422	E4ICDs/ETO2	None	nucleus	pid_20423;pid_20424	pid_20423:1.0;pid_20424:1.0	None
+pid_60514	EGF	UniProt:P01133	protein	None	lysosome	None

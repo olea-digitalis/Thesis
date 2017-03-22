@@ -1,0 +1,160 @@
+#####################################
+FEASIBLE TARGETS FOR ['pid_62912', 'pid_62915', 'pid_62929', 'pid_62948', 'pid_62952', 'pid_62984', 'pid_63052', 'pid_62984', 'pid_63066', 'pid_63139', 'pid_63211', 'pid_63227', 'pid_63282', 'pid_63368']
+#####################################
+
+
+##################
+TARGETS FOR pid_62912:
+pid_62912	RAR-alpha	UniProt:P10276	protein	None	None	None
+##################
+pid_62912	RAR-alpha	UniProt:P10276	protein	None	None	None
+pid_62915	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@null	None	None
+pid_63367	RAR-alpha/9cRA	activating-residue-modification	None	pid_62959;pid_63368	pid_62959:1.0;pid_63368:1.0	None
+pid_63131	RAR-alpha/Jnk1	None	None	pid_62912;pid_9522	pid_62912:1.0;pid_9522:1.0	None
+pid_63138	RAR-alpha/9cRA	activating-residue-modification	None	pid_62959;pid_63139	pid_62959:1.0;pid_63139:1.0	None
+pid_63306	RAR-alpha/9cRA/Cyclin-H	activating-residue-modification	None	pid_62959;pid_62984;pid_62987	pid_62959:1.0;pid_62984:1.0;pid_62987:1.0	None
+pid_62981	RAR-alpha/9cRA/Cyclin-H	activating-residue-modification	None	pid_62959;pid_62982;pid_62984;pid_62987	pid_62959:1.0;pid_62982:1.0;pid_62984:1.0;pid_62987:1.0	None
+
+
+##################
+TARGETS FOR pid_62915:
+pid_62915	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@null	None	None
+##################
+pid_62915	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@null	None	None
+
+
+##################
+TARGETS FOR pid_62929:
+pid_62929	RARs	None	protein	None	None	None
+##################
+pid_62929	RARs	None	protein	None	None	None
+pid_63294	RARs/AIB1/Cbp/p300/PCAF/9cRA	activating-residue-modification	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_7394	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_7394:1.0	None
+pid_148984	RARs/VDR/DNA/Vit-D3	None	None	pid_62929;pid_63011;pid_63024;pid_63026	pid_62929:1.0;pid_63011:1.0;pid_63024:1.0;pid_63026:1.0	None
+pid_63010	RXRs/VDR/DNA/Vit-D3	None	None	pid_63011;pid_63013;pid_63024;pid_63026	pid_63011:1.0;pid_63013:1.0;pid_63024:1.0;pid_63026:1.0	None
+pid_63176	VDR/VDR/Vit-D3	None	None	pid_63011;pid_63026	pid_63011:1.0;pid_63026:2.0	None
+pid_63114	RARs/Src-1/Cbp/p300/PCAF/9cRA	activating-residue-modification	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_7814	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_7814:1.0	None
+pid_62962	RARs/TIF2/Cbp/p300/PCAF/9cRA	activating-residue-modification	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_7475	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_7475:1.0	None
+pid_63200	RARs/AIB1/Cbp/p300/PCAF/9cRA	None	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_63201	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_63201:1.0	None
+pid_148989	RARs/RARs/DNA/9cRA	None	None	pid_62929;pid_62959;pid_63024	pid_62929:2.0;pid_62959:1.0;pid_63024:1.0	None
+pid_148993	RARs/RARs/DNA/9cRA	None	None	pid_148888;pid_62929;pid_63024	pid_148888:1.0;pid_62929:2.0;pid_63024:1.0	None
+pid_63038	VDR/Vit-D3/DNA	None	None	pid_63011;pid_63024;pid_63026	pid_63011:1.0;pid_63024:1.0;pid_63026:1.0	None
+pid_63034	RXRs/RXRs/DNA/9cRA	None	None	pid_62959;pid_63013;pid_63024	pid_62959:1.0;pid_63013:2.0;pid_63024:1.0	None
+
+
+##################
+TARGETS FOR pid_62948:
+pid_62948	Rar-gamma1;RAR-gamma1	UniProt:P13631	protein	None	None	None
+##################
+pid_62948	Rar-gamma1;RAR-gamma1	UniProt:P13631	protein	None	None	None
+pid_63226	RAR-gamma1/9cRA	activating-residue-modification	None	pid_62959;pid_63227	pid_62959:1.0;pid_63227:1.0	None
+
+
+##################
+TARGETS FOR pid_62952:
+pid_62952	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	None	None	None
+##################
+pid_62952	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	None	None	None
+pid_63281	RAR-gamma2/9cRA	activating-residue-modification	None	pid_62959;pid_63282	pid_62959:1.0;pid_63282:1.0	None
+pid_63065	RAR-gamma2/9cRA	activating-residue-modification	None	pid_62959;pid_63066	pid_62959:1.0;pid_63066:1.0	None
+
+
+##################
+TARGETS FOR pid_62984:
+pid_62984	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369;[O-phospho-L-serine]@77	None	None
+##################
+pid_62984	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369;[O-phospho-L-serine]@77	None	None
+
+
+##################
+TARGETS FOR pid_63052:
+pid_63052	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@157	None	None
+##################
+pid_63052	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@157	None	None
+
+
+##################
+TARGETS FOR pid_62984:
+pid_62984	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369;[O-phospho-L-serine]@77	None	None
+##################
+pid_62984	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369;[O-phospho-L-serine]@77	None	None
+
+
+##################
+TARGETS FOR pid_63066:
+pid_63066	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	[O-phospho-L-serine]@66;[O-phospho-L-serine]@68	None	None
+##################
+pid_63066	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	[O-phospho-L-serine]@66;[O-phospho-L-serine]@68	None	None
+
+
+##################
+TARGETS FOR pid_63139:
+pid_63139	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@77	None	None
+##################
+pid_63139	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@77	None	None
+
+
+##################
+TARGETS FOR pid_63211:
+pid_63211	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@181	None	None
+##################
+pid_63211	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@181	None	None
+
+
+##################
+TARGETS FOR pid_63227:
+pid_63227	Rar-gamma1;RAR-gamma1	UniProt:P13631	protein	[O-phospho-L-serine]@371	None	None
+##################
+pid_63227	Rar-gamma1;RAR-gamma1	UniProt:P13631	protein	[O-phospho-L-serine]@371	None	None
+
+
+##################
+TARGETS FOR pid_63282:
+pid_63282	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	[O-phospho-L-serine]@360	None	None
+##################
+pid_63282	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	[O-phospho-L-serine]@360	None	None
+
+
+##################
+TARGETS FOR pid_63368:
+pid_63368	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369	None	None
+##################
+pid_63368	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369	None	None
+
+
+
+
+Listing all successfully identified outputs:
+pid_62912	RAR-alpha	UniProt:P10276	protein	None	None	None
+pid_62915	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@null	None	None
+pid_63367	RAR-alpha/9cRA	activating-residue-modification	None	pid_62959;pid_63368	pid_62959:1.0;pid_63368:1.0	None
+pid_63131	RAR-alpha/Jnk1	None	None	pid_62912;pid_9522	pid_62912:1.0;pid_9522:1.0	None
+pid_63138	RAR-alpha/9cRA	activating-residue-modification	None	pid_62959;pid_63139	pid_62959:1.0;pid_63139:1.0	None
+pid_63306	RAR-alpha/9cRA/Cyclin-H	activating-residue-modification	None	pid_62959;pid_62984;pid_62987	pid_62959:1.0;pid_62984:1.0;pid_62987:1.0	None
+pid_62981	RAR-alpha/9cRA/Cyclin-H	activating-residue-modification	None	pid_62959;pid_62982;pid_62984;pid_62987	pid_62959:1.0;pid_62982:1.0;pid_62984:1.0;pid_62987:1.0	None
+pid_62915	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@null	None	None
+pid_62929	RARs	None	protein	None	None	None
+pid_63294	RARs/AIB1/Cbp/p300/PCAF/9cRA	activating-residue-modification	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_7394	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_7394:1.0	None
+pid_148984	RARs/VDR/DNA/Vit-D3	None	None	pid_62929;pid_63011;pid_63024;pid_63026	pid_62929:1.0;pid_63011:1.0;pid_63024:1.0;pid_63026:1.0	None
+pid_63010	RXRs/VDR/DNA/Vit-D3	None	None	pid_63011;pid_63013;pid_63024;pid_63026	pid_63011:1.0;pid_63013:1.0;pid_63024:1.0;pid_63026:1.0	None
+pid_63176	VDR/VDR/Vit-D3	None	None	pid_63011;pid_63026	pid_63011:1.0;pid_63026:2.0	None
+pid_63114	RARs/Src-1/Cbp/p300/PCAF/9cRA	activating-residue-modification	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_7814	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_7814:1.0	None
+pid_62962	RARs/TIF2/Cbp/p300/PCAF/9cRA	activating-residue-modification	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_7475	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_7475:1.0	None
+pid_63200	RARs/AIB1/Cbp/p300/PCAF/9cRA	None	None	pid_23030;pid_62929;pid_62956;pid_62959;pid_63201	pid_23030:1.0;pid_62929:1.0;pid_62956:1.0;pid_62959:1.0;pid_63201:1.0	None
+pid_148989	RARs/RARs/DNA/9cRA	None	None	pid_62929;pid_62959;pid_63024	pid_62929:2.0;pid_62959:1.0;pid_63024:1.0	None
+pid_148993	RARs/RARs/DNA/9cRA	None	None	pid_148888;pid_62929;pid_63024	pid_148888:1.0;pid_62929:2.0;pid_63024:1.0	None
+pid_63038	VDR/Vit-D3/DNA	None	None	pid_63011;pid_63024;pid_63026	pid_63011:1.0;pid_63024:1.0;pid_63026:1.0	None
+pid_63034	RXRs/RXRs/DNA/9cRA	None	None	pid_62959;pid_63013;pid_63024	pid_62959:1.0;pid_63013:2.0;pid_63024:1.0	None
+pid_62948	Rar-gamma1;RAR-gamma1	UniProt:P13631	protein	None	None	None
+pid_63226	RAR-gamma1/9cRA	activating-residue-modification	None	pid_62959;pid_63227	pid_62959:1.0;pid_63227:1.0	None
+pid_62952	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	None	None	None
+pid_63281	RAR-gamma2/9cRA	activating-residue-modification	None	pid_62959;pid_63282	pid_62959:1.0;pid_63282:1.0	None
+pid_63065	RAR-gamma2/9cRA	activating-residue-modification	None	pid_62959;pid_63066	pid_62959:1.0;pid_63066:1.0	None
+pid_62984	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369;[O-phospho-L-serine]@77	None	None
+pid_63052	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@157	None	None
+pid_62984	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369;[O-phospho-L-serine]@77	None	None
+pid_63066	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	[O-phospho-L-serine]@66;[O-phospho-L-serine]@68	None	None
+pid_63139	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@77	None	None
+pid_63211	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@445;[O-phospho-L-serine]@461;[O-phospho-L-threonine]@181;[ubiquitinylated-lysine]@181	None	None
+pid_63227	Rar-gamma1;RAR-gamma1	UniProt:P13631	protein	[O-phospho-L-serine]@371	None	None
+pid_63282	RAR-gamma2;Rar-gamma2	UniProt:P22932	protein	[O-phospho-L-serine]@360	None	None
+pid_63368	RAR-alpha	UniProt:P10276	protein	[O-phospho-L-serine]@369	None	None

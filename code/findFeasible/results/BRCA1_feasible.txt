@@ -1,0 +1,90 @@
+#####################################
+FEASIBLE TARGETS FOR ['pid_40897', 'pid_7404', 'pid_90826', 'pid_92007', 'pid_92209', 'pid_92256']
+#####################################
+
+
+##################
+TARGETS FOR pid_40897:
+pid_40897	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@null	None	None
+##################
+pid_40897	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@null	None	None
+
+
+##################
+TARGETS FOR pid_7404:
+pid_7404	BRCA1	UniProt:P38398	protein	None	None	None
+##################
+pid_7404	BRCA1	UniProt:P38398	protein	None	None	None
+pid_40925	BARD1/CSTF1/BRCA1	None	None	pid_40816;pid_40920;pid_7404	pid_40816:1.0;pid_40920:1.0;pid_7404:1.0	None
+pid_40880	BRCA1/BACH1	None	None	pid_40881;pid_7404	pid_40881:1.0;pid_7404:1.0	None
+pid_40815	BRCA1/BARD1	None	None	pid_40816;pid_7404	pid_40816:1.0;pid_7404:1.0	None
+pid_90825	Aurora-A/BRCA1	None	None	pid_86637;pid_90826	pid_86637:1.0;pid_90826:1.0	None
+pid_7407	E2/ERA-(dimer)/BRCA1	activating-residue-modification	nucleus	pid_7376;pid_7404;pid_7408	pid_7376:1.0;pid_7404:1.0;pid_7408:2.0	None
+pid_146147	ATF2/BRCA1/Oct-1/Neurofibromin	activating-residue-modification	None	pid_122140;pid_52425;pid_7404;pid_75078	pid_122140:1.0;pid_52425:1.0;pid_7404:1.0;pid_75078:1.0	None
+pid_40885	BRCA1/BACH1/BARD1	None	None	pid_40816;pid_40881;pid_7404	pid_40816:1.0;pid_40881:1.0;pid_7404:1.0	None
+pid_40938	BRCA1/BARD1/DNA-directed-RNA-polymerase-II-holoenzyme	None	None	pid_40816;pid_40937;pid_7404	pid_40816:1.0;pid_40937:1.0;pid_7404:1.0	None
+pid_40896	BRCA1/BARD1/p53	None	None	pid_40816;pid_40897;pid_40899	pid_40816:1.0;pid_40897:1.0;pid_40899:1.0	None
+pid_41063	BRCA1/BARD1/CTIP	inactivating-residue-modification	None	pid_40816;pid_41060;pid_7404	pid_40816:1.0;pid_41060:1.0;pid_7404:1.0	None
+pid_40837	BRCA1/BARD1/RAD51/PCNA	None	None	pid_16561;pid_40816;pid_7404;pid_7639	pid_16561:1.0;pid_40816:1.0;pid_7404:1.0;pid_7639:1.0	None
+pid_40821	BRCA1/BARD1	inactivating-residue-modification	None	pid_40822;pid_7404	pid_40822:1.0;pid_7404:1.0	None
+pid_40908	BRCA1/BARD1/UbcH5C	None	None	pid_40816;pid_40905;pid_7404	pid_40816:1.0;pid_40905:1.0;pid_7404:1.0	None
+pid_41030	BRCA1/BARD1/UbcH7	None	None	pid_40816;pid_41027;pid_7404	pid_40816:1.0;pid_41027:1.0;pid_7404:1.0	None
+pid_41175	BRCA1/BACH1/BARD1/TopBP1	None	None	pid_40816;pid_40881;pid_41172;pid_7404	pid_40816:1.0;pid_40881:1.0;pid_41172:1.0;pid_7404:1.0	None
+pid_41093	CtIP;CTIP	UniProt:Q99708	protein	[O-phospho-L-serine]@664;[O-phospho-L-serine]@745	None	None
+pid_41151	BRCA1/BARD1/CTIP/M/R/N-Complex	None	None	pid_39198;pid_39200;pid_39202;pid_40816;pid_41060;pid_7404	pid_39198:1.0;pid_39200:1.0;pid_39202:1.0;pid_40816:1.0;pid_41060:1.0;pid_7404:1.0	None
+
+
+##################
+TARGETS FOR pid_90826:
+pid_90826	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@308	None	None
+##################
+pid_90826	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@308	None	None
+
+
+##################
+TARGETS FOR pid_92007:
+pid_92007	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@1423	None	None
+##################
+pid_92007	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@1423	None	None
+
+
+##################
+TARGETS FOR pid_92209:
+pid_92209	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@1387	None	None
+##################
+pid_92209	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@1387	None	None
+
+
+##################
+TARGETS FOR pid_92256:
+pid_92256	BRCA1	UniProt:P38398	protein	inactivating-residue-modification	None	None
+##################
+pid_92256	BRCA1	UniProt:P38398	protein	inactivating-residue-modification	None	None
+
+
+
+
+Listing all successfully identified outputs:
+pid_40897	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@null	None	None
+pid_7404	BRCA1	UniProt:P38398	protein	None	None	None
+pid_40925	BARD1/CSTF1/BRCA1	None	None	pid_40816;pid_40920;pid_7404	pid_40816:1.0;pid_40920:1.0;pid_7404:1.0	None
+pid_40880	BRCA1/BACH1	None	None	pid_40881;pid_7404	pid_40881:1.0;pid_7404:1.0	None
+pid_40815	BRCA1/BARD1	None	None	pid_40816;pid_7404	pid_40816:1.0;pid_7404:1.0	None
+pid_90825	Aurora-A/BRCA1	None	None	pid_86637;pid_90826	pid_86637:1.0;pid_90826:1.0	None
+pid_7407	E2/ERA-(dimer)/BRCA1	activating-residue-modification	nucleus	pid_7376;pid_7404;pid_7408	pid_7376:1.0;pid_7404:1.0;pid_7408:2.0	None
+pid_146147	ATF2/BRCA1/Oct-1/Neurofibromin	activating-residue-modification	None	pid_122140;pid_52425;pid_7404;pid_75078	pid_122140:1.0;pid_52425:1.0;pid_7404:1.0;pid_75078:1.0	None
+pid_40885	BRCA1/BACH1/BARD1	None	None	pid_40816;pid_40881;pid_7404	pid_40816:1.0;pid_40881:1.0;pid_7404:1.0	None
+pid_40938	BRCA1/BARD1/DNA-directed-RNA-polymerase-II-holoenzyme	None	None	pid_40816;pid_40937;pid_7404	pid_40816:1.0;pid_40937:1.0;pid_7404:1.0	None
+pid_40896	BRCA1/BARD1/p53	None	None	pid_40816;pid_40897;pid_40899	pid_40816:1.0;pid_40897:1.0;pid_40899:1.0	None
+pid_41063	BRCA1/BARD1/CTIP	inactivating-residue-modification	None	pid_40816;pid_41060;pid_7404	pid_40816:1.0;pid_41060:1.0;pid_7404:1.0	None
+pid_40837	BRCA1/BARD1/RAD51/PCNA	None	None	pid_16561;pid_40816;pid_7404;pid_7639	pid_16561:1.0;pid_40816:1.0;pid_7404:1.0;pid_7639:1.0	None
+pid_40821	BRCA1/BARD1	inactivating-residue-modification	None	pid_40822;pid_7404	pid_40822:1.0;pid_7404:1.0	None
+pid_40908	BRCA1/BARD1/UbcH5C	None	None	pid_40816;pid_40905;pid_7404	pid_40816:1.0;pid_40905:1.0;pid_7404:1.0	None
+pid_41030	BRCA1/BARD1/UbcH7	None	None	pid_40816;pid_41027;pid_7404	pid_40816:1.0;pid_41027:1.0;pid_7404:1.0	None
+pid_41175	BRCA1/BACH1/BARD1/TopBP1	None	None	pid_40816;pid_40881;pid_41172;pid_7404	pid_40816:1.0;pid_40881:1.0;pid_41172:1.0;pid_7404:1.0	None
+pid_41093	CtIP;CTIP	UniProt:Q99708	protein	[O-phospho-L-serine]@664;[O-phospho-L-serine]@745	None	None
+pid_41151	BRCA1/BARD1/CTIP/M/R/N-Complex	None	None	pid_39198;pid_39200;pid_39202;pid_40816;pid_41060;pid_7404	pid_39198:1.0;pid_39200:1.0;pid_39202:1.0;pid_40816:1.0;pid_41060:1.0;pid_7404:1.0	None
+pid_90826	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@308	None	None
+pid_92007	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@1423	None	None
+pid_92209	BRCA1	UniProt:P38398	protein	[O-phospho-L-serine]@1387	None	None
+pid_92256	BRCA1	UniProt:P38398	protein	inactivating-residue-modification	None	None

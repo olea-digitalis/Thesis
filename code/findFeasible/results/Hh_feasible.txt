@@ -1,0 +1,156 @@
+#####################################
+FEASIBLE TARGETS FOR ['pid_24145', 'pid_24217', 'pid_24221', 'pid_24225', 'pid_24226', 'pid_24286', 'pid_24310', 'pid_24312', 'pid_24322', 'pid_24333', 'pid_36242', 'pid_87931']
+#####################################
+
+
+##################
+TARGETS FOR pid_24145:
+pid_24145	SHH-Np	UniProt:Q15465	protein	[S-palmitoyl-L-cysteine]@24;Fragment:24-197	None	None
+##################
+pid_24145	SHH-Np	UniProt:Q15465	protein	[S-palmitoyl-L-cysteine]@24;Fragment:24-197	None	None
+
+
+##################
+TARGETS FOR pid_24217:
+pid_24217	DHH-N	UniProt:O43323	protein	Fragment:23-198	extracellular-region	None
+##################
+pid_24217	DHH-N	UniProt:O43323	protein	Fragment:23-198	extracellular-region	None
+pid_24391	DHH-N/PTCH1	None	integral-to-membrane	pid_24225;pid_24238	pid_24225:1.0;pid_24238:1.0	None
+pid_24355	DHH-N/PTCH2	None	integral-to-membrane	pid_24225;pid_24356	pid_24225:1.0;pid_24356:1.0	None
+pid_24224	DHH-N/Hhip	inactivating-residue-modification	None	pid_24225;pid_24226	pid_24225:1.0;pid_24226:1.0	None
+
+
+##################
+TARGETS FOR pid_24221:
+pid_24221	Hhip	UniProt:Q96QV1	protein	None	integral-to-membrane	None
+##################
+pid_24221	Hhip	UniProt:Q96QV1	protein	None	integral-to-membrane	None
+pid_24334	IHH-N/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24226;pid_24286	pid_24226:1.0;pid_24286:1.0	None
+pid_24299	SHH-Np/Cholesterol/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24226	pid_24145:1.0;pid_24152:1.0;pid_24226:1.0	None
+pid_24224	DHH-N/Hhip	inactivating-residue-modification	None	pid_24225;pid_24226	pid_24225:1.0;pid_24226:1.0	None
+
+
+##################
+TARGETS FOR pid_24225:
+pid_24225	DHH-N	UniProt:O43323	protein	Fragment:23-198	None	None
+##################
+pid_24225	DHH-N	UniProt:O43323	protein	Fragment:23-198	None	None
+
+
+##################
+TARGETS FOR pid_24226:
+pid_24226	Hhip	UniProt:Q96QV1	protein	None	None	None
+##################
+pid_24226	Hhip	UniProt:Q96QV1	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_24286:
+pid_24286	IHH-N	UniProt:Q14623	protein	Fragment:28-202	None	None
+##################
+pid_24286	IHH-N	UniProt:Q14623	protein	Fragment:28-202	None	None
+
+
+##################
+TARGETS FOR pid_24310:
+pid_24310	SHH	UniProt:Q15465	protein	None	cytoplasm	None
+##################
+pid_24310	SHH	UniProt:Q15465	protein	None	cytoplasm	None
+pid_24144	SHH-Np/Cholesterol	None	cytoplasm	pid_24145;pid_24152	pid_24145:1.0;pid_24152:1.0	None
+pid_24312	SHH-C	UniProt:Q15465	protein	Fragment:198-462	None	None
+pid_24157	SHH-Np/Cholesterol	None	extracellular-region	pid_24145;pid_24152	pid_24145:1.0;pid_24152:1.0	None
+pid_24496	SHH-Np/Cholesterol/CDO	activating-residue-modification	extracellular-region	pid_24145;pid_24152;pid_24497	pid_24145:1.0;pid_24152:1.0;pid_24497:1.0	None
+pid_121024	SHH-Np/Cholesterol/GPC3	inactivating-residue-modification	integral-to-membrane	pid_121025;pid_24145;pid_24152	pid_121025:1.0;pid_24145:1.0;pid_24152:1.0	None
+pid_121059	SHH-Np/Cholesterol/PTCH1	activating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24238	pid_24145:1.0;pid_24152:1.0;pid_24238:1.0	None
+pid_24433	SHH-Np/Cholesterol/BOC	activating-residue-modification	extracellular-region	pid_24145;pid_24152;pid_24434	pid_24145:1.0;pid_24152:1.0;pid_24434:1.0	None
+pid_24530	SHH-Np/Cholesterol/Megalin	activating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24527	pid_24145:1.0;pid_24152:1.0;pid_24527:1.0	None
+pid_24535	Megalin/LRPAP1	None	None	pid_12975;pid_24527	pid_12975:1.0;pid_24527:1.0	None
+pid_24299	SHH-Np/Cholesterol/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24226	pid_24145:1.0;pid_24152:1.0;pid_24226:1.0	None
+pid_24237	SHH-Np/Cholesterol/PTCH1	None	integral-to-membrane	pid_24145;pid_24152;pid_24238	pid_24145:1.0;pid_24152:1.0;pid_24238:1.0	None
+pid_24576	SHH-Np/Cholesterol/PTCH2	None	integral-to-membrane	pid_24145;pid_24152;pid_24356	pid_24145:1.0;pid_24152:1.0;pid_24356:1.0	None
+pid_121032	SHH-Np/Cholesterol/GPC3	inactivating-residue-modification	late-endosome	pid_121025;pid_24145;pid_24152	pid_121025:1.0;pid_24145:1.0;pid_24152:1.0	None
+pid_24421	PTCH1	UniProt:Q13635	protein	inactivating-residue-modification	integral-to-membrane	None
+pid_24422	SHH-Np/Cholesterol	None	integral-to-membrane	pid_24145;pid_24152	pid_24145:1.0;pid_24152:1.0	None
+pid_24378	PTCH1	UniProt:Q13635	protein	inactivating-residue-modification	late-endosome	None
+pid_24454	SHH-Np/Cholesterol/GAS1	inactivating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24455	pid_24145:1.0;pid_24152:1.0;pid_24455:1.0	None
+
+
+##################
+TARGETS FOR pid_24312:
+pid_24312	SHH-C	UniProt:Q15465	protein	Fragment:198-462	None	None
+##################
+pid_24312	SHH-C	UniProt:Q15465	protein	Fragment:198-462	None	None
+
+
+##################
+TARGETS FOR pid_24322:
+pid_24322	HHAT	UniProt:Q5VTY9	protein	None	None	None
+##################
+pid_24322	HHAT	UniProt:Q5VTY9	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_24333:
+pid_24333	IHH-N	UniProt:Q14623	protein	Fragment:28-202	extracellular-region	None
+##################
+pid_24333	IHH-N	UniProt:Q14623	protein	Fragment:28-202	extracellular-region	None
+pid_24285	IHH-N/PTCH1	None	integral-to-membrane	pid_24238;pid_24286	pid_24238:1.0;pid_24286:1.0	None
+pid_24334	IHH-N/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24226;pid_24286	pid_24226:1.0;pid_24286:1.0	None
+pid_24413	IHH-N/PTCH2	None	integral-to-membrane	pid_24286;pid_24356	pid_24286:1.0;pid_24356:1.0	None
+
+
+##################
+TARGETS FOR pid_36242:
+pid_36242	SHH1L	UniProt:Q8WYL5	protein	None	filamentous-actin	None
+##################
+pid_36242	SHH1L	UniProt:Q8WYL5	protein	None	filamentous-actin	None
+
+
+##################
+TARGETS FOR pid_87931:
+pid_87931	SHH	UniProt:Q15465	protein	None	None	None
+##################
+pid_87931	SHH	UniProt:Q15465	protein	None	None	None
+
+
+
+
+Listing all successfully identified outputs:
+pid_24145	SHH-Np	UniProt:Q15465	protein	[S-palmitoyl-L-cysteine]@24;Fragment:24-197	None	None
+pid_24217	DHH-N	UniProt:O43323	protein	Fragment:23-198	extracellular-region	None
+pid_24391	DHH-N/PTCH1	None	integral-to-membrane	pid_24225;pid_24238	pid_24225:1.0;pid_24238:1.0	None
+pid_24355	DHH-N/PTCH2	None	integral-to-membrane	pid_24225;pid_24356	pid_24225:1.0;pid_24356:1.0	None
+pid_24224	DHH-N/Hhip	inactivating-residue-modification	None	pid_24225;pid_24226	pid_24225:1.0;pid_24226:1.0	None
+pid_24221	Hhip	UniProt:Q96QV1	protein	None	integral-to-membrane	None
+pid_24334	IHH-N/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24226;pid_24286	pid_24226:1.0;pid_24286:1.0	None
+pid_24299	SHH-Np/Cholesterol/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24226	pid_24145:1.0;pid_24152:1.0;pid_24226:1.0	None
+pid_24224	DHH-N/Hhip	inactivating-residue-modification	None	pid_24225;pid_24226	pid_24225:1.0;pid_24226:1.0	None
+pid_24225	DHH-N	UniProt:O43323	protein	Fragment:23-198	None	None
+pid_24226	Hhip	UniProt:Q96QV1	protein	None	None	None
+pid_24286	IHH-N	UniProt:Q14623	protein	Fragment:28-202	None	None
+pid_24310	SHH	UniProt:Q15465	protein	None	cytoplasm	None
+pid_24144	SHH-Np/Cholesterol	None	cytoplasm	pid_24145;pid_24152	pid_24145:1.0;pid_24152:1.0	None
+pid_24312	SHH-C	UniProt:Q15465	protein	Fragment:198-462	None	None
+pid_24157	SHH-Np/Cholesterol	None	extracellular-region	pid_24145;pid_24152	pid_24145:1.0;pid_24152:1.0	None
+pid_24496	SHH-Np/Cholesterol/CDO	activating-residue-modification	extracellular-region	pid_24145;pid_24152;pid_24497	pid_24145:1.0;pid_24152:1.0;pid_24497:1.0	None
+pid_121024	SHH-Np/Cholesterol/GPC3	inactivating-residue-modification	integral-to-membrane	pid_121025;pid_24145;pid_24152	pid_121025:1.0;pid_24145:1.0;pid_24152:1.0	None
+pid_121059	SHH-Np/Cholesterol/PTCH1	activating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24238	pid_24145:1.0;pid_24152:1.0;pid_24238:1.0	None
+pid_24433	SHH-Np/Cholesterol/BOC	activating-residue-modification	extracellular-region	pid_24145;pid_24152;pid_24434	pid_24145:1.0;pid_24152:1.0;pid_24434:1.0	None
+pid_24530	SHH-Np/Cholesterol/Megalin	activating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24527	pid_24145:1.0;pid_24152:1.0;pid_24527:1.0	None
+pid_24535	Megalin/LRPAP1	None	None	pid_12975;pid_24527	pid_12975:1.0;pid_24527:1.0	None
+pid_24299	SHH-Np/Cholesterol/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24226	pid_24145:1.0;pid_24152:1.0;pid_24226:1.0	None
+pid_24237	SHH-Np/Cholesterol/PTCH1	None	integral-to-membrane	pid_24145;pid_24152;pid_24238	pid_24145:1.0;pid_24152:1.0;pid_24238:1.0	None
+pid_24576	SHH-Np/Cholesterol/PTCH2	None	integral-to-membrane	pid_24145;pid_24152;pid_24356	pid_24145:1.0;pid_24152:1.0;pid_24356:1.0	None
+pid_121032	SHH-Np/Cholesterol/GPC3	inactivating-residue-modification	late-endosome	pid_121025;pid_24145;pid_24152	pid_121025:1.0;pid_24145:1.0;pid_24152:1.0	None
+pid_24421	PTCH1	UniProt:Q13635	protein	inactivating-residue-modification	integral-to-membrane	None
+pid_24422	SHH-Np/Cholesterol	None	integral-to-membrane	pid_24145;pid_24152	pid_24145:1.0;pid_24152:1.0	None
+pid_24378	PTCH1	UniProt:Q13635	protein	inactivating-residue-modification	late-endosome	None
+pid_24454	SHH-Np/Cholesterol/GAS1	inactivating-residue-modification	integral-to-membrane	pid_24145;pid_24152;pid_24455	pid_24145:1.0;pid_24152:1.0;pid_24455:1.0	None
+pid_24312	SHH-C	UniProt:Q15465	protein	Fragment:198-462	None	None
+pid_24322	HHAT	UniProt:Q5VTY9	protein	None	None	None
+pid_24333	IHH-N	UniProt:Q14623	protein	Fragment:28-202	extracellular-region	None
+pid_24285	IHH-N/PTCH1	None	integral-to-membrane	pid_24238;pid_24286	pid_24238:1.0;pid_24286:1.0	None
+pid_24334	IHH-N/Hhip	inactivating-residue-modification	integral-to-membrane	pid_24226;pid_24286	pid_24226:1.0;pid_24286:1.0	None
+pid_24413	IHH-N/PTCH2	None	integral-to-membrane	pid_24286;pid_24356	pid_24286:1.0;pid_24356:1.0	None
+pid_36242	SHH1L	UniProt:Q8WYL5	protein	None	filamentous-actin	None
+pid_87931	SHH	UniProt:Q15465	protein	None	None	None

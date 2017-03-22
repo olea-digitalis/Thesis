@@ -1,0 +1,262 @@
+#####################################
+FEASIBLE TARGETS FOR ['pid_132413', 'pid_132418', 'pid_132530', 'pid_93907', 'pid_93910', 'pid_94101', 'pid_94106', 'pid_94109', 'pid_94137', 'pid_94148', 'pid_94154', 'pid_94344', 'pid_94435', 'pid_94551']
+#####################################
+
+
+##################
+TARGETS FOR pid_132413:
+pid_132413	NOTCH1-Precursor;NOTCH1-precursor	UniProt:P46531	protein	None	None	None
+##################
+pid_132413	NOTCH1-Precursor;NOTCH1-precursor	UniProt:P46531	protein	None	None	None
+pid_132417	NOTCH1-precursor/Deltex-homolog-1	activating-residue-modification	None	pid_132418;pid_132419	pid_132418:1.0;pid_132419:1.0	None
+pid_132428	Delta-1/NOTCHprecursor	None	None	pid_132418;pid_93923	pid_132418:2.0;pid_93923:1.0	None
+pid_132522	NEXT	UniProt:P46531	protein	Fragment:1721-2555	None	None
+pid_132529	Delta-1/NOTCH/NOTCH(cleaved)	None	extracellular-region	pid_132530;pid_93923	pid_132530:2.0;pid_93923:1.0	None
+pid_132534	NOTCH/Deltex-homolog-1	activating-residue-modification	None	pid_132419;pid_132530	pid_132419:1.0;pid_132530:1.0	None
+pid_94509	NICD	UniProt:P46531	protein	Fragment:1754-2555	cytoplasm	None
+pid_132333	NICD	UniProt:P46531	protein	Fragment:1754-2555	nucleus	None
+pid_132491	NICD/RBPSUH	None	nucleus	pid_132492;pid_132493	pid_132492:1.0;pid_132493:1.0	None
+
+
+##################
+TARGETS FOR pid_132418:
+pid_132418	NOTCH1-Precursor;NOTCH1-precursor	UniProt:P46531	protein	None	None	None
+##################
+pid_132418	NOTCH1-Precursor;NOTCH1-precursor	UniProt:P46531	protein	None	None	None
+pid_132478	NOTCH1-precursor/DVL1	inactivating-residue-modification	None	pid_132418;pid_77300	pid_132418:1.0;pid_77300:1.0	None
+
+
+##################
+TARGETS FOR pid_132530:
+pid_132530	NOTCH	UniProt:P46531	protein	None	None	None
+##################
+pid_132530	NOTCH	UniProt:P46531	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_93907:
+pid_93907	NOTCH2-N-terminal-fragment	UniProt:Q04721	protein	Fragment:null-null	None	None
+##################
+pid_93907	NOTCH2-N-terminal-fragment	UniProt:Q04721	protein	Fragment:null-null	None	None
+
+
+##################
+TARGETS FOR pid_93910:
+pid_93910	NOTCH2-C-terminal-fragment	UniProt:Q04721	protein	Fragment:null-null	None	None
+##################
+pid_93910	NOTCH2-C-terminal-fragment	UniProt:Q04721	protein	Fragment:null-null	None	None
+
+
+##################
+TARGETS FOR pid_94101:
+pid_94101	NOTCH3	UniProt:Q9UM47	protein	Fragment:40-2321	Golgi-apparatus	None
+##################
+pid_94101	NOTCH3	UniProt:Q9UM47	protein	Fragment:40-2321	Golgi-apparatus	None
+pid_94105	NOTCH3-heterodimer	None	integral-to-membrane	pid_94106;pid_94109	pid_94106:1.0;pid_94109:1.0	None
+pid_94522	NOTCH3-heterodimer/DSL	activating-residue-modification	integral-to-membrane	pid_93925;pid_94106;pid_94109	pid_93925:1.0;pid_94106:1.0;pid_94109:1.0	None
+pid_94362	NEXT3	UniProt:Q9UM47	protein	Fragment:1629-2321	integral-to-membrane	None
+pid_94603	NECD3/DSL	None	integral-to-membrane	pid_93925;pid_94106	pid_93925:1.0;pid_94106:1.0	None
+pid_94004	NICD3	UniProt:Q9UM47	protein	Fragment:1662-2321	cytoplasm	None
+pid_94007	NICD3	UniProt:Q9UM47	protein	Fragment:1662-2321	nucleus	None
+
+
+##################
+TARGETS FOR pid_94106:
+pid_94106	NOTCH3-N-terminal-fragment	UniProt:Q9UM47	protein	Fragment:null-null	None	None
+##################
+pid_94106	NOTCH3-N-terminal-fragment	UniProt:Q9UM47	protein	Fragment:null-null	None	None
+
+
+##################
+TARGETS FOR pid_94109:
+pid_94109	NOTCH3-C-terminal-fragment	UniProt:Q9UM47	protein	None	None	None
+##################
+pid_94109	NOTCH3-C-terminal-fragment	UniProt:Q9UM47	protein	None	None	None
+
+
+##################
+TARGETS FOR pid_94137:
+pid_94137	NOTCH1	UniProt:P46531	protein	Fragment:19-2555	None	None
+##################
+pid_94137	NOTCH1	UniProt:P46531	protein	Fragment:19-2555	None	None
+
+
+##################
+TARGETS FOR pid_94148:
+pid_94148	NOTCH4	UniProt:Q99466	protein	Fragment:24-2003	integral-to-membrane	None
+##################
+pid_94148	NOTCH4	UniProt:Q99466	protein	Fragment:24-2003	integral-to-membrane	None
+pid_94153	NOTCH4/Delta-4	activating-residue-modification	integral-to-membrane	pid_93922;pid_94154	pid_93922:1.0;pid_94154:1.0	None
+pid_94172	NICD4	UniProt:Q99466	protein	Fragment:1467-2003	cytoplasm	None
+pid_94211	NICD4	UniProt:Q99466	protein	Fragment:1467-2003	nucleus	None
+
+
+##################
+TARGETS FOR pid_94154:
+pid_94154	NOTCH4	UniProt:Q99466	protein	Fragment:24-2003	None	None
+##################
+pid_94154	NOTCH4	UniProt:Q99466	protein	Fragment:24-2003	None	None
+
+
+##################
+TARGETS FOR pid_94344:
+pid_94344	NOTCH1	UniProt:P46531	protein	Fragment:19-2555	Golgi-apparatus	None
+##################
+pid_94344	NOTCH1	UniProt:P46531	protein	Fragment:19-2555	Golgi-apparatus	None
+pid_93823	NOTCH1-heterodimer	None	integral-to-membrane	pid_93824;pid_93829	pid_93824:1.0;pid_93829:1.0	None
+pid_94551	NOTCH1	UniProt:P46531	protein	activating-residue-modification;Fragment:19-2555	integral-to-membrane	None
+pid_94386	NOTCH1-heterodimer/CNTN1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94218	pid_93824:1.0;pid_93829:1.0;pid_94218:1.0	None
+pid_93840	NOTCH1-heterodimer/Jagged-1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93841;pid_93842	pid_93824:1.0;pid_93841:1.0;pid_93842:1.0	None
+pid_94538	NOTCH1-heterodimer/MAGP1-2	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94533	pid_93824:1.0;pid_93829:1.0;pid_94533:1.0	None
+pid_94122	NOTCH1-heterodimer/DLK1	inactivating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94123	pid_93824:1.0;pid_93829:1.0;pid_94123:1.0	None
+pid_94031	NOTCH1-heterodimer/Jagged-2	activating-residue-modification	integral-to-membrane	pid_93824;pid_93842;pid_93921	pid_93824:1.0;pid_93842:1.0;pid_93921:1.0	None
+pid_93869	NOTCH1-heterodimer/sDelta-1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93842;pid_93864	pid_93824:1.0;pid_93842:1.0;pid_93864:1.0	None
+pid_94232	NOTCH1-heterodimer/NB-3	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94233	pid_93824:1.0;pid_93829:1.0;pid_94233:1.0	None
+pid_94443	NOTCH1-heterodimer/DNER	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94444	pid_93824:1.0;pid_93829:1.0;pid_94444:1.0	None
+pid_94399	NOTCH1-heterodimer	None	late-endosome	pid_93824;pid_94400	pid_93824:1.0;pid_94400:1.0	None
+pid_93949	NOTCH1-heterodimer/Delta-1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93842;pid_93923	pid_93824:1.0;pid_93842:1.0;pid_93923:1.0	None
+pid_94136	NOTCH1/Jagged-1	activating-residue-modification	integral-to-membrane	pid_93841;pid_94137	pid_93841:1.0;pid_94137:1.0	None
+pid_94391	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	cytoplasm	None
+pid_93958	NTMIC	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1665-2555	integral-to-membrane	None
+pid_94087	NECD/Jagged-1	None	integral-to-membrane	pid_93824;pid_93841	pid_93824:1.0;pid_93841:1.0	None
+pid_94570	NECD/MAGP1-2	None	integral-to-membrane	pid_93824;pid_94533	pid_93824:1.0;pid_94533:1.0	None
+pid_94078	NECD/Jagged-2	None	integral-to-membrane	pid_93824;pid_93921	pid_93824:1.0;pid_93921:1.0	None
+pid_94015	NECD/sDelta-1	None	integral-to-membrane	pid_93824;pid_93864	pid_93824:1.0;pid_93864:1.0	None
+pid_94509	NICD	UniProt:P46531	protein	Fragment:1754-2555	cytoplasm	None
+pid_94319	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	cytoplasm	None
+pid_93954	NECD/Delta-1	None	integral-to-membrane	pid_93824;pid_93955	pid_93824:1.0;pid_93955:1.0	None
+pid_94255	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	nucleus	None
+pid_94063	NEXT	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1721-2555	integral-to-membrane	None
+pid_94090	NECD/Jagged-1	None	cytoplasm	pid_93824;pid_93841	pid_93824:1.0;pid_93841:1.0	None
+pid_94018	NECD/sDelta-1	None	cytoplasm	pid_93824;pid_93864	pid_93824:1.0;pid_93864:1.0	None
+pid_132333	NICD	UniProt:P46531	protein	Fragment:1754-2555	nucleus	None
+pid_94049	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	nucleus	None
+pid_94333	NECD/Delta-1	None	cytoplasm	pid_93824;pid_93955	pid_93824:1.0;pid_93955:1.0	None
+pid_94055	NICD	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1754-2555	cytoplasm	None
+pid_132491	NICD/RBPSUH	None	nucleus	pid_132492;pid_132493	pid_132492:1.0;pid_132493:1.0	None
+pid_93946	NICD	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1754-2555	nucleus	None
+pid_94458	RBPJ/NICD/MAML1-2	activating-residue-modification	nucleus	pid_93885;pid_93888;pid_94459	pid_93885:1.0;pid_93888:1.0;pid_94459:1.0	None
+pid_94491	SHARP	UniProt:Q96T58	protein	None	None	None
+pid_93884	RBPJ/NICD	activating-residue-modification	nucleus	pid_93885;pid_93888	pid_93885:1.0;pid_93888:1.0	None
+pid_94683	CtIP/CtBP/LSD1	None	None	pid_41060;pid_92258;pid_94676	pid_41060:1.0;pid_92258:1.0;pid_94676:1.0	None
+pid_7761	HDAC1	UniProt:Q13547	protein	None	None	None
+pid_94617	NCoR	None	protein	None	None	None
+pid_94585	NICD/YY1	activating-residue-modification	nucleus	pid_5180;pid_93888	pid_5180:1.0;pid_93888:1.0	None
+pid_94471	RBPJ/NICD/MAML1-2/p300	activating-residue-modification	nucleus	pid_7834;pid_93885;pid_93888;pid_94459	pid_7834:1.0;pid_93885:1.0;pid_93888:1.0;pid_94459:1.0	None
+pid_95427	E2F1/DP/HDAC1	inactivating-residue-modification	nucleus	pid_7761;pid_94779;pid_94828	pid_7761:1.0;pid_94779:1.0;pid_94828:1.0	None
+pid_95605	STAT5-(dimer)-active/HDAC1	activating-residue-modification	nucleus	pid_7761;pid_95606	pid_7761:1.0;pid_95606:1.0	None
+pid_94873	E2F4/DP2/p107-p130/HDAC1	None	nucleus	pid_7761;pid_94783;pid_94815;pid_94874	pid_7761:1.0;pid_94783:1.0;pid_94815:1.0;pid_94874:1.0	None
+
+
+##################
+TARGETS FOR pid_94435:
+pid_94435	NOTCH2	UniProt:Q04721	protein	Fragment:26-2471	Golgi-apparatus	None
+##################
+pid_94435	NOTCH2	UniProt:Q04721	protein	Fragment:26-2471	Golgi-apparatus	None
+pid_93906	NOTCH2-heterodimer	None	integral-to-membrane	pid_93907;pid_93910	pid_93907:1.0;pid_93910:1.0	None
+pid_93924	NOTCH2-heterodimer/DSL	activating-residue-modification	integral-to-membrane	pid_93907;pid_93910;pid_93925	pid_93907:1.0;pid_93910:1.0;pid_93925:1.0	None
+pid_94217	NOTCH2-heterodimer/CNTN1	activating-residue-modification	integral-to-membrane	pid_93907;pid_93910;pid_94218	pid_93907:1.0;pid_93910:1.0;pid_94218:1.0	None
+pid_94271	NEXT2	UniProt:Q04721	protein	Fragment:1666-2471	integral-to-membrane	None
+pid_94646	NECD2/DSL	None	integral-to-membrane	pid_93907;pid_93925	pid_93907:1.0;pid_93925:1.0	None
+pid_93936	NICD2	UniProt:Q04721	protein	activating-residue-modification;Fragment:1697-2471	cytoplasm	None
+pid_94274	NICD2	UniProt:Q04721	protein	Fragment:1697-2471	cytoplasm	None
+pid_93940	NICD2	UniProt:Q04721	protein	activating-residue-modification;Fragment:1697-2471	nucleus	None
+pid_94579	NICD2	UniProt:Q04721	protein	Fragment:1697-2471	nucleus	None
+
+
+##################
+TARGETS FOR pid_94551:
+pid_94551	NOTCH1	UniProt:P46531	protein	activating-residue-modification;Fragment:19-2555	integral-to-membrane	None
+##################
+pid_94551	NOTCH1	UniProt:P46531	protein	activating-residue-modification;Fragment:19-2555	integral-to-membrane	None
+pid_94136	NOTCH1/Jagged-1	activating-residue-modification	integral-to-membrane	pid_93841;pid_94137	pid_93841:1.0;pid_94137:1.0	None
+
+
+
+
+Listing all successfully identified outputs:
+pid_132413	NOTCH1-Precursor;NOTCH1-precursor	UniProt:P46531	protein	None	None	None
+pid_132417	NOTCH1-precursor/Deltex-homolog-1	activating-residue-modification	None	pid_132418;pid_132419	pid_132418:1.0;pid_132419:1.0	None
+pid_132428	Delta-1/NOTCHprecursor	None	None	pid_132418;pid_93923	pid_132418:2.0;pid_93923:1.0	None
+pid_132522	NEXT	UniProt:P46531	protein	Fragment:1721-2555	None	None
+pid_132529	Delta-1/NOTCH/NOTCH(cleaved)	None	extracellular-region	pid_132530;pid_93923	pid_132530:2.0;pid_93923:1.0	None
+pid_132534	NOTCH/Deltex-homolog-1	activating-residue-modification	None	pid_132419;pid_132530	pid_132419:1.0;pid_132530:1.0	None
+pid_94509	NICD	UniProt:P46531	protein	Fragment:1754-2555	cytoplasm	None
+pid_132333	NICD	UniProt:P46531	protein	Fragment:1754-2555	nucleus	None
+pid_132491	NICD/RBPSUH	None	nucleus	pid_132492;pid_132493	pid_132492:1.0;pid_132493:1.0	None
+pid_132418	NOTCH1-Precursor;NOTCH1-precursor	UniProt:P46531	protein	None	None	None
+pid_132478	NOTCH1-precursor/DVL1	inactivating-residue-modification	None	pid_132418;pid_77300	pid_132418:1.0;pid_77300:1.0	None
+pid_132530	NOTCH	UniProt:P46531	protein	None	None	None
+pid_93907	NOTCH2-N-terminal-fragment	UniProt:Q04721	protein	Fragment:null-null	None	None
+pid_93910	NOTCH2-C-terminal-fragment	UniProt:Q04721	protein	Fragment:null-null	None	None
+pid_94101	NOTCH3	UniProt:Q9UM47	protein	Fragment:40-2321	Golgi-apparatus	None
+pid_94105	NOTCH3-heterodimer	None	integral-to-membrane	pid_94106;pid_94109	pid_94106:1.0;pid_94109:1.0	None
+pid_94522	NOTCH3-heterodimer/DSL	activating-residue-modification	integral-to-membrane	pid_93925;pid_94106;pid_94109	pid_93925:1.0;pid_94106:1.0;pid_94109:1.0	None
+pid_94362	NEXT3	UniProt:Q9UM47	protein	Fragment:1629-2321	integral-to-membrane	None
+pid_94603	NECD3/DSL	None	integral-to-membrane	pid_93925;pid_94106	pid_93925:1.0;pid_94106:1.0	None
+pid_94004	NICD3	UniProt:Q9UM47	protein	Fragment:1662-2321	cytoplasm	None
+pid_94007	NICD3	UniProt:Q9UM47	protein	Fragment:1662-2321	nucleus	None
+pid_94106	NOTCH3-N-terminal-fragment	UniProt:Q9UM47	protein	Fragment:null-null	None	None
+pid_94109	NOTCH3-C-terminal-fragment	UniProt:Q9UM47	protein	None	None	None
+pid_94137	NOTCH1	UniProt:P46531	protein	Fragment:19-2555	None	None
+pid_94148	NOTCH4	UniProt:Q99466	protein	Fragment:24-2003	integral-to-membrane	None
+pid_94153	NOTCH4/Delta-4	activating-residue-modification	integral-to-membrane	pid_93922;pid_94154	pid_93922:1.0;pid_94154:1.0	None
+pid_94172	NICD4	UniProt:Q99466	protein	Fragment:1467-2003	cytoplasm	None
+pid_94211	NICD4	UniProt:Q99466	protein	Fragment:1467-2003	nucleus	None
+pid_94154	NOTCH4	UniProt:Q99466	protein	Fragment:24-2003	None	None
+pid_94344	NOTCH1	UniProt:P46531	protein	Fragment:19-2555	Golgi-apparatus	None
+pid_93823	NOTCH1-heterodimer	None	integral-to-membrane	pid_93824;pid_93829	pid_93824:1.0;pid_93829:1.0	None
+pid_94551	NOTCH1	UniProt:P46531	protein	activating-residue-modification;Fragment:19-2555	integral-to-membrane	None
+pid_94386	NOTCH1-heterodimer/CNTN1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94218	pid_93824:1.0;pid_93829:1.0;pid_94218:1.0	None
+pid_93840	NOTCH1-heterodimer/Jagged-1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93841;pid_93842	pid_93824:1.0;pid_93841:1.0;pid_93842:1.0	None
+pid_94538	NOTCH1-heterodimer/MAGP1-2	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94533	pid_93824:1.0;pid_93829:1.0;pid_94533:1.0	None
+pid_94122	NOTCH1-heterodimer/DLK1	inactivating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94123	pid_93824:1.0;pid_93829:1.0;pid_94123:1.0	None
+pid_94031	NOTCH1-heterodimer/Jagged-2	activating-residue-modification	integral-to-membrane	pid_93824;pid_93842;pid_93921	pid_93824:1.0;pid_93842:1.0;pid_93921:1.0	None
+pid_93869	NOTCH1-heterodimer/sDelta-1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93842;pid_93864	pid_93824:1.0;pid_93842:1.0;pid_93864:1.0	None
+pid_94232	NOTCH1-heterodimer/NB-3	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94233	pid_93824:1.0;pid_93829:1.0;pid_94233:1.0	None
+pid_94443	NOTCH1-heterodimer/DNER	activating-residue-modification	integral-to-membrane	pid_93824;pid_93829;pid_94444	pid_93824:1.0;pid_93829:1.0;pid_94444:1.0	None
+pid_94399	NOTCH1-heterodimer	None	late-endosome	pid_93824;pid_94400	pid_93824:1.0;pid_94400:1.0	None
+pid_93949	NOTCH1-heterodimer/Delta-1	activating-residue-modification	integral-to-membrane	pid_93824;pid_93842;pid_93923	pid_93824:1.0;pid_93842:1.0;pid_93923:1.0	None
+pid_94136	NOTCH1/Jagged-1	activating-residue-modification	integral-to-membrane	pid_93841;pid_94137	pid_93841:1.0;pid_94137:1.0	None
+pid_94391	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	cytoplasm	None
+pid_93958	NTMIC	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1665-2555	integral-to-membrane	None
+pid_94087	NECD/Jagged-1	None	integral-to-membrane	pid_93824;pid_93841	pid_93824:1.0;pid_93841:1.0	None
+pid_94570	NECD/MAGP1-2	None	integral-to-membrane	pid_93824;pid_94533	pid_93824:1.0;pid_94533:1.0	None
+pid_94078	NECD/Jagged-2	None	integral-to-membrane	pid_93824;pid_93921	pid_93824:1.0;pid_93921:1.0	None
+pid_94015	NECD/sDelta-1	None	integral-to-membrane	pid_93824;pid_93864	pid_93824:1.0;pid_93864:1.0	None
+pid_94509	NICD	UniProt:P46531	protein	Fragment:1754-2555	cytoplasm	None
+pid_94319	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	cytoplasm	None
+pid_93954	NECD/Delta-1	None	integral-to-membrane	pid_93824;pid_93955	pid_93824:1.0;pid_93955:1.0	None
+pid_94255	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	nucleus	None
+pid_94063	NEXT	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1721-2555	integral-to-membrane	None
+pid_94090	NECD/Jagged-1	None	cytoplasm	pid_93824;pid_93841	pid_93824:1.0;pid_93841:1.0	None
+pid_94018	NECD/sDelta-1	None	cytoplasm	pid_93824;pid_93864	pid_93824:1.0;pid_93864:1.0	None
+pid_132333	NICD	UniProt:P46531	protein	Fragment:1754-2555	nucleus	None
+pid_94049	NICD	UniProt:P46531	protein	activating-residue-modification;Fragment:1754-2555	nucleus	None
+pid_94333	NECD/Delta-1	None	cytoplasm	pid_93824;pid_93955	pid_93824:1.0;pid_93955:1.0	None
+pid_94055	NICD	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1754-2555	cytoplasm	None
+pid_132491	NICD/RBPSUH	None	nucleus	pid_132492;pid_132493	pid_132492:1.0;pid_132493:1.0	None
+pid_93946	NICD	UniProt:P46531	protein	[O4'-phospho-L-tyrosine]@null;Fragment:1754-2555	nucleus	None
+pid_94458	RBPJ/NICD/MAML1-2	activating-residue-modification	nucleus	pid_93885;pid_93888;pid_94459	pid_93885:1.0;pid_93888:1.0;pid_94459:1.0	None
+pid_94491	SHARP	UniProt:Q96T58	protein	None	None	None
+pid_93884	RBPJ/NICD	activating-residue-modification	nucleus	pid_93885;pid_93888	pid_93885:1.0;pid_93888:1.0	None
+pid_94683	CtIP/CtBP/LSD1	None	None	pid_41060;pid_92258;pid_94676	pid_41060:1.0;pid_92258:1.0;pid_94676:1.0	None
+pid_7761	HDAC1	UniProt:Q13547	protein	None	None	None
+pid_94617	NCoR	None	protein	None	None	None
+pid_94585	NICD/YY1	activating-residue-modification	nucleus	pid_5180;pid_93888	pid_5180:1.0;pid_93888:1.0	None
+pid_94471	RBPJ/NICD/MAML1-2/p300	activating-residue-modification	nucleus	pid_7834;pid_93885;pid_93888;pid_94459	pid_7834:1.0;pid_93885:1.0;pid_93888:1.0;pid_94459:1.0	None
+pid_95427	E2F1/DP/HDAC1	inactivating-residue-modification	nucleus	pid_7761;pid_94779;pid_94828	pid_7761:1.0;pid_94779:1.0;pid_94828:1.0	None
+pid_95605	STAT5-(dimer)-active/HDAC1	activating-residue-modification	nucleus	pid_7761;pid_95606	pid_7761:1.0;pid_95606:1.0	None
+pid_94873	E2F4/DP2/p107-p130/HDAC1	None	nucleus	pid_7761;pid_94783;pid_94815;pid_94874	pid_7761:1.0;pid_94783:1.0;pid_94815:1.0;pid_94874:1.0	None
+pid_94435	NOTCH2	UniProt:Q04721	protein	Fragment:26-2471	Golgi-apparatus	None
+pid_93906	NOTCH2-heterodimer	None	integral-to-membrane	pid_93907;pid_93910	pid_93907:1.0;pid_93910:1.0	None
+pid_93924	NOTCH2-heterodimer/DSL	activating-residue-modification	integral-to-membrane	pid_93907;pid_93910;pid_93925	pid_93907:1.0;pid_93910:1.0;pid_93925:1.0	None
+pid_94217	NOTCH2-heterodimer/CNTN1	activating-residue-modification	integral-to-membrane	pid_93907;pid_93910;pid_94218	pid_93907:1.0;pid_93910:1.0;pid_94218:1.0	None
+pid_94271	NEXT2	UniProt:Q04721	protein	Fragment:1666-2471	integral-to-membrane	None
+pid_94646	NECD2/DSL	None	integral-to-membrane	pid_93907;pid_93925	pid_93907:1.0;pid_93925:1.0	None
+pid_93936	NICD2	UniProt:Q04721	protein	activating-residue-modification;Fragment:1697-2471	cytoplasm	None
+pid_94274	NICD2	UniProt:Q04721	protein	Fragment:1697-2471	cytoplasm	None
+pid_93940	NICD2	UniProt:Q04721	protein	activating-residue-modification;Fragment:1697-2471	nucleus	None
+pid_94579	NICD2	UniProt:Q04721	protein	Fragment:1697-2471	nucleus	None
+pid_94551	NOTCH1	UniProt:P46531	protein	activating-residue-modification;Fragment:19-2555	integral-to-membrane	None
+pid_94136	NOTCH1/Jagged-1	activating-residue-modification	integral-to-membrane	pid_93841;pid_94137	pid_93841:1.0;pid_94137:1.0	None
