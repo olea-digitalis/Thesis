@@ -1,0 +1,28 @@
+
+
+########################
+Non-cheat hedges
+########################
+e2867:
+pid_174501	pid_26794	pid_88626	None	Transport	pid_26794:1.0;pid_88626:1.0	null	None	inferred-from-mutant-phenotype:ECO:0000015;inferred-from-physical-interaction:ECO:0000021	Pubmed:15684397	ncipid-reactions.txt
+pid_88625	pid_26794	pid_88626	None	Transport	pid_26794:1.0;pid_88626:1.0	true	None	inferred-from-mutant-phenotype:ECO:0000015	Pubmed:11751573;Pubmed:15024404	ncipid-reactions.txt
+
+e2139:
+pid_88632	pid_88615	pid_77289	pid_88635	BiochemicalReaction	pid_77289:1.0;pid_88615:1.0	null	None	inferred-from-mutant-phenotype:ECO:0000015	Pubmed:18772438;Pubmed:19561074	ncipid-reactions.txt
+
+
+#######################
+Cheat hedges
+#######################
+e10599:
+pid_98307	pid_88626;pid_98282	pid_98308;pid_98312	None	BiochemicalReaction	pid_88626:1.0;pid_98282:1.0;pid_98308:1.0;pid_98312:1.0	true	None	inferred-from-mutant-phenotype:ECO:0000015;inferred-from-physical-interaction:ECO:0000021	Pubmed:16301527	ncipid-reactions.txt
+
+e7923:
+pid_88784	pid_205;pid_88755	pid_88615	None	ComplexAssembly	pid_205:1.0;pid_88615:1.0;pid_88755:1.0	true	None	inferred-from-mutant-phenotype:ECO:0000015;inferred-from-physical-interaction:ECO:0000021	Pubmed:16263762;Pubmed:17569865;Pubmed:18077588;Pubmed:19561074	ncipid-reactions.txt
+
+e10938:
+pid_88733	pid_77289;pid_88705	pid_26794;pid_3479;pid_88734	None	ComplexAssembly	pid_26794:1.0;pid_3479:1.0;pid_77289:1.0;pid_88705:1.0;pid_88734:1.0	true	None	inferred-from-mutant-phenotype:ECO:0000015	Pubmed:10023673;Pubmed:12000790;Pubmed:14966280;Pubmed:9482734	ncipid-reactions.txt
+
+e9555:
+pid_184	pid_164;pid_185;pid_202	pid_205	None	ComplexAssembly	pid_164:1.0;pid_185:1.0;pid_202:1.0;pid_205:1.0	true	None	inferred-from-mutant-phenotype:ECO:0000015;inferred-from-physical-interaction:ECO:0000021	Pubmed:12897152;Pubmed:14731402;Pubmed:16890161;Pubmed:18077588	ncipid-reactions.txt
+

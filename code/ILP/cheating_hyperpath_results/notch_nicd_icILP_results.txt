@@ -1,0 +1,18 @@
+-------------------------------------
+iterate_cheat_ILP results for source: notch_source and target: nicd_target
+-------------------------------------
+
+
+
+
+RESULTS: k=5945
+# nodes:	# hedges:	# cheats:	nodes+hedges:
+14	4	2	18
+
+
+Nodes in Path: ['pid_94101', 'pid_94344', 'pid_94551', 'pid_94154', 'pid_94153', 'pid_93910', 'notch_source', 'pid_94137', 'pid_94148', 'nicd_target', 'pid_132530', 'pid_93907', 'pid_94435', 'pid_94172']
+
+Hyperedges in Path: ['e7254', 'e778', 'e10407', 'e2']
+
+Cheat Hyperedges in Path: ['e7254', 'e10407']
+

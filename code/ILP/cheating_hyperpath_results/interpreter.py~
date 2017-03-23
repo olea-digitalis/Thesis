@@ -1,0 +1,21 @@
+outprefix = "wnt3a_MYF5"
+
+def order_file(outprefix,solnum=1):
+    return outprefix+'-'+str(solnum)+'.order-variables'
+
+def edge_file(outprefix,solnum=1):
+    return outprefix+'-'+str(solnum)+'.edge-variables'
+
+def node_file(outprefix,solnum=1):
+    return outprefix+'-'+str(solnum)+'.node-variables'
+
+def results_file(outprefix):
+    return outprefix+'_icILP_results.txt'
+
+
+def scroll_through(outprefix):
+    with open(order_file(outprefix), 'r') as order:
+        for line in order:
+            ls = line.split('\t')
+            if float(ls[1]) != 0:
+                print(line)

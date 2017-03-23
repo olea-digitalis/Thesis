@@ -1,0 +1,18 @@
+-------------------------------------
+iterate_cheat_ILP results for source: pid_185 and target: pid_98312
+-------------------------------------
+
+
+
+
+RESULTS: k=5947
+# nodes:	# hedges:	# cheats:	nodes+hedges:
+10	6	4	16
+
+
+Nodes in Path: ['pid_98312', 'pid_3479', 'pid_88626', 'pid_185', 'pid_77289', 'pid_98308', 'pid_88734', 'pid_205', 'pid_88615', 'pid_26794']
+
+Hyperedges in Path: ['e10599', 'e7923', 'e2867', 'e2139', 'e10938', 'e9555']
+
+Cheat Hyperedges in Path: ['e10599', 'e7923', 'e10938', 'e9555']
+
