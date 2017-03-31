@@ -36,14 +36,26 @@ def results_file(outprefix):
 
 
 
-#random helper functions
-#for convenience in various places
+#helper functions
 
 def iterate_replace(old, new, ls):
     c = ls[:]
     for i in range(len(c)):
         c[i] = c[i].replace(old, new)
     return c
+
+def find_entry(id, reference_files):
+    #given a pid_number, searches through ncipid-elements.txt to find the entry associated with the id
+    #returns that entry
+    for filename in reference_files:
+        with open(filename,'r') as f:
+            for line in f:
+                if line.split('\t')[0] == id:
+                    return line.strip() + '\t' + filename + '\n'
+    s = id + " not found.\n"
+    return s
+
+
 
 
 #ic_ILP output interpreting functions
