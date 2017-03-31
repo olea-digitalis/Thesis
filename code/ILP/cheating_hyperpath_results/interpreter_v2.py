@@ -111,7 +111,7 @@ def lookup_hyperedges(outprefix, hyperedge_file, reference_files = None):
                     print(e)
                     print(line)
                     if reference_files:
-                        print("REACTION LOOKUP: ",find_entry(line.strip().split('\t')[-1],reference_files)) #looks up the reaction pid
+                        print("REACTION LOOKUP: "+find_entry(line.strip().split('\t')[-1],reference_files)) #looks up the reaction pid
                         print
                         print("TAIL NODE LOOKUP: ")
                         for node in e[0].split(';'):
@@ -128,7 +128,7 @@ def lookup_hyperedges(outprefix, hyperedge_file, reference_files = None):
                     print(e)
                     print(line)
                     if reference_files:
-                        print("REACTION LOOKUP: ",find_entry(line.strip().split('\t')[-1],reference_files))
+                        print("REACTION LOOKUP: "+find_entry(line.strip().split('\t')[-1],reference_files))
                         print
                         print("TAIL NODE LOOKUP: ")
                         print('\t'+find_entry(e[0],reference_files))
