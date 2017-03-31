@@ -4,7 +4,7 @@
 #keeps track of the index files for lookups
 #modifies which file we're investigating (outprefix)
 
-outprefix = "wnt3a_wnt5a_bcat_nucleus"
+outprefix = "just_wnt5a_bcat_nucleus"
 hyperedge_data = "signaling-hypergraph-hyperedges.txt"
 
 node_file = "signaling-hypergraph-hypernodes.txt"
@@ -55,6 +55,20 @@ def find_entry(id, reference_files):
     s = id + " not found.\n"
     return s
 
+def isPerm(string1, string2, delimiter=';'):
+    #given two strings, checks if one is a permutation of the other wrt delimiter
+    set1 = set(string1.split(delimiter))
+    set2 = set(string2.split(delimiter))
+    if set1 == set2:
+        return True
+    else:
+        return False
+
+def hello():
+    #just a function used in testing that makes locating pieces of
+    #printed layouts easier
+    print('\n\n\n\n\n')
+    print('HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nHELLOOOOOO\nHELLOOOO\nHELLOOO\nHELLOO\n\n\n\n')
 
 
 
@@ -105,7 +119,7 @@ def lookup_hyperedges(outprefix, hyperedge_file, reference_files = None):
         for e in in_hyperpath:
             for line in hf:
                 ls = line.strip().split('\t') #tab delineated list of lookup line components, ls[0] is tail and ls[1] is head
-                if e[0] == ls[0] and e[1] == ls[1]:
+                if isPerm(e[0],ls[0]) and isPerm(e[1],ls[1]):
                     print('####################### NEW HYPEREDGE ##################')
                     print(ls)
                     print(e)
@@ -122,11 +136,13 @@ def lookup_hyperedges(outprefix, hyperedge_file, reference_files = None):
                         for node in e[1].split(';'):
                             print('\t'+find_entry(node,reference_files))
                         print("---------------------")
-                elif e[0] in ls[0] and e[1] == ls[1]:
+                elif e[0] in ls[0] and isPerm(e[1],ls[1]):
                     print("####################### NEW HYPEREDGE #################")
                     print("THIS EDGE IS A CHEAT")
                     print(e)
                     print(line)
+                    if e[0] == 'pid_454':
+                        hello()
                     if reference_files:
                         print("REACTION LOOKUP: "+find_entry(line.strip().split('\t')[-1],reference_files))
                         print
@@ -143,16 +159,22 @@ def lookup_hyperedges(outprefix, hyperedge_file, reference_files = None):
                             print('\t'+find_entry(node,reference_files))
                         print('--------------------')
             hf.seek(1)
+    print('PRINTING IN_HYPERPATH')
+    print(in_hyperpath)
 
 
 
 #run the following functions to get a summary
 
-print('ORDER VARIABLES:')
-scroll_through_order(outprefix, ref_ls)
-print
-print
-print
+#print('ORDER VARIABLES:')
+#scroll_through_order(outprefix, ref_ls)
+#print
+#print
+#print
 
-print('HEDGE LOOKUP:')
+#print('HEDGE LOOKUP:')
 lookup_hyperedges(outprefix, hyperedge_data, ref_ls)
+
+print(st_edgevars(outprefix))
+
+
