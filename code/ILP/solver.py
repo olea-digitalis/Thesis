@@ -14,6 +14,7 @@ import random
 import time
 import copy
 
+
 from ilp import *  ## import functions from ilp.py
 import mod_ilp
 
@@ -62,8 +63,8 @@ def main(args):
     print("Max bcon root is called:", max_bcon_root)
     print("Here are the bconnected nodes:", bcon_dict[max_bcon_root])
     """
-    print_all_hedges(H)
-    compile_shortest_hpaths(H,'Complex842',opts.outprefix,opts.subopt, opts.verbose)
+    #print_all_hedges(H)
+    #compile_shortest_hpaths(H,'Complex842',opts.outprefix,opts.subopt, opts.verbose)
     
     
     
@@ -81,7 +82,7 @@ def main(args):
     allvars = compute_cheating_hyperpath(cH,cheatset,k,opts.source,opts.target,\
         opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
     """
-    #iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
+    iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
 
     """
     print("\n\nHere's the hgraph:")
@@ -145,18 +146,6 @@ def read_hypergraph(opts, mod=False):
     return H
 
 
-def get_frag_pairs(H, n):
-    #UNFINISHED
-    i = 0
-    nodes = H.get_node_set()
-    while i < n:
-        current = random.choice(nodes)
-        bconnected, ignore1,ignore2,ignore3 = directed_paths.b_visit(H,current)
-        if len(bconnected) == 1:
-            pass
-        else:
-            pass
-
 
 def print_hedge(H,hedge):
     print hedge, "\ttail:", H.get_hyperedge_tail(hedge),"\thead:", H.get_hyperedge_head(hedge), "\tattributes:", H.get_hyperedge_attributes(hedge)
@@ -173,9 +162,13 @@ def print_all_hedges(H):
 ################################
 
 def get_restrictive_hedges(H,n):
+    #returns the set of restrictive hyperedges for a node n as a list
+    
     #the restrictive hedges of a node is a subset of the forward star
-    #any hedge in the forward star of n with |tail_set| > 1 (i.e. contains more nodes than just n) is a restrictive hedge
+    #any hedge in the forward star of n with |tail_set| > 1 is a restrictive hedge
+    #(i.e. any hedge whose tail contains more than n itself is a restrictive hyperedge)
     #the forward star of a node is the set of hyperedges such that the node is in the tail of each hyperedge in that set.
+
     hedges = H.get_forward_star(n)
     r_hedges = []
     for h in hedges:
@@ -185,25 +178,26 @@ def get_restrictive_hedges(H,n):
 
 
 def add_cheat_hedges(H):
-    #adds cheat hedges to every node in H, labeled with attribute: 'cheat' = True
+    #adds cheat hedges to every node in the hypergraph H, labeled with attribute: 'cheat' = True
+    #returns a list of the added cheat hedge ID's
+    
     #for every restrictive hedge (see function: get_restrictive_hedges() ) of each node, we add a cheat hedge
     #cheat hedges model the restrictive hedges but they remove the restriction
     #that is, the tail of a cheat hedge contains only the given node, and the head contains the head set of the given restrictive hedge
     #each cheat edge keeps track of which hedge it is modeled after via the 'original_hedge' attribute.
-    #returns a list of the added cheat hedge ID's
-
+    
     
     added_cheats = []
     for n in H.get_node_set():
         r_hedges = get_restrictive_hedges(H,n)
+        
         for h in r_hedges:
-            if not H.has_hyperedge([n],H.get_hyperedge_head(h)): #this conditional is necessary because the halp library won't let you have two hyperedges with the same head and tail. If there is already with the head and tail of the candidate cheat edge, we simply do not make it.
+            if not H.has_hyperedge([n],H.get_hyperedge_head(h)):
+                #if there is an existing hedge with the same head and tail of the candidate cheat hedge, we don't need to make it. (fixes an issue with halp)
                 c = H.add_hyperedge([n], H.get_hyperedge_head(h), attr_dict={'cheat': True, 'original_hedge': h})
+                #c is a hyperedge whose tail is only n and whose head is the same as that of the restrictive hyperedge it's modeled after
                 added_cheats.append(c)
     return added_cheats
-
-
-
 
 
 
@@ -332,7 +326,7 @@ def compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,sub
 
 
 
-def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose):
+def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, loud=False):
     results_file = outprefix + "_icILP_results.txt"
     with open(results_file,'w') as rf:
         rf.write("-------------------------------------\n")
@@ -341,21 +335,23 @@ def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose):
     cH = copy.deepcopy(H_orig)
     cheatset = add_cheat_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
     k = len(cheatset)+1
-
+    
     while k > 0:
         allvars, times = compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,subopt,verbose)
         allvars = allvars[0] #for some reason this is a list containing only a dict
-        print("#####################################################")
-        print("#####################################################")
-        print("#####################################################")
-        print(allvars)
-        print(type(allvars))
-        print(allvars.keys())
-        print(cheatset)
-        print_all_hedges(cH)
-        print("#####################################################")
-        print("#####################################################")
-        print("#####################################################")
+
+        if loud:
+            print("#####################################################")
+            print("#####################################################")
+            print("#####################################################")
+            print(allvars)
+            print(type(allvars))
+            print(allvars.keys())
+            print(cheatset)
+            print_all_hedges(cH)
+            print("#####################################################")
+            print("#####################################################")
+            print("#####################################################")
         next_k = icILP_recorder(k,allvars,cheatset,outprefix)
         k = next_k
 
@@ -368,8 +364,23 @@ def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose):
 
 
 def icILP_recorder(k,allvars,cheatset,outprefix):
-    #this function will record a summary of each iteration of the icILP in a txt file
+    #this function will record a summary of each iteration of the icILP in a txt file:
+    #outprefix + "_icILP_results.txt"
     #it will also compute and return the k for the next iteration of the icILP
+
+    #details:
+    #the next value of k is determined by observing the number of cheats used in the previous iteration's path
+    #k is set to that number of cheats (such that the next iteration is allowed one fewer cheat than was used in the previous /solution/)
+    #emphasis on /solution/ since k is an upper bound. If solution uses fewer than k cheats and we simply count down by one each time, every k value between the present k and that number of cheats will redundantly find the same solution.
+    #setting k in this way skips over the redundant solutions.
+    #the reason the next k is computed in this particular function is because this is the only cheating-hyperpath-relevant function that communicates with the outputs of the ilp.
+    #having the recorder function compute the next k is weird, but writing a separate function to go find the results of the recorder function seemed more cumbersome
+    
+    #notes/to do:
+    #unfortunately the hedge readout is kind of useless since it gives the names of the hyperedges but you have no way of relating those back to the nodes that they touch
+    #fixing this seems like more trouble than it's worth at the present moment. I wrote a script to look up the corresponding reactions on the NCIPID database. It's in the cheating hyperpath results folder.
+    
+    #also unfortunate is the fact that the nodes are not listed in order, making it a pain to extract the hyperpath in a human-intelligible way. This seems like it may be worth fixing actually, I'll see what I can do.
 
     results_file = outprefix + "_icILP_results.txt"
     
@@ -382,8 +393,6 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
     path_nodes = []
     path_hedges = []
     path_cheats = []
-    #for some reason allvars is returned as a list containing only a dictionary
-    #so that's why it's allvars[0] in the next line
     for v in allvars.keys():
         if var_is_alpha(v) and allvars[v]==1:
             if var_is_edge(v):
