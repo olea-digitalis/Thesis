@@ -18,7 +18,7 @@ import copy
 #path to CPLEX package on VT local server:
 sys.path.append('/data/annaritz/tools/CPLEX/2014/CPLEX_Studio126/cplex/python/x86-64_linux/')
 
-from ilp import *  #Anna's original ilp script
+#from ilp import *  #Anna's original ilp script
 import mod_ilp     #cheating hyperpath ilp script
 
 ## import HALP library.  https://github.com/Murali-group/halp
@@ -57,9 +57,9 @@ def main(args):
 #################################
 
 
-#################################
-#PARSING AND REPORTING FUNCTIONS#
-#################################
+##########################
+#PARSING AND INITIALIZING#
+##########################
 
 def parseOptions(args):
     """
@@ -108,57 +108,6 @@ def read_hypergraph(opts, debug=False):
     if opts.target not in nodes and debug==False:
         sys.exit('ERROR: target "%s" is not in node set. Exiting.' % (opts.target))
     return H
-
-
-
-def print_hedge(H,hedge):
-    print hedge, "\ttail:", H.get_hyperedge_tail(hedge),"\thead:", H.get_hyperedge_head(hedge), "\tattributes:", H.get_hyperedge_attributes(hedge)
-
-def print_all_hedges(H):
-    hedges = list(H.get_hyperedge_id_set())
-    for hedge in sorted(hedges):
-        print_hedge(H,hedge)
-
-
-##############################################
-#ANNA'S ORIGINAL SHORTEST HYPERPATH ALGORITHM#
-##############################################
-
-#for posterity
-
-def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
-    
-    ## Get induced sub-hypergraph on b-connected nodes 
-    bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H_orig,source)
-    if target not in bconnected:
-        print 'TARGET NOT IN INPUT.'
-        return None, None
-    H = H_orig.get_induced_subhypergraph(bconnected)
-
-    if verbose:
-        #print '%d nodes are B-connected to source "%s"' % (len(bconnected),source)
-        print 'Hypergraph of B-connected nodes now has %d nodes and %d hyperedges.' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
-
-    ## Build the ILP.
-    lpfile = '%s.lp' % (outprefix)
-    make_shortesthyperpath_ilp(H,source,target,lpfile)
-
-    ## get set of nodes (for parsing output)
-    nodeset = H.get_node_set()
-
-    ## Run the ILP
-    numsols,numoptobjective,allvars,times = solveILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose)
-    if verbose:
-        print 'Done.\n'
-        
-    if numsols == 0:
-        print 'INFEASIBLE SOLUTION.'
-        return None, None
-  
-    ## return variables (first solution indexed at 0)
-    print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
-    return allvars, times
-
 
         
         
@@ -410,6 +359,16 @@ def var_is_cheat_edge(v, cheatset):
 
 
 
+def print_hedge(H,hedge):
+    print hedge, "\ttail:", H.get_hyperedge_tail(hedge),"\thead:", H.get_hyperedge_head(hedge), "\tattributes:", H.get_hyperedge_attributes(hedge)
+
+def print_all_hedges(H):
+    hedges = list(H.get_hyperedge_id_set())
+    for hedge in sorted(hedges):
+        print_hedge(H,hedge)
+
+
+
 def find_b_fragments(H,dictionary=False):
     #counts the number of nodes B-connected to each node in H
     #if dictionary=True, returns a dictionary specifying the connections
@@ -527,7 +486,59 @@ def get_median(ls):
         
 
     
+
+
+
+
+
+
+
+##############################################
+#ANNA'S ORIGINAL SHORTEST HYPERPATH ALGORITHM#
+##############################################
+
+#for posterity/reference
+
+"""
+def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
     
+    ## Get induced sub-hypergraph on b-connected nodes 
+    bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H_orig,source)
+    if target not in bconnected:
+        print 'TARGET NOT IN INPUT.'
+        return None, None
+    H = H_orig.get_induced_subhypergraph(bconnected)
+
+    if verbose:
+        #print '%d nodes are B-connected to source "%s"' % (len(bconnected),source)
+        print 'Hypergraph of B-connected nodes now has %d nodes and %d hyperedges.' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
+
+    ## Build the ILP.
+    lpfile = '%s.lp' % (outprefix)
+    make_shortesthyperpath_ilp(H,source,target,lpfile)
+
+    ## get set of nodes (for parsing output)
+    nodeset = H.get_node_set()
+
+    ## Run the ILP
+    numsols,numoptobjective,allvars,times = solveILP(H,nodeset,lpfile,outprefix,numsols,subopt,verbose)
+    if verbose:
+        print 'Done.\n'
+        
+    if numsols == 0:
+        print 'INFEASIBLE SOLUTION.'
+        return None, None
+  
+    ## return variables (first solution indexed at 0)
+    print '%d solutions returned (%d optimal)' % (numsols,numoptobjective)
+    return allvars, times
+
+"""
+
+
+
+
+
 ###########
 if __name__=='__main__':
     main(sys.argv)
