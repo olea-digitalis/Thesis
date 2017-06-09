@@ -5,144 +5,23 @@ import cplex
 EPSILON=0.0001
 CONSTANT=1000000
 
-'''
-def make_bshrub_ilp_2(H,sources,targets,outfile):
 
-	out = open(outfile,'w')
+#cplex-relevant functions for the cheating hyperpath algorithm
 
-	## write objective
-	out = writeObjective(H,out)
-
-	## write constraints
-	out.write('Subject To\n')
-	c = 0
-	out,c = writeConstraint_IfHedgeThenHnode(H,out,c)
-
-	for t in targets:
-		out.write('c%d_sources_out:' % (c))
-		for s in sources:
-			for hedge in H.get_forward_star(s):
-				out.write(' + %s' % (pi(t,hedge)))
-		out.write(' = 1\n')
-		c+=1
-
-		out.write('c%d_targets_in:' % (c))
-		for hedge in H.get_backward_star(t):
-			out.write(' + %s' % (pi(t,hedge)))
-		out.write(' = 1\n')
-		c+=1
-
-		for hedge in H.hyperedge_id_iterator():
-			if hedge in H.get_backward_star(t):
-				continue
-			## q_e \leq \sum_{heads of e} \sum_{forward star of heads} q_e'
-			## q_e - \sum_{heads of e} \sum_{forward star of heads} q_e' \leq 0
-			out.write('c%d_forward_flow: %s' % (c,pi(t,hedge)))
-			for v in H.get_hyperedge_head(hedge):
-				for hedge2 in H.get_forward_star(v):
-					out.write(' - %s' % (pi(t,hedge2)))
-			out.write(' <= 0\n')
-			c+=1
-
-		for hedge in H.hyperedge_id_iterator():
-			skip = False
-			for s in sources:
-				if hedge in H.get_forward_star(s):
-					skip = True
-			if skip:
-				continue
-
-			## q_e \leq \sum_{tails of e} \sum_{backward star of tails} q_e'
-			## q_e - \sum_{tails of e} \sum_{backward star of heads} q_e' \leq 0
-			out.write('c%d_backward_flow: %s' % (c,pi(t,hedge)))
-			for v in H.get_hyperedge_tail(hedge):
-				for hedge2 in H.get_backward_star(v):
-					out.write(' - %s' % (pi(t,hedge2)))
-			out.write(' <= 0\n')
-			c+=1
-
-		## if q_e = 1 then alpha_e = 1
-		## q_e <= a_e
-		for hedge in H.hyperedge_id_iterator():
-			out.write('c%d_if_pi_then_alpha: %s - %s <= 0\n' % (c,pi(t,hedge),a(hedge)))
-			c+=1
-
-	## if a_v = 1 then some incident a_e must be 1.
-	## a_v < \sum_{incident e} a_e
-	for hnode in H.node_iterator():
-		incident = H.get_forward_star(hnode).union(H.get_backward_star(hnode))
-		out.write('c%d_incident_nodes: %s' % (c,a(hnode)))
-		for hedge in incident:
-			out.write(' - %s' % (a(hedge)))
-		out.write(' <= 0\n')
-		c+=1
-
-
-
-	#out,c = writeConstraint_fixTails(targets,out,c)
-
-	## write bounds
-	out = writeBounds(H,out,targets=targets)
-
-	out.write('End\n')
-	out.close()
-	print 'Wrote to %s' % (outfile)
-	return
-
-def make_bshrub_ilp_predecessors(H,sources,targets,outfile):
-
-	out = open(outfile,'w')
-
-	## write objective
-	out = writeObjective(H,out)
-
-	## write constraints
-	out.write('Subject To\n')
-	c = 0
-	out,c = writeConstraint_IfHedgeThenHnode(H,out,c)
-	out,c = writeConstraint_IfHedgeThenPredecessor(H,out,c)
-	out,c = writeConstraint_IfPredecessorThenHedge(H,out,c)
-	out,c = writeConstraint_IfHnodeThenPredecessor(H,sources,out,c)
-	out,c = writeConstraint_fixTails(targets,out,c)
-
-	## write bounds
-	out = writeBounds(H,out)
-
-	out.write('End\n')
-	out.close()
-	print 'Wrote to %s' % (outfile)
-	return
-	'''
-
-def make_shortesthyperpath_ilp(H,source,target,outfile):
-	out = open(outfile,'w')
-
-	## write objective
-	out = writeObjective(H,out)
-
-	## write constraints
-	out.write('Subject To\n')
-	c = 0
-	out,c = writeConstraint_IfHedgeThenIncidents(H,out,c)
-	out,c = writeConstraint_IfHnodeThenBackwardStar(H,source,out,c)
-	out,c = writeConstraint_FixValues(H,{target:1},out,c)
-	out,c = writeConstraint_OrderVariables(H,out,c)
-	out = writeBinaryBounds(H,out)
-	out.write('End\n')
-	out.close()
-
-	print 'Wrote to %s' % (outfile)
-	return
-
+#this script contains functions to construct an ILP script that CPLEX can read
+#execute said script
+#and report the results of said execution
 
 
 
 
 #############################################
-#MY ANALOGUE OF make_shortesthyperpath_ilp()#
+#chp version of make_shortesthyperpath_ilp()#
 #############################################
 
 def make_cheatinghyperpath_ilp(H,k,cheatset,source,target,outfile):
+        #constructs an ILP script that can be executed by CPLEX
+        
 	out = open(outfile,'w')
 
 	## write objective
@@ -165,9 +44,9 @@ def make_cheatinghyperpath_ilp(H,k,cheatset,source,target,outfile):
 
 
 
-###############
-#MY CONSTRAINT#
-###############
+#######################################
+#allowed cheats upper bound constraint#
+#######################################
 
 
 def writeConstraint_fewerThan_k_cheats(H,k,cheatset,out,c):
@@ -187,9 +66,9 @@ def writeConstraint_fewerThan_k_cheats(H,k,cheatset,out,c):
 
 
 
-#######################
-#MY OBJECTIVE FUNCTION#
-#######################
+########################
+#chp objective function#
+########################
 
 def writeCheatObjective(H,cheatset,out,minimize=True):
         if minimize:
@@ -209,22 +88,15 @@ def writeCheatObjective(H,cheatset,out,minimize=True):
 def CHEAT_EPSILON():
         #helper function for writeCheatObjective()
         epsilon = 0.00001
+        #this epsilon just needs to be greater than 0 and small enough that
+        # <max_number_of_possible_cheats> * epsilon < 1
+        #holds
+        #
+        #a safe bet is 1/<total_number_of_cheat_hedges> * 1/100 or lower
         constant = 1 + epsilon
         return str(constant)
 
 
-
-
-def writeObjective(H,out,minimize=True):
-	if minimize:
-		out.write('Minimize\n')
-	else:
-		out.write('Maximize\n')
-
-	for hedge in H.hyperedge_id_iterator():
-		out.write(' + ' + a(hedge))
-	out.write('\n')
-	return out
 
 def writeConstraint_IfHedgeThenIncidents(H,out,c):
 	'''
@@ -319,86 +191,16 @@ def writeBinaryBounds(H,out):
 
 ################################
 
-def solveILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False):
-	print '\nSolving ILP...'
-
-	print '\n' + '-'*20 + 'Cplex Output Start' + '-'*20
-	ilp = cplex.Cplex()
-	ilp.read(lpfile)
-
-	numsolsfound = 1
-	numoptobjective = 0
-	maxobj = None
-	allvars = []
-        times = []
-	while(numsolsfound < numsols+1):
-		## Solve ILP
-		print '-'*10 + 'Looking for Solution %d' % (numsolsfound) + '-'*10 + '\n'
-                start = ilp.get_dettime()
-		ilp.solve()
-                finish = ilp.get_dettime()
-                times.append(finish-start)
-		print '-'*10 + 'Done Looking for Solution %d' % (numsolsfound) + '-'*10 + '\n'
-		
-		if ilp.solution.pool.get_num()>0:
-			print 'Solution Found.'
-			
-			objective = ilp.solution.pool.get_objective_value(0)
-			if numsolsfound == 1:
-				maxobj = objective
-				numoptobjective+=1
-				print 'Max Objective of %d' % (objective)
-			elif objective != maxobj and not subopt:
-				print 'Solution (obj=%d) does not have max objective of %d: quitting.' % (objective,maxobj)
-				break
-			elif objective != maxobj and subopt:
-				print 'Solution (obj=%d) does not have max objective of %d.' % (objective,maxobj)
-			else:
-				print 'ANOTHER OPTIMAL OBJECTIVE=%d' % (objective)
-				numoptobjective+=1
-
-			# Incumbent solution is 0 in the pool:
-			ilp.solution.pool.write('%s-%d.sol' % (outprefix,numsolsfound),0)
-
-			# Get variables 
-			variables = getILPSolution(H,nodeset,outprefix,numsolsfound,objective,verbose)
-			allvars.append(variables)
-
-			# Add constraint for this solution.
-			# See http://www-01.ibm.com/support/docview.wss?uid=swg21399929
-			#ones = [var for var in variables if variables[var] == 1]
-			#zeros = [var for var in variables if variables[var] == 0]
-			#ind = ones + zeros
-			#val = [-1.0]*len(ones)+[1.0]*len(zeros)
-			#eq = cplex.SparsePair(ind,val)
-			#ilp.linear_constraints.add(lin_expr = [eq], senses = ['G'], rhs = [1-len(ones)], names = ['solution%d' % (numsolsfound)])
-
-			# all we need is the ones.
-			ones = [var for var in variables if variables[var] == 1 and var[0]=='a' and var.split('_')[1] not in nodeset]
-			val = [1.0]*len(ones)
-			eq = cplex.SparsePair(ones,val)
-			ilp.linear_constraints.add(lin_expr = [eq], senses = ['L'], rhs = [len(ones)-1], names = ['solution%d' % (numsolsfound)])
-		else:
-			print 'Infeasible Solution. quitting.'
-			break
-		numsolsfound+=1
-
-	print '-'*20 + 'Cplex Output End' + '-'*20 + '\n'
-	print '%d solutions found' % (numsolsfound-1)
-	return numsolsfound-1,numoptobjective,allvars, times
-
-
-
-
-
 
 
 
 ###########################
-#MY ANALOGUE OF solveILP()#
+#chp version of solveILP()#
 ###########################
 
 def solveCheatILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False):
+        #executes the ILP once it's been constructed
+        
 	print '\nSolving ILP...'
 
 	print '\n' + '-'*20 + 'Cplex Output Start' + '-'*20
@@ -470,6 +272,8 @@ def solveCheatILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False)
 
 ################################
 def getILPSolution(H,nodeset,outprefix,num,objective,verbose):
+        #parses ILP outputs into a solution
+        
 	print '\nGetting ILP Solution for Solution # %d in Pool' % (num)
 
 	# parse xml
@@ -635,13 +439,129 @@ def pi(hnode,hedge):
 
 
 
-#######################
-#QUESTIONS THAT I HAVE#
-#######################
 
-#how do I pass the information of which hedges are cheats to the ILP?
-#once the ILP knows who is a cheat, how do I find:
-    #of the set of optimal shortest paths on c(H), I want the one that uses the fewest cheats
-    #call that number of cheats n. Now I want the shortest path given n-1 cheats
-    #Then I want to continue subtracting 1 from the previous number of cheats until there is no solution
-    #then I want to return all of the hyperpaths found this way.
+
+
+
+
+
+###########################################
+#original shortest hyperpath ilp functions#
+###########################################
+
+#these are not required to run the cheating hyperpath ilp, but the chp functions were built largely by pattern matching from these, so they are included for reference/posterity
+
+
+
+
+
+'''
+def writeObjective(H,out,minimize=True):
+	if minimize:
+		out.write('Minimize\n')
+	else:
+		out.write('Maximize\n')
+
+	for hedge in H.hyperedge_id_iterator():
+		out.write(' + ' + a(hedge))
+	out.write('\n')
+	return out
+'''
+
+
+
+
+'''
+def make_shortesthyperpath_ilp(H,source,target,outfile):
+	out = open(outfile,'w')
+
+	## write objective
+	out = writeObjective(H,out)
+
+	## write constraints
+	out.write('Subject To\n')
+	c = 0
+	out,c = writeConstraint_IfHedgeThenIncidents(H,out,c)
+	out,c = writeConstraint_IfHnodeThenBackwardStar(H,source,out,c)
+	out,c = writeConstraint_FixValues(H,{target:1},out,c)
+	out,c = writeConstraint_OrderVariables(H,out,c)
+	out = writeBinaryBounds(H,out)
+	out.write('End\n')
+	out.close()
+
+	print 'Wrote to %s' % (outfile)
+	return
+'''
+
+
+
+
+'''
+def solveILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False):
+	print '\nSolving ILP...'
+
+	print '\n' + '-'*20 + 'Cplex Output Start' + '-'*20
+	ilp = cplex.Cplex()
+	ilp.read(lpfile)
+
+	numsolsfound = 1
+	numoptobjective = 0
+	maxobj = None
+	allvars = []
+        times = []
+	while(numsolsfound < numsols+1):
+		## Solve ILP
+		print '-'*10 + 'Looking for Solution %d' % (numsolsfound) + '-'*10 + '\n'
+                start = ilp.get_dettime()
+		ilp.solve()
+                finish = ilp.get_dettime()
+                times.append(finish-start)
+		print '-'*10 + 'Done Looking for Solution %d' % (numsolsfound) + '-'*10 + '\n'
+		
+		if ilp.solution.pool.get_num()>0:
+			print 'Solution Found.'
+			
+			objective = ilp.solution.pool.get_objective_value(0)
+			if numsolsfound == 1:
+				maxobj = objective
+				numoptobjective+=1
+				print 'Max Objective of %d' % (objective)
+			elif objective != maxobj and not subopt:
+				print 'Solution (obj=%d) does not have max objective of %d: quitting.' % (objective,maxobj)
+				break
+			elif objective != maxobj and subopt:
+				print 'Solution (obj=%d) does not have max objective of %d.' % (objective,maxobj)
+			else:
+				print 'ANOTHER OPTIMAL OBJECTIVE=%d' % (objective)
+				numoptobjective+=1
+
+			# Incumbent solution is 0 in the pool:
+			ilp.solution.pool.write('%s-%d.sol' % (outprefix,numsolsfound),0)
+
+			# Get variables 
+			variables = getILPSolution(H,nodeset,outprefix,numsolsfound,objective,verbose)
+			allvars.append(variables)
+
+			# Add constraint for this solution.
+			# See http://www-01.ibm.com/support/docview.wss?uid=swg21399929
+			#ones = [var for var in variables if variables[var] == 1]
+			#zeros = [var for var in variables if variables[var] == 0]
+			#ind = ones + zeros
+			#val = [-1.0]*len(ones)+[1.0]*len(zeros)
+			#eq = cplex.SparsePair(ind,val)
+			#ilp.linear_constraints.add(lin_expr = [eq], senses = ['G'], rhs = [1-len(ones)], names = ['solution%d' % (numsolsfound)])
+
+			# all we need is the ones.
+			ones = [var for var in variables if variables[var] == 1 and var[0]=='a' and var.split('_')[1] not in nodeset]
+			val = [1.0]*len(ones)
+			eq = cplex.SparsePair(ones,val)
+			ilp.linear_constraints.add(lin_expr = [eq], senses = ['L'], rhs = [len(ones)-1], names = ['solution%d' % (numsolsfound)])
+		else:
+			print 'Infeasible Solution. quitting.'
+			break
+		numsolsfound+=1
+
+	print '-'*20 + 'Cplex Output End' + '-'*20 + '\n'
+	print '%d solutions found' % (numsolsfound-1)
+	return numsolsfound-1,numoptobjective,allvars, times
+'''
