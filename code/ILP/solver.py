@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
-## Stand-alone script to run the Shortest B-Hyperpaths problem.
+## Script to run the Cheating Hyperpath Algorithm
+## Modified from Anna's original Shortest s-t B-Hyperpath Algorithm script
 ## Modified from VT: /data/annaritz/hypergraph/2014-05-15-acm-bcb-hypergraphs/master-script.py
 
 import os
@@ -14,92 +15,55 @@ import random
 import time
 import copy
 
+#path to CPLEX package on VT local server:
+sys.path.append('/data/annaritz/tools/CPLEX/2014/CPLEX_Studio126/cplex/python/x86-64_linux/')
 
-from ilp import *  ## import functions from ilp.py
-import mod_ilp
+from ilp import *  #Anna's original ilp script
+import mod_ilp     #cheating hyperpath ilp script
 
 ## import HALP library.  https://github.com/Murali-group/halp
 from halp.directed_hypergraph import DirectedHypergraph
 from halp.utilities import directed_graph_transformations,directed_statistics
 from halp.algorithms import directed_paths
 
+
+
+
+
+################################
+################################
 ################################
 def main(args):
-    opts = parseOptions(args)
-    H = read_hypergraph(opts,mod=True)
+    opts = parseOptions(args) #parses command line arguments into an object
+    H = read_hypergraph(opts) #parses the infile into a hypergraph object
     if opts.verbose:
         print '%d nodes and %d hyperedges' % (directed_statistics.number_of_nodes(H),directed_statistics.number_of_hyperedges(H))
-        """
         for hedge in H.hyperedge_id_iterator():
             print '%s: %s --> %s' % (hedge,opts.nodedelim.join(H.get_hyperedge_tail(hedge)),opts.nodedelim.join(H.get_hyperedge_head(hedge)))
-        """
-    """
-    H_nodes = H.get_node_set()
-    pairs = []
-    for i in range(0,3000):
-        pairs.append(random.sample(H_nodes,2))
-    """
 
-    """
-    #testing cheat hedges code
-    print(H.get_node_set())
-    print(H.get_hyperedge_id_set())
-    print_all_hedges(H)
 
-    add_cheat_hedges(H)
-    print("##############################\nAdded cheat hedges\n#####################\n")
-    
-    print(H.get_node_set())
-    print(H.get_hyperedge_id_set())
-    print_all_hedges(H)
+    #runs the ilp
+    cH = iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
 
-    """
+    #summary linking hedge id's to nodes
+    if opts.verbose:
+        for hedge in cH.hyperedge_id_iterator():
+            print(str(hedge) + ': ' + str(opts.nodedelim.join(cH.get_hyperedge_tail(hedge))) + ' --> ' + str(opts.nodedelim.join(cH.get_hyperedge_head(hedge))))
 
-    """
-    #find_b_fragments(H)
-    bcon_dict = find_b_fragments(H, dictionary=True)
-    max_bcon_root = dict_max(bcon_dict, val_len)
-    print(len(bcon_dict[max_bcon_root]))
-    print("Max bcon root is called:", max_bcon_root)
-    print("Here are the bconnected nodes:", bcon_dict[max_bcon_root])
-    """
-    #print_all_hedges(H)
-    #compile_shortest_hpaths(H,'Complex842',opts.outprefix,opts.subopt, opts.verbose)
-    
-    
-    
-    #allvars, times = compile_shortest_hpaths(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt, opts.verbose,path_directions = pairs)
-    
-    #allvars = compute_shortest_b_hyperpath(H,opts.source,opts.target,\
-    #    opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
-    """
-    cH = copy.deepcopy(H)
-    cheatset = add_cheat_hedges(cH) #add_cheating_hedges() modifies the given object and returns a list of all cheating hedge id's
-    k = 1
 
-    
+    return
+#################################
+#################################
+#################################
 
-    allvars = compute_cheating_hyperpath(cH,cheatset,k,opts.source,opts.target,\
-        opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
-    """
-    iterate_cheat_ILP(H,opts.source,opts.target,opts.outprefix,opts.numsols,opts.subopt,opts.verbose)
 
-    """
-    print("\n\nHere's the hgraph:")
-    print_all_hedges(H)
-    print_all_hedges(cH)
-    print('\n')
-    print("Printing allvars:")
-    print(allvars)
-    print(type(allvars[0][0]))
-    """
-    return 
-   
+#################################
+#PARSING AND REPORTING FUNCTIONS#
+#################################
 
-################################
 def parseOptions(args):
     """
-    Parses arguments passed to function.
+    Parses command line arguments.
     """
 
     desc = 'Computes Shortest B-Hyperpaths between a source and a target in a directed hypergraph consisting of nodes.\n\npython acm_bcb_shortest_b_hyperpaths.py [options] HEDGEFILE SOURCE TARGET\n\n\tHEDGEFILE: two column delimited file of hyperedges in the form of <TAIL> <HEAD>, where \n\t  <TAIL> and <HEAD> may be delimited sets of nodes. Note: Underscore "_" is not allowed\n\t  in the node names.\n\tSOURCE: Source node.\n\tTARGET: Target node.'
@@ -134,14 +98,14 @@ def parseOptions(args):
 
     return opts
 
-def read_hypergraph(opts, mod=False):
+def read_hypergraph(opts, debug=False):
     H = DirectedHypergraph()
     H.read(opts.hedgefile,opts.nodedelim,opts.coldelim)
 
     nodes = H.get_node_set()
-    if opts.source not in nodes and mod==False:
+    if opts.source not in nodes and debug==False:
         sys.exit('ERROR: source "%s" is not in node set. Exiting.' % (opts.source))
-    if opts.target not in nodes and mod==False:
+    if opts.target not in nodes and debug==False:
         sys.exit('ERROR: target "%s" is not in node set. Exiting.' % (opts.target))
     return H
 
@@ -156,94 +120,11 @@ def print_all_hedges(H):
         print_hedge(H,hedge)
 
 
+##############################################
+#ANNA'S ORIGINAL SHORTEST HYPERPATH ALGORITHM#
+##############################################
 
-################################
-#cheating hpath setup functions#
-################################
-
-def get_restrictive_hedges(H,n):
-    #returns the set of restrictive hyperedges for a node n as a list
-    
-    #the restrictive hedges of a node is a subset of the forward star
-    #any hedge in the forward star of n with |tail_set| > 1 is a restrictive hedge
-    #(i.e. any hedge whose tail contains more than n itself is a restrictive hyperedge)
-    #the forward star of a node is the set of hyperedges such that the node is in the tail of each hyperedge in that set.
-
-    hedges = H.get_forward_star(n)
-    r_hedges = []
-    for h in hedges:
-        if len(H.get_hyperedge_tail(h)) > 1:
-            r_hedges.append(h)
-    return r_hedges
-
-
-def add_cheat_hedges(H):
-    #adds cheat hedges to every node in the hypergraph H, labeled with attribute: 'cheat' = True
-    #returns a list of the added cheat hedge ID's
-    
-    #for every restrictive hedge (see function: get_restrictive_hedges() ) of each node, we add a cheat hedge
-    #cheat hedges model the restrictive hedges but they remove the restriction
-    #that is, the tail of a cheat hedge contains only the given node, and the head contains the head set of the given restrictive hedge
-    #each cheat edge keeps track of which hedge it is modeled after via the 'original_hedge' attribute.
-    
-    
-    added_cheats = []
-    for n in H.get_node_set():
-        r_hedges = get_restrictive_hedges(H,n)
-        
-        for h in r_hedges:
-            if not H.has_hyperedge([n],H.get_hyperedge_head(h)):
-                #if there is an existing hedge with the same head and tail of the candidate cheat hedge, we don't need to make it. (fixes an issue with halp)
-                c = H.add_hyperedge([n], H.get_hyperedge_head(h), attr_dict={'cheat': True, 'original_hedge': h})
-                #c is a hyperedge whose tail is only n and whose head is the same as that of the restrictive hyperedge it's modeled after
-                added_cheats.append(c)
-    return added_cheats
-
-
-
-
-def find_b_fragments(H,dictionary=False):
-    if dictionary:
-        d = {}
-    ls = []
-    for n in H.get_node_set():
-        bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H,n)
-        ls.append(len(bconnected))
-        if dictionary:
-            d[n]=bconnected
-
-
-    ls.sort(reverse=True)
-
-    if dictionary:
-        return d
-    print(count(ls))
-    return ls
-
-
-def count(ls):
-    d = {}
-    for i in ls:
-        if i in d:
-            d[i] += 1
-        else:
-            d[i] = 1
-    return d
-
-
-def val_len(d, key):
-    return len(d[key])
-
-def dict_max(d, obj_function):
-    max_key = d.keys()[0]
-    max_val = obj_function(d,d.keys()[0])
-    for k in d.keys():
-        if obj_function(d,k) >= max_val:
-            max_key = k
-            max_val = obj_function(d,k)
-    return max_key
-
-
+#for posterity
 
 def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,verbose):
     
@@ -279,6 +160,60 @@ def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,v
     return allvars, times
 
 
+        
+        
+        
+
+
+################################
+#cheating hpath setup functions#
+################################
+
+def get_restrictive_hedges(H,n):
+    #returns the set of restrictive hyperedges for a node n as a list
+
+    #details:
+    #the restrictive hedges of a node is a subset of the forward star
+    #any hedge in the forward star of n with |tail_set| > 1 is a restrictive hedge
+    #(i.e. any hedge whose tail contains more than n itself is a restrictive hyperedge)
+    #the forward star of a node is the set of hyperedges such that the node is in the tail of each hyperedge in that set.
+
+    hedges = H.get_forward_star(n)
+    r_hedges = []
+    for h in hedges:
+        if len(H.get_hyperedge_tail(h)) > 1:
+            r_hedges.append(h)
+    return r_hedges
+
+
+def add_cheat_hedges(H):
+    #adds cheat hedges to every node in the hypergraph H, labeled with attribute: 'cheat' = True
+    #returns a list of the added cheat hedge ID's
+
+    #details:
+    #for every restrictive hedge (see function: get_restrictive_hedges() ) of each node, we add a cheat hedge
+    #cheat hedges model the restrictive hedges but they remove the restriction
+    #that is, the tail of a cheat hedge contains only the given node, and the head contains the head set of the given restrictive hedge
+    #each cheat edge keeps track of which hedge it is modeled after via the 'original_hedge' attribute.
+    
+    
+    added_cheats = []
+    for n in H.get_node_set():
+        r_hedges = get_restrictive_hedges(H,n)
+        
+        for h in r_hedges:
+            if not H.has_hyperedge([n],H.get_hyperedge_head(h)):
+                #if there is an existing hedge with the same head and tail of the candidate cheat hedge, we don't need to make it. (fixes an issue with halp)
+                c = H.add_hyperedge([n], H.get_hyperedge_head(h), attr_dict={'cheat': True, 'original_hedge': h})
+                #c is a hyperedge whose tail is only n and whose head is the same as that of the restrictive hyperedge it's modeled after
+                added_cheats.append(c)
+    return added_cheats
+
+
+
+
+
+
 
 
 
@@ -289,19 +224,20 @@ def compute_shortest_b_hyperpath(H_orig,source,target,outprefix,numsols,subopt,v
 
 
 def compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,subopt,verbose):
-    ## Get induced sub-hypergraph on b-connected nodes 
+    #constructs and executes ilp files to find the cheating hyperpath for a given cheat parameter k
+    
+    ## Check whether there is a feasible solution 
     bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(cH,source)
     if target not in bconnected:
         print 'TARGET NOT IN INPUT.'
         print(bconnected)
         return None, None
-    #print("Printing cH now:\n")
-    #print_all_hedges(cH)
+
     
     #H = cH.get_induced_subhypergraph(bconnected)
-    #print("\n\nPrinting H now:\n")
-    #print_all_hedges(H)
-
+    #running the algorithm on the induced subhypergraph (i.e. the set of feasibly reachable nodes instead of the entire hypergraph) will likely make it run faster for large datasets but it was causing some issues in the initial implementation so I cut this step out.
+    #leaving the line commented here because it's possible that I'll figure it out and achieve the speedup
+    
     
     ## Build the ILP.
     lpfile = '%s.lp' % (outprefix)
@@ -326,7 +262,12 @@ def compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,sub
 
 
 
-def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, loud=False):
+def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, debug=False):
+    #finds the cheating hyperpath between source and target for all interesting values of the cheat parameter k
+    #constructs a report of the solutions as a txt file:
+    #outprefix + "_icILP_results.txt"
+    #returns the cheat transform of the given hypergraph c(H_orig)
+    
     results_file = outprefix + "_icILP_results.txt"
     with open(results_file,'w') as rf:
         rf.write("-------------------------------------\n")
@@ -338,24 +279,21 @@ def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, lou
     
     while k > 0:
         allvars, times = compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,subopt,verbose)
-        allvars = allvars[0] #for some reason this is a list containing only a dict
+        allvars = allvars[0] #for some reason allvars is a list containing only a dict
 
-        if loud:
-            print("#####################################################")
-            print("#####################################################")
-            print("#####################################################")
+        if debug:
+            #helpful printout for debugging, does not show by default
+            print("#####################################################\n"*3)
             print(allvars)
             print(type(allvars))
             print(allvars.keys())
             print(cheatset)
             print_all_hedges(cH)
-            print("#####################################################")
-            print("#####################################################")
-            print("#####################################################")
+            print("#####################################################\n"*3)
         next_k = icILP_recorder(k,allvars,cheatset,outprefix)
         k = next_k
 
-    return
+    return cH
 
 
 
@@ -367,7 +305,10 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
     #this function will record a summary of each iteration of the icILP in a txt file:
     #outprefix + "_icILP_results.txt"
     #it will also compute and return the k for the next iteration of the icILP
+    
+    #you probably don't need to know any of the details below
 
+    
     #details:
     #the next value of k is determined by observing the number of cheats used in the previous iteration's path
     #k is set to that number of cheats (such that the next iteration is allowed one fewer cheat than was used in the previous /solution/)
@@ -377,7 +318,7 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
     #having the recorder function compute the next k is weird, but writing a separate function to go find the results of the recorder function seemed more cumbersome
     
     #notes/to do:
-    #unfortunately the hedge readout is kind of useless since it gives the names of the hyperedges but you have no way of relating those back to the nodes that they touch
+    #unfortunately the hedge portion of the readout is kind of useless since it gives the names of the hyperedges but you have no way of relating those back to the nodes that they touch
     #fixing this seems like more trouble than it's worth at the present moment. I wrote a script to look up the corresponding reactions on the NCIPID database. It's in the cheating hyperpath results folder.
     
     #also unfortunate is the fact that the nodes are not listed in order, making it a pain to extract the hyperpath in a human-intelligible way. This seems like it may be worth fixing actually, I'll see what I can do.
@@ -418,12 +359,9 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
     return next_k
 
 
-def write_ref_sheet(H, cH, cheatset,allvars=None):
-    #this function will construct a reference sheet so you can quickly figure out what a returned path should actually look like.
-    pass
 
 
-
+###helper functions for icILP_recorder()###
 
 def get_var_id(v):
     #gets the id from a variable in the ILP output
@@ -437,11 +375,8 @@ def var_is_alpha(v):
         return False
 
 def var_is_edge(v):
-    #this helper function determines whether an alpha variable from the ILP
-    #output belongs to an edge. On the toy graphs, edges are labeled e<number>
-    #but it's concievable that naming conventions for somebody else's graphs
-    #might complicate matters. So for now this is a placeholder, to make fixing
-    #things easier if such a problem arises.
+    #helper function for parsing ILP output files.
+    #determines whether an alpha variable belongs to an edge.
     var_id = get_var_id(v)
     if var_id[0] == 'e':
         try:
@@ -463,6 +398,63 @@ def var_is_cheat_edge(v, cheatset):
 
 
 
+
+
+
+
+
+
+
+
+###various diagnostic functions that are irrelevant to the cheating hyperpath algorithm###
+
+
+
+def find_b_fragments(H,dictionary=False):
+    #counts the number of nodes B-connected to each node in H
+    #if dictionary=True, returns a dictionary specifying the connections
+    if dictionary:
+        d = {}
+    ls = []
+    for n in H.get_node_set():
+        bconnected,ignore1,ignore2,ignore3 = directed_paths.b_visit(H,n)
+        ls.append(len(bconnected))
+        if dictionary:
+            d[n]=bconnected
+
+
+    ls.sort(reverse=True)
+
+    if dictionary:
+        return d
+    print(count(ls))
+    return ls
+
+
+def count(ls):
+    #helper function, basically makes a histogram in dictionary form
+    d = {}
+    for i in ls:
+        if i in d:
+            d[i] += 1
+        else:
+            d[i] = 1
+    return d
+
+
+def val_len(d, key):
+    #accession helper function
+    return len(d[key])
+
+def dict_max(d, obj_function):
+    #finds the key of a dictionary whose value is maximized according to the objective function
+    max_key = d.keys()[0]
+    max_val = obj_function(d,d.keys()[0])
+    for k in d.keys():
+        if obj_function(d,k) >= max_val:
+            max_key = k
+            max_val = obj_function(d,k)
+    return max_key
 
 
 
