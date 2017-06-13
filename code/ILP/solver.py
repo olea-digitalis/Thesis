@@ -182,18 +182,15 @@ def compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,sub
         print(bconnected)
         return None, None
 
-    
-    #H = cH.get_induced_subhypergraph(bconnected)
-    #running the algorithm on the induced subhypergraph (i.e. the set of feasibly reachable nodes instead of the entire hypergraph) will likely make it run faster for large datasets but it was causing some issues in the initial implementation so I cut this step out.
-    #leaving the line commented here because it's possible that I'll figure it out and achieve the speedup
-    
+    ## get set of nodes (for parsing output)
+    nodeset = cH.get_node_set()
+
+    ## consider only induced subhypergraph to reduce the solution space
+    cH = cH.get_induced_subhypergraph(bconnected)
     
     ## Build the ILP.
     lpfile = '%s.lp' % (outprefix)
     mod_ilp.make_cheatinghyperpath_ilp(cH,k,cheatset,source,target,lpfile)
-
-    ## get set of nodes (for parsing output)
-    nodeset = cH.get_node_set()
 
     ## Run the ILP
     numsols,numoptobjective,allvars,times = mod_ilp.solveCheatILP(cH,nodeset,lpfile,outprefix,numsols,subopt,verbose)
@@ -228,7 +225,11 @@ def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, deb
     
     while k > 0:
         allvars, times = compute_cheating_hyperpath(cH,cheatset,k,source,target,outprefix,numsols,subopt,verbose)
-        allvars = allvars[0] #for some reason allvars is a list containing only a dict
+        if allvars:
+            allvars = allvars[0] #for some reason allvars is a list containing only a dict
+        else:
+            #if the cheating hyperpath for some k is infeasible, then the cheating hyperpath for all lower k's is also infeasible, so we can stop iterating when we get to an infeasible k.
+            return None
 
         if debug:
             #helpful printout for debugging, does not show by default
@@ -239,7 +240,7 @@ def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, deb
             print(cheatset)
             print_all_hedges(cH)
             print("#####################################################\n"*3)
-        next_k = icILP_recorder(k,allvars,cheatset,outprefix)
+        next_k = icILP_recorder(cH,k,allvars,cheatset,outprefix)
         k = next_k
 
     return cH
@@ -250,7 +251,7 @@ def iterate_cheat_ILP(H_orig,source,target,outprefix,numsols,subopt,verbose, deb
 
 
 
-def icILP_recorder(k,allvars,cheatset,outprefix):
+def icILP_recorder(cH,k,allvars,cheatset,outprefix):
     #this function will record a summary of each iteration of the icILP in a txt file:
     #outprefix + "_icILP_results.txt"
     #it will also compute and return the k for the next iteration of the icILP
@@ -265,12 +266,6 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
     #setting k in this way skips over the redundant solutions.
     #the reason the next k is computed in this particular function is because this is the only cheating-hyperpath-relevant function that communicates with the outputs of the ilp.
     #having the recorder function compute the next k is weird, but writing a separate function to go find the results of the recorder function seemed more cumbersome
-    
-    #notes/to do:
-    #unfortunately the hedge portion of the readout is kind of useless since it gives the names of the hyperedges but you have no way of relating those back to the nodes that they touch
-    #fixing this seems like more trouble than it's worth at the present moment. I wrote a script to look up the corresponding reactions on the NCIPID database. It's in the cheating hyperpath results folder.
-    
-    #also unfortunate is the fact that the nodes are not listed in order, making it a pain to extract the hyperpath in a human-intelligible way. This seems like it may be worth fixing actually, I'll see what I can do.
 
     results_file = outprefix + "_icILP_results.txt"
     
@@ -304,6 +299,22 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
         rf.write('\n\nNodes in Path: ' + str(path_nodes) + '\n\n')
         rf.write('Hyperedges in Path: ' + str(path_hedges) + '\n\n')
         rf.write('Cheat Hyperedges in Path: ' + str(path_cheats) + '\n\n')
+        rf.write('Hyperedge Index:\n')
+        rf.write('hedge_id\ttail_nodes\thead_nodes\tis_cheat\n')
+        sort_ids(path_hedges)
+        for e in path_hedges:
+            d = cH.get_hyperedge_attributes(e)
+            rf.write(e + '\t' + set_string(d['tail']) + '\t' + set_string(d['head']) + '\t' + str(safe_lookup(d, 'cheat')) + '\n')
+
+        rf.write('\n\n')
+        rf.write('Cheat Hyperedge Index:\n')
+        rf.write('hedge_id\toriginal_hedge\toriginal_tail\toriginal_head\n')
+
+        sort_ids(path_cheats)
+        for e in path_cheats:
+            d = cH.get_hyperedge_attributes(e)
+            d_orig = cH.get_hyperedge_attributes(d['original_hedge'])
+            rf.write(e+'\t'+str(d['original_hedge'])+'\t'+set_string(d_orig['tail'])+'\t'+set_string(d_orig['head'])+'\n')
     
     return next_k
 
@@ -311,6 +322,24 @@ def icILP_recorder(k,allvars,cheatset,outprefix):
 
 
 ###helper functions for icILP_recorder()###
+
+def sort_ids(ls):
+    #sorts a list of hedge ids numerically
+    f = lambda x: int(x[1:])
+    ls.sort(key=f)
+
+def set_string(s,delim=';'):
+    out = ""
+    for element in s:
+        out += str(element) + delim
+    out = out[:-len(delim)]
+    return out
+
+def safe_lookup(d, key):
+    if key in d:
+        return True
+    else:
+        return False
 
 def get_var_id(v):
     #gets the id from a variable in the ILP output

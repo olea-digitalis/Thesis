@@ -271,7 +271,7 @@ def solveCheatILP(H,nodeset,lpfile,outprefix,numsols,subopt=False,verbose=False)
 
 
 ################################
-def getILPSolution(H,nodeset,outprefix,num,objective,verbose):
+def getILPSolution(H,nodeset,outprefix,num,objective,verbose, debug=False):
         #parses ILP outputs into a solution
         
 	print '\nGetting ILP Solution for Solution # %d in Pool' % (num)
@@ -320,8 +320,20 @@ def getILPSolution(H,nodeset,outprefix,num,objective,verbose):
 			if row[1] in nodeset: # node
 				nout.write('%s\t%s\t%d\n' % (v,row[1],variables[v]))
 			else: # edge
-				eout.write('%s\t%s\t%s\t%d\n' % (v,'|'.join(H.get_hyperedge_tail(row[1])),\
-					'|'.join(H.get_hyperedge_head(row[1])),variables[v]))		  
+                                if debug:
+                                        print
+                                        print
+                                        print('PRINTING THE THING NOW')
+                                        print(row[1])
+                                        print
+                                        print
+                                try:
+				        eout.write('%s\t%s\t%s\t%d\n' % (v,'|'.join(H.get_hyperedge_tail(row[1])),\
+					                                 '|'.join(H.get_hyperedge_head(row[1])),variables[v]))
+		                except ValueError:
+                                        #this is a lazy fix for an error that occurred because the ILP was trying to look up hyperedges outside of the induced subhypergraph. I had trouble determining how it was seeing these hyperedges (because they did exist on the original hypergraph), so I just made this quick fix.
+                                        #if it's causing problems somewhere, remove this try-except block (keep the code in the try) and comment out the line of compute_cheating_hyperpath() that calls get_induced_subhypergraph().
+                                        eout.write(row[1] + '\tNone\tNone\tNone\n')
 	eout.close()
 	nout.close()
 	oout.close()
